@@ -32,49 +32,74 @@ end cache;
 architecture arch of cache is
 
 -- declare signals here
-	type mem_array is array(4096-1 downto 0) of std_logic_vector(41 downto 0);
+	type mem_array is array(32-1 downto 0) of std_logic_vector(137 downto 0);
+	signal ram: mem_array;
+	signal rowFound : std_logic_vector(137 downto 0);
+	signal default_waitrequest : std_logic := '1';
+
 	--bit table
 	----------------------------------------------------------------------------
-	--41 Valid | 40  Dirty | 39 	Tag	   32 | 31	 		Data 			0 --
+	--137 Valid | 136 Dirty | 135 	Tag	   128 | 127	 	Block Data		0 --
 	----------------------------------------------------------------------------
 
-	type state_type is (Swait, Sread, Swrite);
-	signal next_state, current_state: state_type;
+
+	-- How data is stored (Big Endian)
+	-- Word table stored in data block
+	---_______________________________________________
+	--| 127 	96 | 95		64 | 65		32 | 31 	0 |
+	--|-----------------------------------------------|
+
+
+	--type state_type is (Swait, Sread, Swrite);
+	--signal next_state, current_state: state_type;
+
 
 begin
+	
 
-	states: process (clock, reset)
-	begin
-		if (reset = '1') then
-            		current_state <= Swait;
-		elsif (rising_edge(clock)) then
-		   	current_state <= next_state;
-		end if;
-	end process;
+	-- states: process (clock, reset)
+	-- begin
+	-- 	if (reset = '1') then
+    --         		current_state <= Swait;
+	-- 	elsif (rising_edge(clock)) then
+	-- 	   	current_state <= next_state;
+	-- 	end if;
+	-- end process;
 
 	write_process: process(clock, s_addr, s_write)
 	begin
 		if (rising_edge(clock)) then
 			if(s_write) then
 				--look up the cache 
-				-- thatrow = array.get(s_addr(6 downto 2))
+				rowFound <= ram(s_addr(6 downto 2)) 	-- 12 bits needed to find the correct index in a 4096 bit (word aligned)
 
-				if(thatrow(39 downto 31) == s_addr(14 downto 7)) then
+				if(rowFound(135 downto 128) == s_addr(14 downto 7)) then
 
-					if(thatrow(41) == '1') then --ie is the bit valid? (1 = a hit)
-						thatrow()
+					if(rowFound(137) == '1') then --ie is the bit valid? (1 = a hit)
+						
+						-- find the word to be replaced
+						case s_addr(1) & s_addr(0) is
+							when 00 => rowFound(31 downto 0)  <= s_writedata;
+							when 01 => rowFound(63 downto 32)  <= s_writedata;
+							when 10 => rowFound(95 downto 64)  <= s_writedata;
+							when 11 => rowFound(127 downto 96)  <= s_writedata;
+						end case;
+
+						rowFound(136) <= '1';	--set the bit to be dirty
+
+						
 					else then
 						--	not valid => miss => go look in memory				
 					end if;
 				else then
-				-- miss go look in mememory
+				-- miss go look in memory
 					m_write <= '1';
 					m_addr <= s_addr;
 
 				end if;
 
 				
-			
+			elsif (s_read) then
 
 
 
@@ -84,6 +109,7 @@ begin
 		end if;
 	end process;
 
+	s_waitrequest <= default_waitrequest;
 
 -- make circuits here
 
