@@ -1,0 +1,20 @@
+{C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory_tb
+-- Compiling architecture behaviour of memory_tb
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cache_tb
+-- Compiling architecture behavior of cache_tb
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd(120): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+
+} {} {}}

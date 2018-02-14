@@ -49,35 +49,23 @@ architecture arch of cache is
 	--| 127 	96 | 95		64 | 65		32 | 31 	0 |
 	--|-----------------------------------------------|
 
-
-	--type state_type is (Swait, Sread, Swrite);
-	--signal next_state, current_state: state_type;
-
-
 begin
 	
 
-	-- states: process (clock, reset)
-	-- begin
-	-- 	if (reset = '1') then
-    --         		current_state <= Swait;
-	-- 	elsif (rising_edge(clock)) then
-	-- 	   	current_state <= next_state;
-	-- 	end if;
-	-- end process;
 
 	write_process: process(clock, s_addr, s_write)
 	begin
 		if (rising_edge(clock)) then
 			if(s_write) then
 				--look up the cache 
-				rowFound <= ram(s_addr(6 downto 2)) 	-- 12 bits needed to find the correct index in a 4096 bit (word aligned)
+				rowFound <= ram(s_addr(6 downto 2));	-- 12 bits needed to find the correct index in a 4096 bit (word aligned)
 
-				if(rowFound(135 downto 128) == s_addr(14 downto 7)) then
+
+				if(rowFound(135 downto 128) == s_addr(14 downto 7)) then	--check if the tag is the same
 
 					if(rowFound(137) == '1') then --ie is the bit valid? (1 = a hit)
 						
-						-- find the word to be replaced
+						-- select the word to be replaced
 						case s_addr(1) & s_addr(0) is
 							when 00 => rowFound(31 downto 0)  <= s_writedata;
 							when 01 => rowFound(63 downto 32)  <= s_writedata;
@@ -86,29 +74,63 @@ begin
 						end case;
 
 						rowFound(136) <= '1';	--set the bit to be dirty
-
+						--then update the cache
+						ram(s_addr(6 downto 2)) <=  rowFound;
 						
 					else then
+						m_write <= '1';
+						m_addr <= s_addr;
+						m_writedata <= s_writedata;
+						wait until m_waitrequest = '0';
+
 						--	not valid => miss => go look in memory				
 					end if;
 				else then
 				-- miss go look in memory
 					m_write <= '1';
 					m_addr <= s_addr;
+					m_writedata <= s_writedata;
+					wait until m_waitrequest = '0';
 
 				end if;
 
-				
 			elsif (s_read) then
 
+				rowFound <= ram(s_addr(6 downto 2)) 	-- 5 bits needed to find the correct index of the 32 blocks
 
+				if(rowFound(135 downto 128) == s_addr(14 downto 7)) then
 
-			end if;
+					if(rowFound(137) == '1') then --ie is the bit valid? (1 = a hit)
+						
+						-- select the word to be read
+						case s_addr(1) & s_addr(0) is
+							when 00 =>  s_readdata <= rowFound(31 downto 0);  
+							when 01 =>  s_readdata <= rowFound(63 downto 32);
+							when 10 =>  s_readdata <= rowFound(95 downto 64);
+							when 11 =>  s_readdata <= rowFound(127 downto 96);
+						end case;
 
+						s_waitrequest <= '0'; 	--data is on the bus 
+						
+					else then
+						--	not valid => miss => go look in memory	
+						--	(if the block to be replaced is dirty, send the old block to a buffer, save the new block and service the read
+						--		then write back the correct value in memory.)			
+					end if;
+				else then
+				-- miss go look in memory
+					m_read <= '1';
+					m_addr <= s_addr;
+					wait until m_waitrequest = '0';
+					s_readdata <= m_readdata;
 
-		end if;
+				end if;
+
+			end if; -- if (s_write)
+		end if; --rising edge
 	end process;
 
+	--Setting the default wait request value
 	s_waitrequest <= default_waitrequest;
 
 -- make circuits here
