@@ -58,7 +58,7 @@ begin
 		if (rising_edge(clock)) then
 			if(s_write) then
 				--look up the cache 
-				rowFound <= ram(s_addr(6 downto 2));	-- 12 bits needed to find the correct index in a 4096 bit (word aligned)
+				rowFound <= ram(s_addr(6 downto 2));	-- 5 bits needed to find the correct index in a 4096 bit (word aligned)
 
 
 				if(rowFound(135 downto 128) == s_addr(14 downto 7)) then	--check if the tag is the same
@@ -78,15 +78,38 @@ begin
 						ram(s_addr(6 downto 2)) <=  rowFound;
 						
 					else then
+						--	not valid => miss => go look in memory + get new block (write back the old block if dirty)				
+
 						m_write <= '1';
 						m_addr <= s_addr;
 						m_writedata <= s_writedata;
 						wait until m_waitrequest = '0';
 
-						--	not valid => miss => go look in memory				
+						-- get block
+						m_read <= '1';
+						m_addr <= s_addr(15 downto 2) & '0' & '0';
+						wait until m_waitrequest = '0';
+						rowFound(31 downto 0) <= m_readdata;
+
+						m_read <= '1';
+						m_addr <= s_addr(15 downto 2) & '0' & '1';
+						wait until m_waitrequest = '0';
+						rowFound(63 downto 32) <= m_readdata;
+
+						m_read <= '1';
+						m_addr <= s_addr(15 downto 2) & '1' & '0';
+						wait until m_waitrequest = '0';
+						rowFound(95 downto 64) <= m_readdata;
+
+						m_read <= '1';
+						m_addr <= s_addr(15 downto 2) & '1' & '1';
+						wait until m_waitrequest = '0';
+						rowFound(127 downto 96) <= m_readdata;
+
+
 					end if;
 				else then
-				-- miss go look in memory
+				-- miss go look in memory and get new block
 					m_write <= '1';
 					m_addr <= s_addr;
 					m_writedata <= s_writedata;
@@ -115,7 +138,13 @@ begin
 					else then
 						--	not valid => miss => go look in memory	
 						--	(if the block to be replaced is dirty, send the old block to a buffer, save the new block and service the read
-						--		then write back the correct value in memory.)			
+						--		then write back the correct value in memory.)	
+
+						m_read <= '1';
+						m_addr <= s_addr;
+						wait until m_waitrequest = '0';
+						s_readdata <= m_readdata;
+
 					end if;
 				else then
 				-- miss go look in memory
