@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+--*----------------------------------------maybe import something
 
 entity cache is
 generic(
@@ -51,107 +52,207 @@ architecture arch of cache is
 
 begin
 	
+	type state_type is (default, write_valid, write_invalid, read_valid, read_invalid_dirty);
+	signal next_state, current_state: state_type;
+	
+	states: process (clk, reset)
+	begin
+		if (reset='1') then
+            		current_state <= S0;
+		elsif (clk'event and clk='0') then
+		   	current_state <= next_state;
+		end if;
+	end process;
+
+	state_logic: process(current_state, s_addr, s_read, s_write)
+	begin
+		case current_state is
 
 
-	write_process: process(clock, s_addr, s_write)
+			when default =>	--do all checks
+
+						s_waitrequest <= '1'; 	--data is ready
+
+							rowFound <= ram(to_integer(unsigned(s_addr(6 downto 2))));	-- 5 bits needed to find the correct index in a 4096 bit (word aligned)
+
+							if(s_write = '1') then 
+
+								--go to write state
+								if(rowFound(135 downto 128) = s_addr(14 downto 7)) then	--check if the tag is the same
+									if(rowFound(137) = '1') then --ie is the bit valid? (1 = a hit)
+										next_state <= write_valid;
+									else
+										next_state <= write_invalid;
+									end if;
+								else
+									next_state <= write_invalid;
+								end if;
+
+							elsif(s_read = '1') then
+								if(rowFound(137) = '1') then
+									if(rowFound(135 downto 128) = s_addr(14 downto 7)) then	--check if the tag is the same
+										next_state <= read_valid;
+									else
+										if(rowFound(135) = '1') then --ie is the bit dirty(1 = a hit)
+											next_state <= read_invalid_dirty;
+										else
+											next_state <= read_invalid;
+										end if;
+									end if;
+								else
+									next_state <= read_invalid;
+												
+								end if;
+							end if;
+			when write_valid =>	
+						case (s_addr(1 downto 0)) is
+							when "00" => rowFound(31 downto 0)  <= s_writedata;
+							when "01" => rowFound(63 downto 32)  <= s_writedata;
+							when "10" => rowFound(95 downto 64)  <= s_writedata;
+							when "11" => rowFound(127 downto 96)  <= s_writedata;
+						end case;
+						s_waitrequest <= '0'; 	--data is on the bus 
+
+						next_state <= default;
+
+			when write_invalid =>
+						--load block from memory, avalon interface
+						if(read_state = done) then ---------------------------
+
+							next_state <= write_valid;
+						end if;
+			when read_valid =>
+						-- select the word to be read
+						case (s_addr(1 downto 0)) is
+							when "00" =>  s_readdata <= rowFound(31 downto 0);  
+							when "01" =>  s_readdata <= rowFound(63 downto 32);
+							when "10" =>  s_readdata <= rowFound(95 downto 64);
+							when "11" =>  s_readdata <= rowFound(127 downto 96);
+						end case;
+
+						s_waitrequest <= '0'; 	--data is on the bus 
+						next_state <= default;
+			when read_invalid =>
+						--load block from memory, avalon interface
+						if(read_state = done) then ---------------------------
+
+							next_state <= read_valid;
+						end if;
+
+			when read_invalid_dirty =>
+						--actually write to mem the old block
+						if(write_state = done) then ---------------------------
+							next_state <= read_invalid;
+						end if;
+
+			end case;
+	end process;
+
+	read_process: process(s_addr, m_waitrequest)
+
+		if(counter = '16') then
+			--set read state to done
+			next_state_read <= done_read;
+			counter <= '0';
+		elsif( m_waitrequest = '0') then
+			counter <= counter + 1;
+			ram(to_integer(unsigned(s_addr(6 downto 2))))
+			ram() <= m_readdata;		---------
+		else 
+			m_read <= '1';
+			m_addr <= to_integer(unsigned(s_addr) + counter);
+		end if;
+
+
+						write_state <= default
+
+
+						--only up here dont look down
+						
+-------------------------------------------------------------------------------------------------------------------------------------
+
+	process: process(clock, s_addr, s_write)
 	begin
 		if (rising_edge(clock)) then
-			if(s_write) then
+			if(s_write = '1') then
 				--look up the cache 
-				rowFound <= ram(s_addr(6 downto 2));	-- 5 bits needed to find the correct index in a 4096 bit (word aligned)
+				rowFound <= ram(to_integer(unsigned(s_addr(6 downto 2))));	-- 5 bits needed to find the correct index in a 4096 bit (word aligned)
 
 
-				if(rowFound(135 downto 128) == s_addr(14 downto 7)) then	--check if the tag is the same
+				if(rowFound(135 downto 128) = s_addr(14 downto 7)) then	--check if the tag is the same
 
-					if(rowFound(137) == '1') then --ie is the bit valid? (1 = a hit)
+					if(rowFound(137) = '1') then --ie is the bit valid? (1 = a hit)
 						
 						-- select the word to be replaced
-						case s_addr(1) & s_addr(0) is
-							when 00 => rowFound(31 downto 0)  <= s_writedata;
-							when 01 => rowFound(63 downto 32)  <= s_writedata;
-							when 10 => rowFound(95 downto 64)  <= s_writedata;
-							when 11 => rowFound(127 downto 96)  <= s_writedata;
-						end case;
 
 						rowFound(136) <= '1';	--set the bit to be dirty
 						--then update the cache
-						ram(s_addr(6 downto 2)) <=  rowFound;
+						ram(to_integer(unsigned(s_addr(6 downto 2)))) <=  rowFound; 	--move this
 						
-					else then
+					else 
 						--	not valid => miss => go look in memory + get new block (write back the old block if dirty)				
 
 						m_write <= '1';
-						m_addr <= s_addr;
-						m_writedata <= s_writedata;
-						wait until m_waitrequest = '0';
+						m_addr <= to_integer(unsigned(s_addr));
+						m_writedata <= s_writedata(31 downto 24);
+						-- call write process / state macine stuff wait for memory then do other words
 
-						-- get block
-						m_read <= '1';
-						m_addr <= s_addr(15 downto 2) & '0' & '0';
-						wait until m_waitrequest = '0';
-						rowFound(31 downto 0) <= m_readdata;
-
-						m_read <= '1';
-						m_addr <= s_addr(15 downto 2) & '0' & '1';
-						wait until m_waitrequest = '0';
-						rowFound(63 downto 32) <= m_readdata;
-
-						m_read <= '1';
-						m_addr <= s_addr(15 downto 2) & '1' & '0';
-						wait until m_waitrequest = '0';
-						rowFound(95 downto 64) <= m_readdata;
-
-						m_read <= '1';
-						m_addr <= s_addr(15 downto 2) & '1' & '1';
-						wait until m_waitrequest = '0';
-						rowFound(127 downto 96) <= m_readdata;
 
 
 					end if;
-				else then
+				else 
 				-- miss go look in memory and get new block
 					m_write <= '1';
-					m_addr <= s_addr;
+					m_addr <= to_integer(unsigned(s_addr));
 					m_writedata <= s_writedata;
-					wait until m_waitrequest = '0';
+					
+					--do the same as before ie call write process 
 
 				end if;
 
-			elsif (s_read) then
+			elsif (s_read = '1') then
 
-				rowFound <= ram(s_addr(6 downto 2)) 	-- 5 bits needed to find the correct index of the 32 blocks
+				rowFound <= ram(to_integer(unsigned(s_addr(6 downto 2)))); 	-- 5 bits needed to find the correct index of the 32 blocks
 
-				if(rowFound(135 downto 128) == s_addr(14 downto 7)) then
+				if(rowFound(135 downto 128) = s_addr(14 downto 7)) then
 
-					if(rowFound(137) == '1') then --ie is the bit valid? (1 = a hit)
+					if(rowFound(137) = '1') then --ie is the bit valid? (1 = a hit)
 						
 						-- select the word to be read
-						case s_addr(1) & s_addr(0) is
-							when 00 =>  s_readdata <= rowFound(31 downto 0);  
-							when 01 =>  s_readdata <= rowFound(63 downto 32);
-							when 10 =>  s_readdata <= rowFound(95 downto 64);
-							when 11 =>  s_readdata <= rowFound(127 downto 96);
+						case (s_addr(1 downto 0)) is
+							when "00" =>  s_readdata <= rowFound(31 downto 0);  
+							when "01" =>  s_readdata <= rowFound(63 downto 32);
+							when "10" =>  s_readdata <= rowFound(95 downto 64);
+							when "11" =>  s_readdata <= rowFound(127 downto 96);
 						end case;
 
 						s_waitrequest <= '0'; 	--data is on the bus 
 						
-					else then
+					else
 						--	not valid => miss => go look in memory	
 						--	(if the block to be replaced is dirty, send the old block to a buffer, save the new block and service the read
 						--		then write back the correct value in memory.)	
 
 						m_read <= '1';
-						m_addr <= s_addr;
+						m_addr <= to_integer(unsigned(s_addr));
 						wait until m_waitrequest = '0';
 						s_readdata <= m_readdata;
 
+						--check if bit dirty if so do write then read
+
 					end if;
-				else then
+				else
+
+				--same thing as above
+
+
 				-- miss go look in memory
 					m_read <= '1';
-					m_addr <= s_addr;
+					m_addr <= to_integer(unsigned(s_addr));
 					wait until m_waitrequest = '0';
 					s_readdata <= m_readdata;
+			
+
 
 				end if;
 

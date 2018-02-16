@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/camille/OneDrive - McGill University/P2_pipeline
 Ecache
-Z0 w1517422381
+Z0 w1518822889
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -18,13 +18,13 @@ Z5 8C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd
 Z6 FC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd
 l0
 L5
-V3ZYLNEDCB4o]EBl2SD6f12
-!s100 C<;HKM7M38>>4jE0Q0h@Q2
+VZS@Co;UiOCmTX^8Jm8SRX0
+!s100 j[l3Q_nSFb5Ta9A=jI9gQ1
 Z7 OV;C;10.5c;63
 32
-Z8 !s110 1517422447
+Z8 !s110 1518822893
 !i10b 1
-Z9 !s108 1517422446.000000
+Z9 !s108 1518822893.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd|
 Z11 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd|
 !i113 1
@@ -41,9 +41,9 @@ V1^=]mM1mT8zan71G@kTjD3
 !s100 R0PknVCk6M1E1=hImK8j62
 R7
 32
-R8
+!s110 1517422447
 !i10b 1
-R9
+!s108 1517422446.000000
 R10
 R11
 !i113 1
@@ -65,9 +65,9 @@ R7
 32
 R8
 !i10b 1
-Z17 !s108 1517422447.000000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
-Z19 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
+Z18 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
 !i113 1
 R12
 R13
@@ -84,31 +84,31 @@ R7
 32
 R8
 !i10b 1
+R9
 R17
 R18
-R19
 !i113 1
 R12
 R13
 Ememory
-Z20 w1485501980
+Z19 w1518538051
 R1
 R2
 R3
 R4
-Z21 8C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd
-Z22 FC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd
+Z20 8C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd
+Z21 FC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd
 l0
 L6
-V3LP4`=ezmehUVN:f8HSal1
-!s100 TL`MNK5NTn0=f?i`Ph2JS3
+VSmcKHJIFZ;hmLCVdU:@Td2
+!s100 A<dCSOSV1T8n]Ngmi8Rz?3
 R7
 32
 R8
 !i10b 1
-R17
-Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd|
-Z24 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd|
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd|
+Z23 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd|
 !i113 1
 R12
 R13
@@ -116,23 +116,23 @@ Artl
 R1
 R2
 R3
-DEx4 work 6 memory 0 22 3LP4`=ezmehUVN:f8HSal1
+DEx4 work 6 memory 0 22 SmcKHJIFZ;hmLCVdU:@Td2
 l29
 L23
-VRGS>@C^TliVBWJiQY=8il2
-!s100 Fl5=Y6J][VGa6l_6YBKG33
+VRbm7XBK5PCMzb?<P6gE=50
+!s100 7?6Zif6PYj<TD21@n;X8T0
 R7
 32
 R8
 !i10b 1
-R17
+R9
+R22
 R23
-R24
 !i113 1
 R12
 R13
 Ememory_tb
-R20
+Z24 w1485501980
 R1
 R2
 R3
@@ -145,11 +145,11 @@ V_kiS2gc@klE4Vk3RdCF4^2
 !s100 K:h_7;_e46:2;TAj@4dAB3
 R7
 32
-Z27 !s110 1517422448
+R8
 !i10b 1
-Z28 !s108 1517422448.000000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
-Z30 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
+Z28 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
 !i113 1
 R12
 R13
@@ -157,18 +157,18 @@ Abehaviour
 R1
 R2
 R3
-Z31 DEx4 work 9 memory_tb 0 22 _kiS2gc@klE4Vk3RdCF4^2
+Z29 DEx4 work 9 memory_tb 0 22 _kiS2gc@klE4Vk3RdCF4^2
 l38
 L8
-Z32 VAIIG6V5IXNH>AnecMF_ib3
-Z33 !s100 :i96VH_8DL4G91ZkR7MdH1
+Z30 VAIIG6V5IXNH>AnecMF_ib3
+Z31 !s100 :i96VH_8DL4G91ZkR7MdH1
 R7
 32
-R27
+R8
 !i10b 1
+R9
+R27
 R28
-R29
-R30
 !i113 1
 R12
 R13
