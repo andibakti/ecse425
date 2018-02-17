@@ -37,41 +37,47 @@ architecture arch of cache is
 	signal ram: mem_array;
 	signal rowFound : std_logic_vector(137 downto 0);
 	signal default_waitrequest : std_logic := '1';
+	type state_type is (default, write_valid, write_invalid, read_valid, read_invalid_dirty);
+	signal next_state, current_state: state_type;
 
 	--bit table
-	----------------------------------------------------------------------------
-	--137 Valid | 136 Dirty | 135 	Tag	   128 | 127	 	Block Data		0 --
-	----------------------------------------------------------------------------
+	----------------------------------------------------------------------
+	--|137 Valid | 136 Dirty | 135   Tag   128 | 127     Block Data     0 |
+	----------------------------------------------------------------------
 
 
 	-- How data is stored (Big Endian)
 	-- Word table stored in data block
-	---_______________________________________________
-	--| 127 	96 | 95		64 | 65		32 | 31 	0 |
-	--|-----------------------------------------------|
+	------------------------------------------
+	--| 127   96 | 95   64 | 65   32 | 31   0 |
+	------------------------------------------
+
 
 begin
 	
-	type state_type is (default, write_valid, write_invalid, read_valid, read_invalid_dirty);
-	signal next_state, current_state: state_type;
-	
-	states: process (clk, reset)
+	--go to next state at rising edge 
+	--asynchronous reset
+	states: process (clock, reset)
 	begin
-		if (reset='1') then
+		if (reset = '1') then
             		current_state <= S0;
-		elsif (clk'event and clk='0') then
+		elsif (rising_edge(clock)) then
 		   	current_state <= next_state;
 		end if;
 	end process;
 
+	--
+	--
 	state_logic: process(current_state, s_addr, s_read, s_write)
 	begin
 		case current_state is
 
-
+			--	In default we check if there is a read, write, or nothing.
+			-- 	Depending on this input and if all the conditions match
+			--	then we determine the correct next state.
 			when default =>	--do all checks
 
-						s_waitrequest <= '1'; 	--data is ready
+						s_waitrequest <= '1'; 	--waiting for requests
 
 							rowFound <= ram(to_integer(unsigned(s_addr(6 downto 2))));	-- 5 bits needed to find the correct index in a 4096 bit (word aligned)
 
@@ -89,11 +95,11 @@ begin
 								end if;
 
 							elsif(s_read = '1') then
-								if(rowFound(137) = '1') then
+								if(rowFound(137) = '1') then --ie is the bit valid? (1 = a hit)
 									if(rowFound(135 downto 128) = s_addr(14 downto 7)) then	--check if the tag is the same
 										next_state <= read_valid;
 									else
-										if(rowFound(135) = '1') then --ie is the bit dirty(1 = a hit)
+										if(rowFound(135) = '1') then --ie is the bit dirty
 											next_state <= read_invalid_dirty;
 										else
 											next_state <= read_invalid;
@@ -104,6 +110,10 @@ begin
 												
 								end if;
 							end if;
+
+			--	If the block is found and valid we write to the correct word and 
+			--	set the wait request to be '0'.
+			--	
 			when write_valid =>	
 						case (s_addr(1 downto 0)) is
 							when "00" => rowFound(31 downto 0)  <= s_writedata;
@@ -115,12 +125,14 @@ begin
 
 						next_state <= default;
 
+			-- If the block is not in the cache (or invalid), we load from memory
 			when write_invalid =>
-						--load block from memory, avalon interface
+						--load block from memory, avalon interface + fsm-write
 						if(read_state = done) then ---------------------------
 
 							next_state <= write_valid;
 						end if;
+
 			when read_valid =>
 						-- select the word to be read
 						case (s_addr(1 downto 0)) is
@@ -133,42 +145,44 @@ begin
 						s_waitrequest <= '0'; 	--data is on the bus 
 						next_state <= default;
 			when read_invalid =>
-						--load block from memory, avalon interface
+						--load block from memory, avalon interface+fsm_read
 						if(read_state = done) then ---------------------------
 
 							next_state <= read_valid;
 						end if;
 
 			when read_invalid_dirty =>
-						--actually write to mem the old block
+						--first write to mem the old block then read (which is done in read_invalid state)
 						if(write_state = done) then ---------------------------
 							next_state <= read_invalid;
 						end if;
 
 			end case;
-	end process;
+	end process; --end of state_logic fsm-------------------------------------------------------------------
 
+
+	-- read fsm for the avalon interface
 	read_process: process(s_addr, m_waitrequest)
 
 		if(counter = '16') then
-			--set read state to done
 			next_state_read <= done_read;
-			counter <= '0';
+			counter <= '0';		 			 --reset counter
 		elsif( m_waitrequest = '0') then
+			next_state_read <= reading;
 			counter <= counter + 1;
 			ram(to_integer(unsigned(s_addr(6 downto 2))))
-			ram() <= m_readdata;		---------
+			ram() <= m_readdata;
 		else 
 			m_read <= '1';
 			m_addr <= to_integer(unsigned(s_addr) + counter);
 		end if;
 
+		read_state <= default
 
-						write_state <= default
-
+	end process; --end of the read_process
 
 						--only up here dont look down
-						
+
 -------------------------------------------------------------------------------------------------------------------------------------
 
 	process: process(clock, s_addr, s_write)

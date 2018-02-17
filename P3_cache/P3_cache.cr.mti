@@ -7,6 +7,46 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Compiling entity memory_tb
 -- Compiling architecture behaviour of memory_tb
 
+} {} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cache
+-- Compiling architecture arch of cache
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(125): Signal "s_addr" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type std.STANDARD.INTEGER.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(56): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(139): Signal "s_addr" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type std.STANDARD.INTEGER.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(56): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(145): Type error resolving infix expression "&" as type std.STANDARD.INTEGER.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(56): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(150): Type error resolving infix expression "&" as type std.STANDARD.INTEGER.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(56): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(155): Type error resolving infix expression "&" as type std.STANDARD.INTEGER.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(56): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(160): Type error resolving infix expression "&" as type std.STANDARD.INTEGER.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(56): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(69): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(95): (vcom-1272) Length of expected is 8; length of actual is 32.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(110): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(127): (vcom-1272) Length of expected is 32; length of actual is 8.
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(141): (vcom-1272) Length of expected is 32; length of actual is 8.
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(147): (vcom-1272) Length of expected is 32; length of actual is 8.
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(152): (vcom-1272) Length of expected is 32; length of actual is 8.
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(157): (vcom-1272) Length of expected is 32; length of actual is 8.
+** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(162): (vcom-1272) Length of expected is 32; length of actual is 8.
+** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(176): VHDL Compiler exiting
+
+} {9.0 22.0 23.0 24.0 30.0 31.0} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture rtl of memory
+
 } {} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD
