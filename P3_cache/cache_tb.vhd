@@ -115,7 +115,84 @@ end process;
 test_process : process
 begin
 
--- put your tests here
+-- test all possible cases of the cache fsm
+
+
+-- the binary comments correspond to the cases:
+-- read/write - valid/notvalid - dirty/not dirty - tag equal/tagnotequal
+
+-- 0   0   0   0
+REPORT "Testing for write, not valid, not dirty, tag not equal";
+	WAIT FOR 1 * clk_period;
+	--ASSERT (s_op1 = 3) REPORT "First clock cycle, op1 should be 3" SEVERITY ERROR;
+
+
+
+-- 0   0   0   1
+REPORT "Testing for write, not valid, not dirty, tag equal";
+
+
+-- 0   0   1   0
+--Not testing for write, not valid, dirty, tag not equal because impossible
+
+
+-- 0   0   1   1
+--Not testing for write, not valid, dirty, tag equal because impossible
+
+-- 0   1   0   0
+REPORT "Testing for write, valid, not dirty, tag not equal";
+
+
+-- 0   1   0   1
+REPORT "Testing for write, valid, not dirty, tag equal";
+
+
+-- 0   1   1   0
+REPORT "Testing for write, valid, dirty, tag not equal";
+
+
+-- 0   1   1   1
+REPORT "Testing for write, valid, dirty, tag equal";
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+-- 1   0   0   0
+REPORT "Testing for read, not valid, not dirty, tag not equal";
+
+
+-- 1   0   0   1
+REPORT "Testing for read, not valid, not dirty, tag equal";
+
+
+-- 1   0   1   0
+--Not testing for read, not valid, dirty, tag not equal because impossible
+
+-- 1   0   1   1
+--Not testing for read, not valid, dirty, tag equal because impossible
+
+
+-- 1   1   0   0
+REPORT "Testing for read, valid, not dirty, tag not equal";
+
+
+-- 1   1   0   1
+REPORT "Testing for read, valid, not dirty, tag equal";
+
+
+-- 1   1   1   0
+REPORT "Testing for read, valid, dirty, tag not equal";
+
+
+-- 1   1   1   1
+REPORT "Testing for read, valid, dirty, tag equal";
+
+
+
 	
 end process;
 	
