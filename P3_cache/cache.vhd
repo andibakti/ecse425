@@ -93,12 +93,12 @@ begin
 
 						s_waitrequest <= '1'; 	--waiting for requests
 
-							rowFound <= ram(to_integer(unsigned(s_addr(6 downto 2))));	-- 5 bits needed to find the correct index in a 4096 bit (word aligned)
+							rowFound <= ram(to_integer(unsigned(s_addr(8 downto 4))));	-- 5 bits needed to find the correct index in a 4096 bit (word aligned)
 
 							if(s_write = '1') then
 
 								--go to write state
-								if(rowFound(135 downto 128) = s_addr(14 downto 7)) then	--check if the tag is the same
+								if(rowFound(135 downto 128) = s_addr(14 downto 9)) then	--check if the tag is the same
 									if(rowFound(137) = '1') then --ie is the bit valid? (1 = a hit)
 										next_state <= write_valid;
 									else
@@ -110,7 +110,7 @@ begin
 
 							elsif(s_read = '1') then
 								if(rowFound(137) = '1') then --ie is the bit valid? (1 = a hit)
-									if(rowFound(135 downto 128) = s_addr(14 downto 7)) then	--check if the tag is the same
+									if(rowFound(135 downto 128) = s_addr(14 downto 9)) then	--check if the tag is the same
 										next_state <= read_valid;
 									else
 										if(rowFound(135) = '1') then --ie is the bit dirty
@@ -129,10 +129,10 @@ begin
 			--	set the wait request to be '0'.
 			--
 			when write_valid =>
-						case (s_addr(1 downto 0)) is
-							when "00"   => rowFound(31 downto 0)    <= s_writedata;
-							when "01"   => rowFound(63 downto 32)   <= s_writedata;
-							when "10"   => rowFound(95 downto 64)   <= s_writedata;
+						case (s_addr(3 downto 0)) is
+							when "0000"   => rowFound(31 downto 0)    <= s_writedata;
+							when "0100"   => rowFound(63 downto 32)   <= s_writedata;
+							when "1000"   => rowFound(95 downto 64)   <= s_writedata;
 							when others => rowFound(127 downto 96)  <= s_writedata;
 						end case;
 						s_waitrequest <= '0'; 	--data is on the bus
@@ -149,10 +149,10 @@ begin
 
 			when read_valid =>
 						-- select the word to be read
-						case (s_addr(1 downto 0)) is
-							when "00"   =>  s_readdata <= rowFound(31 downto 0);
-							when "01"   =>  s_readdata <= rowFound(63 downto 32);
-							when "10"   =>  s_readdata <= rowFound(95 downto 64);
+						case (s_addr(3 downto 0)) is
+							when "0000"   =>  s_readdata <= rowFound(31 downto 0);
+							when "0100"   =>  s_readdata <= rowFound(63 downto 32);
+							when "1000"   =>  s_readdata <= rowFound(95 downto 64);
 							when others =>  s_readdata <= rowFound(127 downto 96);
 						end case;
 
@@ -186,12 +186,12 @@ begin
 				end if;
 			 -- Do nothing
 			when reading =>
-				row <= ram(to_integer(unsigned(s_addr(6 downto 2))));
+				row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
 				if(r_counter = 16) then
 					row(137) <= '1'; -- Valid
 					row(136) <= '0'; -- Not dirty
-					row(135 downto 128) <= s_addr(14 downto 7); -- Tag
-					ram(to_integer(unsigned(s_addr(6 downto 2)))) <= row;
+					row(135 downto 128) <= s_addr(14 downto 9); -- Tag
+					ram(to_integer(unsigned(s_addr(8 downto 4)))) <= row;
 					next_state_read <= done_read;
 					r_counter <= 0;		 			 --reset r_counter
 				elsif( m_waitrequest = '0') then

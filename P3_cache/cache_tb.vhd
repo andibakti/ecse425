@@ -66,7 +66,7 @@ signal m_read : std_logic;
 signal m_readdata : std_logic_vector (7 downto 0);
 signal m_write : std_logic;
 signal m_writedata : std_logic_vector (7 downto 0);
-signal m_waitrequest : std_logic; 
+signal m_waitrequest : std_logic:= '0'; 
 
 begin
 
