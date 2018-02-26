@@ -126,44 +126,16 @@ WAIT FOR 1 * clk_period;
 -- 32 bit adresses, so follow the x"0000 0000" format
 
 
--- 1   0   0   0
-REPORT "First read, invalid, clean, miss";
-s_read <='1'; --read to ensure write was successful
-s_addr <= X"00F00000";
-WAIT UNTIL falling_edge(s_waitrequest); 
-WAIT FOR 1 * clk_period; 
---WE ARE ASSUMING MEMORY IS INITIALIZED TO FFFFFFFF
-ASSERT ( s_readdata = X"FFFFFFFF") REPORT "Write unsuccessful" SEVERITY ERROR;
-
-s_addr <= X"00F00004"; 
-WAIT UNTIL falling_edge(s_waitrequest); 
-WAIT FOR 1 * clk_period; 
-
-ASSERT ( s_readdata = X"FFFFFFFF") REPORT "Write unsuccessful" SEVERITY ERROR;
-
-s_addr <= X"00F00008";
-WAIT UNTIL falling_edge(s_waitrequest); 
-WAIT FOR 1 * clk_period; 
-
-ASSERT ( s_readdata = X"FFFFFFFF") REPORT "Write unsuccessful" SEVERITY ERROR;
-
-s_addr <= X"00F0000C";
-WAIT UNTIL falling_edge(s_waitrequest); 
-WAIT FOR 1 * clk_period; 
-
-ASSERT ( s_readdata = X"FFFFFFFF") REPORT "Write unsuccessful" SEVERITY ERROR;
-s_read <='0';
-
-
-
 -- 0   0   0   0
-REPORT "First write, invalid, clean, miss"; --write an entire word to the cache
+REPORT "First write, invalid, clean, miss"; --write an entire block to the cache
 s_write <='1';
 s_writedata <= X"00000001"; --the x means hexadecimal value of "01"
 s_addr <= X"00001000"; 
 WAIT UNTIL falling_edge(s_waitrequest); -- wait until request = 0
 WAIT FOR 1 * clk_period; --on next clock cycle
 
+-- 0   1   1   1
+REPORT "First write, valid, dirty, hit"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but in the cache, so hit
 s_writedata <= X"00000002"; 
 s_addr <= X"00001004";
 WAIT UNTIL falling_edge(s_waitrequest); -- wait until request = 0
@@ -181,8 +153,8 @@ WAIT FOR 1 * clk_period; --on next clock cycle
 s_write <='0';
 
 
--- 1   1   0   1
-REPORT "Read what was written, valid, clean, hit ";
+-- 1   1   1   1
+REPORT "Read what was written, valid, dirty, hit ";
 s_read <='1'; --read to ensure write was successful
 s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest); 
@@ -210,55 +182,55 @@ ASSERT ( s_readdata = X"00000004") REPORT "Write unsuccessful" SEVERITY ERROR;
 s_read <='0';
 
 
-
-
--- 0   1   1   0
-REPORT "Write to same cache location but different tag: valid, dirty, miss";
+-- 0   0   1   0
+REPORT "Write to same cache location but different tag: invalid, dirty, miss";
 s_write <='1';
 s_writedata <= X"00000011"; 
-s_addr <= X"00002000"; --TO DO FIGURE OUT THE CORRECT ADDRESS WITH SAME OFFSET AND INDEX BUT DIFFERENT TAG
+s_addr <= X"00001020"; --TO DO FIGURE OUT THE CORRECT ADDRESS WITH SAME OFFSET AND INDEX BUT DIFFERENT TAG
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
+-- 0   1   1   1
+REPORT "Continue writing from same block, so now: valid, dirty, hit";
 s_writedata <= X"00000012"; 
-s_addr <= X"00002004";
+s_addr <= X"00001024";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
 s_writedata <= X"00000013";
-s_addr <= X"00002008"; 
+s_addr <= X"00001028"; 
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
 s_writedata <= X"00000014";
-s_addr <= X"0000200C";
+s_addr <= X"0000102C";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 s_write <='0';
-
+-- now since this one has been swapped with the previous block, remember to check if it was succesfully written back
 
 -- 1   1   1   1
 REPORT "Read what was written, valid, dirty, hit";
 s_read <='1'; --read to ensure write was successful
-s_addr <= X"00002000";
+s_addr <= X"00001020";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
 ASSERT ( s_readdata = X"00000011") REPORT "Write unsuccessful" SEVERITY ERROR;
 
-s_addr <= X"00002004"; 
+s_addr <= X"00001024"; 
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period; 
 
 ASSERT ( s_readdata = X"00000012") REPORT "Write unsuccessful" SEVERITY ERROR;
 
-s_addr <= X"00002008";
+s_addr <= X"00001028";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
 ASSERT ( s_readdata = X"00000013") REPORT "Write unsuccessful" SEVERITY ERROR;
 
-s_addr <= X"0000200C";
+s_addr <= X"0000102C";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
@@ -266,9 +238,8 @@ ASSERT ( s_readdata = X"00000014") REPORT "Write unsuccessful" SEVERITY ERROR;
 s_read <='0';
 
 
-
--- 1   1   0   0
-REPORT "Read from memory, triggers block replacement, valid, clean, miss"; --the reading itself is clean, but the block being replaced is dirty
+-- 1   0   0   0
+REPORT "Read from memory what we replaced in previous test, invalid, clean, miss";
 s_read <='1';
 s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest); 
@@ -276,6 +247,8 @@ WAIT FOR 1 * clk_period;
 
 ASSERT ( s_readdata = X"00000001") REPORT "Write unsuccessful" SEVERITY ERROR;
 
+-- 1   1   0   1
+REPORT "Continue reading words from same block, valid, clean, hit";
 s_addr <= X"00001004"; 
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
@@ -297,13 +270,15 @@ s_read <='0';
 
 
 -- 0   1   0   1
-REPORT "Write to what is in the cache already, valid, clean, hit"; --block was clean, but writing to makes it dirty
+REPORT "Write to what is in the cache already, valid, clean, hit";
 s_write <='1';
 s_writedata <= X"0000004A";
 s_addr <= X"00001000"; 
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
+-- 0   1   1   1
+REPORT "Write to what is in the cache already, valid, dirty, hit"; --block was clean, but writing to makes it dirty
 s_writedata <= X"0000004B"; 
 s_addr <= X"00001004";
 WAIT UNTIL falling_edge(s_waitrequest);
@@ -366,7 +341,7 @@ REPORT "Testing for write, not valid, not dirty, tag not equal";
 REPORT "Testing for write, not valid, not dirty, tag equal";
 
 
--- 0   0   1   0
+-- 0   0   1   0 DONE
 --Not testing for write, not valid, dirty, tag not equal because impossible
 
 
@@ -381,11 +356,11 @@ REPORT "Testing for write, valid, not dirty, tag not equal";
 REPORT "Testing for write, valid, not dirty, tag equal";
 
 
--- 0   1   1   0 DONE
+-- 0   1   1   0 
 REPORT "Testing for write, valid, dirty, tag not equal";
 
 
--- 0   1   1   1
+-- 0   1   1   1 DONE
 REPORT "Testing for write, valid, dirty, tag equal";
 
 
@@ -410,7 +385,7 @@ REPORT "Testing for read, not valid, not dirty, tag equal";
 --Not testing for read, not valid, dirty, tag equal because impossible
 
 
--- 1   1   0   0 DONE
+-- 1   1   0   0 
 REPORT "Testing for read, valid, not dirty, tag not equal";
 
 
