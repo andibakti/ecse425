@@ -7,16 +7,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Compiling entity memory_tb
 -- Compiling architecture behaviour of memory_tb
 
-} {} {}} cache.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache.vhd}
+} {} {}} cache_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity cache
--- Compiling architecture arch of cache
+-- Compiling entity cache_tb
+-- Compiling architecture behavior of cache_tb
 
-} {} {}} memory.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory.vhd}
+} {} {}} memory.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -24,15 +24,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Loading package NUMERIC_STD
 -- Compiling entity memory
 -- Compiling architecture rtl of memory
-
-} {} {}} memory_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory_tb.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity memory_tb
--- Compiling architecture behaviour of memory_tb
 
 } {} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
@@ -65,14 +56,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 ** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(162): (vcom-1272) Length of expected is 32; length of actual is 8.
 ** Error: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd(176): VHDL Compiler exiting
 
-} {9.0 22.0 23.0 24.0 30.0 31.0} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd}
+} {9.0 22.0 23.0 24.0 30.0 31.0} {}} memory_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity memory
--- Compiling architecture rtl of memory
+-- Compiling entity memory_tb
+-- Compiling architecture behaviour of memory_tb
 
 } {} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
@@ -83,5 +74,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Compiling entity cache_tb
 -- Compiling architecture behavior of cache_tb
 ** Warning: C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd(120): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture rtl of memory
 
 } {} {}}

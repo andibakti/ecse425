@@ -230,9 +230,7 @@ begin
 			end case;
 	end process; --end of the write_process
 
-	m_addr <= to_integer(unsigned(s_addr) + w_counter + r_counter);
+	m_addr <= to_integer(unsigned(s_addr(14 downto 0)) + w_counter + r_counter);
 
-
--- make circuits here
 
 end arch;

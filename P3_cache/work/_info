@@ -9,24 +9,24 @@ z2
 cModel Technology
 dC:/Users/camille/OneDrive - McGill University/P2_pipeline
 Ecache
-Z0 w1519426285
+Z0 w1519657007
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dC:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache
-Z5 8C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache.vhd
-Z6 FC:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache.vhd
+Z4 dC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache
+Z5 8C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd
+Z6 FC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd
 l0
 L5
 VZS@Co;UiOCmTX^8Jm8SRX0
 !s100 j[l3Q_nSFb5Ta9A=jI9gQ1
 Z7 OV;C;10.5c;63
 32
-Z8 !s110 1519655705
+Z8 !s110 1519657310
 !i10b 1
-Z9 !s108 1519655705.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache.vhd|
-Z11 !s107 C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache.vhd|
+Z9 !s108 1519657310.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd|
+Z11 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -50,24 +50,24 @@ R11
 R12
 R13
 Ecache_tb
-Z14 w1519655649
+R0
 R1
 R2
 R3
 R4
-Z15 8C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache_tb.vhd
-Z16 FC:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache_tb.vhd
+Z14 8C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd
+Z15 FC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd
 l0
 L5
 V7E4^229J[_6oaW@8H^^z00
 !s100 N8hTJD?ado=UI;TQE4:Ql3
 R7
 32
-Z17 !s110 1519655706
+Z16 !s110 1519657311
 !i10b 1
-Z18 !s108 1519655706.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
-Z20 !s107 C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
+Z17 !s108 1519657311.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
+Z19 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/cache_tb.vhd|
 !i113 1
 R12
 R13
@@ -78,37 +78,37 @@ R3
 DEx4 work 8 cache_tb 0 22 7E4^229J[_6oaW@8H^^z00
 l71
 L8
-ViAklYgVZ4aP=N5JY@eUX:1
-!s100 zVnQ1nW6I8hbSjELJSKaK3
+VXM`0D[_<caJR]U[oKY<_G2
+!s100 >5=G7fg0<a`Fd>;MRka7S0
 R7
 32
-R17
+R16
 !i10b 1
+R17
 R18
 R19
-R20
 !i113 1
 R12
 R13
 Ememory
-Z21 w1518819906
+Z20 w1518538051
 R1
 R2
 R3
 R4
-Z22 8C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory.vhd
-Z23 FC:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory.vhd
+Z21 8C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd
+Z22 FC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd
 l0
 L6
 VSmcKHJIFZ;hmLCVdU:@Td2
 !s100 A<dCSOSV1T8n]Ngmi8Rz?3
 R7
 32
-R17
+R16
 !i10b 1
-R18
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory.vhd|
-Z25 !s107 C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory.vhd|
+R17
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd|
+Z24 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory.vhd|
 !i113 1
 R12
 R13
@@ -123,33 +123,33 @@ VRbm7XBK5PCMzb?<P6gE=50
 !s100 7?6Zif6PYj<TD21@n;X8T0
 R7
 32
-R17
+R16
 !i10b 1
-R18
+R17
+R23
 R24
-R25
 !i113 1
 R12
 R13
 Ememory_tb
-R21
+Z25 w1485501980
 R1
 R2
 R3
 R4
-Z26 8C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory_tb.vhd
-Z27 FC:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory_tb.vhd
+Z26 8C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd
+Z27 FC:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd
 l0
 L5
 V_kiS2gc@klE4Vk3RdCF4^2
 !s100 K:h_7;_e46:2;TAj@4dAB3
 R7
 32
-R17
+Z28 !s110 1519657312
 !i10b 1
-R18
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
-Z29 !s107 C:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
+Z29 !s108 1519657312.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
+Z31 !s107 C:/Users/camille/workspace/ECSE 425/ecse425/P3_cache/memory_tb.vhd|
 !i113 1
 R12
 R13
@@ -157,18 +157,18 @@ Abehaviour
 R1
 R2
 R3
-Z30 DEx4 work 9 memory_tb 0 22 _kiS2gc@klE4Vk3RdCF4^2
+Z32 DEx4 work 9 memory_tb 0 22 _kiS2gc@klE4Vk3RdCF4^2
 l38
 L8
-Z31 VAIIG6V5IXNH>AnecMF_ib3
-Z32 !s100 :i96VH_8DL4G91ZkR7MdH1
+Z33 VAIIG6V5IXNH>AnecMF_ib3
+Z34 !s100 :i96VH_8DL4G91ZkR7MdH1
 R7
 32
-R17
-!i10b 1
-R18
 R28
+!i10b 1
 R29
+R30
+R31
 !i113 1
 R12
 R13
