@@ -25,7 +25,7 @@ port(
 	m_readdata : in std_logic_vector (7 downto 0);
 	m_write : out std_logic;
 	m_writedata : out std_logic_vector (7 downto 0);
-	m_waitrequest : in std_logic
+	m_waitrequest : in std_logic:= '0'
 );
 end cache;
 
@@ -40,7 +40,7 @@ architecture arch of cache is
 
 
 	signal row : std_logic_vector(137 downto 0);
-	signal r_counter,  w_counter : integer;
+	signal r_counter,  w_counter : integer := 0;
 
 	type read_state_type is (default, reading, done_read);
 	signal next_state_read, read_state: read_state_type := default;
@@ -87,6 +87,8 @@ begin
 				for i in 0 to 31 loop
 					ram(i)(137) <= '0';
 				end loop;
+				next_state <= default;
+
 			when default =>	--do all checks
 
 						s_waitrequest <= '1'; 	--waiting for requests
@@ -160,6 +162,8 @@ begin
 						if(read_state = done_read) then ---------------------------
 
 							next_state <= read_valid;
+						else
+							
 						end if;
 
 			when read_invalid_dirty =>
@@ -173,7 +177,7 @@ begin
 
 
 	-- read fsm for the avalon interface
-	read_process: process(s_addr, m_waitrequest)
+	read_process: process(s_addr, m_waitrequest, current_state, m_waitrequest)
 	begin
 		case read_state is
 			when default =>
@@ -193,10 +197,11 @@ begin
 				elsif( m_waitrequest = '0') then
 					next_state_read <= reading;
 					r_counter <= r_counter + 1;
-					row(8*(10 + r_counter) downto 8*(10 + r_counter - 1)) <= m_readdata; -- 10 is the data offset in the block
+					row(8*(1 + r_counter)-1 downto 8*(r_counter)) <= m_readdata; -- 10 is the data offset in the block
+					m_read <= '0';
+				--else
 				else
 					m_read <= '1';
-
 				end if;
 
 			when done_read =>
