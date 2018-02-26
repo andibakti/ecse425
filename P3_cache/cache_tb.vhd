@@ -115,26 +115,67 @@ end process;
 test_process : process
 begin
 
--- test all possible cases of the cache fsm
+-- begin by setting up
+reset <= '1';
+WAIT FOR 1 * clk_period;
+reset <= '0';
+s_read <='0';
+s_write <='0';
+WAIT FOR 1 * clk_period;
 
+-- 0   0   x   x
+REPORT "First write";
+s_write <='1';
+s_writedata <= X"01"; --the x means hexadecimal value of "01"
+s_addr <= X"12";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+s_write <='0';
+
+-- 1   1   x   1
+REPORT "Read what was written"
+s_read <='1'; --read to ensure write was successful
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+s_read <='0';
+
+ASSERT ( s_readdata = X"01") REPORT "Write unsuccessful" SEVERITY ERROR;
+
+-- 0   1   x   1
+REPORT "Write to same address";
+s_write <='1';
+s_writedata <= X"02"; --the x means hexadecimal value of "01"
+s_addr <= X"12";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+s_write <='0';
+
+-- 1   1   x   1
+REPORT "Read what was written"
+s_read <='1'; --read to ensure write was successful
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+s_read <='0';
+
+ASSERT ( s_readdata = X"02") REPORT "Write unsuccessful" SEVERITY ERROR;
+
+
+
+
+
+-- test all possible cases of the cache fsm
 
 -- the binary comments correspond to the cases:
 -- read/write - valid/notvalid - dirty/not dirty - tag equal/tagnotequal
 
 
+
 -- 0   0   0   0
 REPORT "Testing for write, not valid, not dirty, tag not equal";
-    s_read <='0';
-    s_write <='1';
-    s_writedata <= X"01"; --the x means hexadecimal value of "12"
-    s_addr <= X"12";
-    WAIT FOR 1 * clk_period;
-    --or wait until request = 0
-    s_read <='1';
-    s_write <='0';
-    WAIT FOR 1 * clk_period;
-    ASSERT ( s_readdata = X"01") REPORT "First clock cycle, op1 should be 3" SEVERITY ERROR;
---idk if this works lol
 
 -- 0   0   0   1
 REPORT "Testing for write, not valid, not dirty, tag equal";
