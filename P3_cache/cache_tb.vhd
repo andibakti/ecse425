@@ -124,10 +124,28 @@ s_write <='0';
 WAIT FOR 1 * clk_period;
 
 -- 0   0   x   x
-REPORT "First write";
+REPORT "First write"; --write an entire word to the cache
 s_write <='1';
 s_writedata <= X"01"; --the x means hexadecimal value of "01"
-s_addr <= X"12";
+s_addr <= X"10";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+
+s_writedata <= X"02"; 
+s_addr <= X"14";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+
+s_writedata <= X"03";
+s_addr <= X"18";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+
+s_writedata <= X"04";
+s_addr <= X"1C";
 wait until rising_edge(s_waitrequest); 
 wait until falling_edge(s_waitrequest); -- wait until request = 0
 wait until rising_edge(clock); --on next clock cycle
@@ -136,18 +154,43 @@ s_write <='0';
 -- 1   1   x   1
 REPORT "Read what was written"
 s_read <='1'; --read to ensure write was successful
+s_addr <= X"10";
 wait until rising_edge(s_waitrequest); 
 wait until falling_edge(s_waitrequest); -- wait until request = 0
 wait until rising_edge(clock); --on next clock cycle
-s_read <='0';
 
 ASSERT ( s_readdata = X"01") REPORT "Write unsuccessful" SEVERITY ERROR;
 
+s_addr <= X"14";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+
+ASSERT ( s_readdata = X"02") REPORT "Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"18";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+
+ASSERT ( s_readdata = X"03") REPORT "Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"1C";
+wait until rising_edge(s_waitrequest); 
+wait until falling_edge(s_waitrequest); -- wait until request = 0
+wait until rising_edge(clock); --on next clock cycle
+
+ASSERT ( s_readdata = X"04") REPORT "Write unsuccessful" SEVERITY ERROR;
+s_read <='0';
+
+
+
+
 -- 0   1   x   1
-REPORT "Write to same address";
+REPORT "Overwrite to same address";
 s_write <='1';
-s_writedata <= X"02"; --the x means hexadecimal value of "01"
-s_addr <= X"12";
+s_writedata <= X"11"; 
+s_addr <= X"10";
 wait until rising_edge(s_waitrequest); 
 wait until falling_edge(s_waitrequest); -- wait until request = 0
 wait until rising_edge(clock); --on next clock cycle
@@ -161,7 +204,7 @@ wait until falling_edge(s_waitrequest); -- wait until request = 0
 wait until rising_edge(clock); --on next clock cycle
 s_read <='0';
 
-ASSERT ( s_readdata = X"02") REPORT "Write unsuccessful" SEVERITY ERROR;
+ASSERT ( s_readdata = X"11") REPORT "Write unsuccessful" SEVERITY ERROR;
 
 
 
