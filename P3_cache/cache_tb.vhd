@@ -186,24 +186,24 @@ s_read <='0';
 REPORT "Write to same cache location but different tag: invalid, dirty, miss";
 s_write <='1';
 s_writedata <= X"00000011"; 
-s_addr <= X"00002000"; --TO DO FIGURE OUT THE CORRECT ADDRESS WITH SAME OFFSET AND INDEX BUT DIFFERENT TAG
+s_addr <= X"00001020"; --TO DO FIGURE OUT THE CORRECT ADDRESS WITH SAME OFFSET AND INDEX BUT DIFFERENT TAG
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
 -- 0   1   1   1
 REPORT "Continue writing from same block, so now: valid, dirty, hit";
 s_writedata <= X"00000012"; 
-s_addr <= X"00002004";
+s_addr <= X"00001024";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
 s_writedata <= X"00000013";
-s_addr <= X"00002008"; 
+s_addr <= X"00001028"; 
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
 s_writedata <= X"00000014";
-s_addr <= X"0000200C";
+s_addr <= X"0000102C";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 s_write <='0';
@@ -212,25 +212,25 @@ s_write <='0';
 -- 1   1   1   1
 REPORT "Read what was written, valid, dirty, hit";
 s_read <='1'; --read to ensure write was successful
-s_addr <= X"00002000";
+s_addr <= X"00001020";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
 ASSERT ( s_readdata = X"00000011") REPORT "Write unsuccessful" SEVERITY ERROR;
 
-s_addr <= X"00002004"; 
+s_addr <= X"00001024"; 
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period; 
 
 ASSERT ( s_readdata = X"00000012") REPORT "Write unsuccessful" SEVERITY ERROR;
 
-s_addr <= X"00002008";
+s_addr <= X"00001028";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
 ASSERT ( s_readdata = X"00000013") REPORT "Write unsuccessful" SEVERITY ERROR;
 
-s_addr <= X"0000200C";
+s_addr <= X"0000102C";
 WAIT UNTIL falling_edge(s_waitrequest); 
 WAIT FOR 1 * clk_period; 
 
