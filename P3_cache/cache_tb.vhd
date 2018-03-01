@@ -125,6 +125,13 @@ WAIT FOR 1 * clk_period;
 
 -- 32 bit adresses, so follow the x"0000 0000" format
 
+-- test all possible cases of the cache fsm
+
+-- the binary comments correspond to the cases:
+-- read/write - valid/notvalid - dirty/not dirty - tag equal/tagnotequal
+
+
+
 
 -- 0   0   0   0
 -- TEST 1: write an entire block to the cache
@@ -216,7 +223,7 @@ s_write <='0';
 -- TEST 4: Read data from test 5 to check if write was succesful
 REPORT "#4 Read what was written, valid, dirty, hit";
 s_read <='1'; 
-s_addr <= X"00000808";
+s_addr <= X"00000800";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
@@ -369,7 +376,7 @@ s_read <='0';
 REPORT "#9 Write to what is in the cache already, valid, clean, hit";
 s_write <='1';
 s_writedata <= X"0000004A";
-s_addr <= X"000001000";
+s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
@@ -512,90 +519,11 @@ ASSERT ( s_readdata = X"CCCCCCCC") REPORT "32: Write unsuccessful" SEVERITY ERRO
 s_read <='0';
 
 
-
-
--- test all possible cases of the cache fsm
-
--- the binary comments correspond to the cases:
--- read/write - valid/notvalid - dirty/not dirty - tag equal/tagnotequal
-
-
-
--- 0   0   0   0 DONE
-REPORT "Testing for write, not valid, not dirty, tag not equal";
-
--- 0   0   0   1 DONE
-REPORT "Testing for write, not valid, not dirty, tag equal";
-
-
--- 0   0   1   0 DONE
---Not testing for write, not valid, dirty, tag not equal because impossible
-
-
--- 0   0   1   1
---Not testing for write, not valid, dirty, tag equal because impossible
-
--- 0   1   0   0 DONE
-REPORT "Testing for write, valid, not dirty, tag not equal";
-
-
--- 0   1   0   1 DONE
-REPORT "Testing for write, valid, not dirty, tag equal";
-
-
--- 0   1   1   0
--- REPORT "Testing for write, valid, dirty, tag not equal";
-
-
--- 0   1   1   1 DONE
-REPORT "Testing for write, valid, dirty, tag equal";
-
-
-
-
-
-
---------------------------------------------------------------------------------------------------------------------
-
--- 1   0   0   0 DONE
-REPORT "Testing for read, not valid, not dirty, tag not equal";
-
-
--- 1   0   0   1 DONE
-REPORT "Testing for read, not valid, not dirty, tag equal";
-
-
--- 1   0   1   0
---Not testing for read, not valid, dirty, tag not equal because impossible
-
--- 1   0   1   1
---Not testing for read, not valid, dirty, tag equal because impossible
-
-
--- 1   1   0   0 DONE
-REPORT "Testing for read, valid, not dirty, tag not equal";
-
-
--- 1   1   0   1 DONE
-REPORT "Testing for read, valid, not dirty, tag equal";
-
-
--- 1   1   1   0
---REPORT "Testing for read, valid, dirty, tag not equal";
-
-
--- 1   1   1   1 DONE
-REPORT "Testing for read, valid, dirty, tag equal";
-
-
-
-
---------------------------------------------------------------------------------------------------------------------
+REPORT "DONE TESTING";
 
 
 --check if reset works
-REPORT "Testing for reset";
-
+--REPORT "Testing for reset";
 
 end process;
 
