@@ -77,7 +77,8 @@ begin
 
 	--
 	--
-	state_logic: process(current_state, s_read, s_write, read_state, write_state, ram, rowFound)
+	state_logic: process(current_state, s_read, s_write, read_state, 
+		write_state, s_addr, m_waitrequest, m_readdata, ram, rowFound)
 	begin
 		case current_state is
 
@@ -150,16 +151,64 @@ begin
 			-- If the block is not in the cache (or invalid), we load from memory
 			when write_invalid =>
 						--load block from memory, avalon interface + fsm-write
-						if(read_state = done_read) then ---------------------------
+						case read_state is
+							when default =>
+								if (current_state = write_invalid OR current_state = read_invalid) then
+									next_state_read <= reading;
+									--m_read <= '1';
+									row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
+								end if;
+							 -- Do nothing
+							when reading =>
+								if(r_counter = 16) then
+									row(135) <= '1'; -- Valid
+									row(134) <= '0'; -- Not dirty
+									row(133 downto 128) <= s_addr(14 downto 9); -- Tag
+									next_state_read <= done_read;
+									r_counter <= 0;		 			 --reset r_counter
+								elsif( m_waitrequest = '1') then
+									next_state_read <= reading;
+									r_counter <= r_counter + 1;
+									row(8*(1 + r_counter)-1 downto 8*(r_counter)) <= m_readdata; -- 10 is the data offset in the block
+									m_read <= '0';
+								--else
+								else
+									m_read <= '1';
+								end if;
 
-							next_state <= write_valid;
-						end if;
+							when done_read =>
+								next_state_read <= default;
+								ram(to_integer(unsigned(s_addr(8 downto 4))))<= row;
+								next_state <= write_valid;
+						end case;
 
 			when write_invalid_dirty =>
-						if(write_state = done_write) then ---------------------------
-							next_state <= write_invalid;
-						end if;
+							case write_state is
+								when default =>
+									if (current_state = write_invalid_dirty or current_state = read_invalid_dirty) then
+										next_state_write <= writing;
+										row2 <= ram(to_integer(unsigned(s_addr(8 downto 4))));
+										m_write <= '1';
+									end if;
+								 -- Do nothing
+								when writing =>
+									if(w_counter = 16) then
+										next_state_write <= done_write;
+										w_counter <= 0;		 			 --reset counter
+										row(134) <= '1'; -- Not dirty
+									elsif( m_waitrequest = '0') then
+										next_state_write <= writing;
+										w_counter <= w_counter + 1;
+									else
+										m_write <= '1';
+										m_writedata <= rowFound(8*(10 + w_counter) downto 8*(10 + w_counter - 1));
+									end if;
 
+								when done_write =>
+									ram(to_integer(unsigned(s_addr(8 downto 4))))<= row2;
+									next_state_write <= default;
+									next_state <= write_invalid;
+								end case;
 			when read_valid =>
 						-- select the word to be read
 						case (s_addr(3 downto 2)) is
@@ -172,86 +221,104 @@ begin
 						s_waitrequest <= '0'; 	--data is on the bus
 						next_state <= default;
 			when read_invalid =>
-						if(read_state = done_read) then ---------------------------
+					case read_state is
+						when default =>
+							if (current_state = write_invalid OR current_state = read_invalid) then
+								next_state_read <= reading;
+								--m_read <= '1';
+								row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
+							end if;
+						 -- Do nothing
+						when reading =>
+							if(r_counter = 16) then
+								row(135) <= '1'; -- Valid
+								row(134) <= '0'; -- Not dirty
+								row(133 downto 128) <= s_addr(14 downto 9); -- Tag
+								next_state_read <= done_read;
+								r_counter <= 0;		 			 --reset r_counter
+							elsif( m_waitrequest = '1') then
+								next_state_read <= reading;
+								r_counter <= r_counter + 1;
+								row(8*(1 + r_counter)-1 downto 8*(r_counter)) <= m_readdata; -- 10 is the data offset in the block
+								m_read <= '0';
+							--else
+							else
+								m_read <= '1';
+							end if;
 
+						when done_read =>
+							next_state_read <= default;
+							ram(to_integer(unsigned(s_addr(8 downto 4))))<= row;
 							next_state <= read_valid;
-						else
-							
-						end if;
+						end case;
 
 			when read_invalid_dirty =>
 						--first write to mem the old block then read (which is done in read_invalid state)
-						if(write_state = done_write) then ---------------------------
-							next_state <= read_invalid;
-						end if;
+						case write_state is
+							when default =>
+								if (current_state = write_invalid_dirty or current_state = read_invalid_dirty) then
+									next_state_write <= writing;
+									row2 <= ram(to_integer(unsigned(s_addr(8 downto 4))));
+									m_write <= '1';
+								end if;
+							 -- Do nothing
+							when writing =>
+								if(w_counter = 16) then
+									next_state_write <= done_write;
+									w_counter <= 0;		 			 --reset counter
+									row(134) <= '1'; -- Not dirty
+								elsif( m_waitrequest = '0') then
+									next_state_write <= writing;
+									w_counter <= w_counter + 1;
+								else
+									m_write <= '1';
+									m_writedata <= rowFound(8*(10 + w_counter) downto 8*(10 + w_counter - 1));
+								end if;
+
+							when done_write =>
+								ram(to_integer(unsigned(s_addr(8 downto 4))))<= row2;
+								next_state_write <= default;
+								next_state <= read_invalid;
+							end case;
 
 			end case;
 	end process; --end of state_logic fsm-------------------------------------------------------------------
 
 
 	-- read fsm for the avalon interface
-	read_process: process(s_addr, m_waitrequest, current_state, m_readdata, ram)
-	begin
-		case read_state is
-			when default =>
-				if (current_state = write_invalid OR current_state = read_invalid) then
-					next_state_read <= reading;
-					m_read <= '1';
-					row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
-				end if;
-			 -- Do nothing
-			when reading =>
-				if(r_counter = 16) then
-					row(135) <= '1'; -- Valid
-					row(134) <= '0'; -- Not dirty
-					row(133 downto 128) <= s_addr(14 downto 9); -- Tag
-					next_state_read <= done_read;
-					r_counter <= 0;		 			 --reset r_counter
-				elsif( m_waitrequest = '1') then
-					next_state_read <= reading;
-					r_counter <= r_counter + 1;
-					row(8*(1 + r_counter)-1 downto 8*(r_counter)) <= m_readdata; -- 10 is the data offset in the block
-					m_read <= '0';
-				--else
-				else
-					m_read <= '1';
-				end if;
-
-			when done_read =>
-				next_state_read <= default;
-				ram(to_integer(unsigned(s_addr(8 downto 4))))<= row;
-			end case;
-	end process; --end of the read_process
+	--read_process: process(s_addr, m_waitrequest, current_state, m_readdata, ram)
+	--begin
+	--end process; --end of the read_process
 
 	-- write fsm for the avalon interface
-	write_process: process(s_addr, m_waitrequest, current_state, m_readdata, ram)
-	begin
-		case write_state is
-			when default =>
-				if (current_state = write_invalid_dirty or current_state = read_invalid_dirty) then
-					next_state_write <= writing;
-					row2 <= ram(to_integer(unsigned(s_addr(8 downto 4))));
-					m_write <= '1';
-				end if;
-			 -- Do nothing
-			when writing =>
-				if(w_counter = 16) then
-					next_state_write <= done_write;
-					w_counter <= 0;		 			 --reset counter
-					row(134) <= '1'; -- Not dirty
-				elsif( m_waitrequest = '0') then
-					next_state_write <= writing;
-					w_counter <= w_counter + 1;
-				else
-					m_write <= '1';
-					m_writedata <= rowFound(8*(10 + w_counter) downto 8*(10 + w_counter - 1));
-				end if;
+	--write_process: process(s_addr, m_waitrequest, current_state, m_readdata, ram)
+	--begin
+	--	case write_state is
+	--		when default =>
+	--			if (current_state = write_invalid_dirty or current_state = read_invalid_dirty) then
+	--				next_state_write <= writing;
+	--				row2 <= ram(to_integer(unsigned(s_addr(8 downto 4))));
+	--				m_write <= '1';
+	--			end if;
+	--		 -- Do nothing
+	--		when writing =>
+	--			if(w_counter = 16) then
+	--				next_state_write <= done_write;
+	--				w_counter <= 0;		 			 --reset counter
+	--				row(134) <= '1'; -- Not dirty
+	--			elsif( m_waitrequest = '0') then
+	--				next_state_write <= writing;
+	--				w_counter <= w_counter + 1;
+	--			else
+	--				m_write <= '1';
+	--				m_writedata <= rowFound(8*(10 + w_counter) downto 8*(10 + w_counter - 1));
+	--			end if;
 
-			when done_write =>
-				ram(to_integer(unsigned(s_addr(8 downto 4))))<= row2;
-				next_state_write <= default;
-			end case;
-	end process; --end of the write_process
+	--		when done_write =>
+	--			ram(to_integer(unsigned(s_addr(8 downto 4))))<= row2;
+	--			next_state_write <= default;
+	--		end case;
+	--end process; --end of the write_process
 
 	m_addr <= to_integer(unsigned(s_addr(14 downto 0)) + w_counter + r_counter);
 
