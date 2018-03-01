@@ -12,7 +12,7 @@ proc AddWaves {} {
     add wave -position end sim:/cache_tb/dut/s_readdata
     add wave -position end sim:/cache_tb/dut/s_writedata
     add wave -position end sim:/cache_tb/dut/s_waitrequest
-    add wave -position end -radix hexadecimal sim:/cache_tb/dut/m_addr 
+    add wave -position end -radix hexadecimal sim:/cache_tb/dut/m_addr
     add wave -position end sim:/cache_tb/dut/m_read
     add wave -position end sim:/cache_tb/dut/m_readdata
     add wave -position end sim:/cache_tb/dut/m_write
