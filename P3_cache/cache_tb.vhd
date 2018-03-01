@@ -115,7 +115,7 @@ end process;
 test_process : process
 begin
 
--- begin by setting up
+-- begin by setting up the cache
 reset <= '1';
 WAIT FOR 1 * clk_period;
 reset <= '0';
@@ -127,15 +127,16 @@ WAIT FOR 1 * clk_period;
 
 
 -- 0   0   0   0
-REPORT "First write, invalid, clean, miss"; --write an entire block to the cache
+-- TEST 1: write an entire block to the cache
+REPORT "#1 First write, invalid, clean, miss"; --1st access will be a miss, clean since from memory, invalid because no valid data is stored yet
 s_write <='1';
-s_writedata <= X"00000001"; --the x means hexadecimal value of "01"
+s_writedata <= X"00000001"; --the x means hexadecimal value
 s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest); -- wait until request = 0
 WAIT FOR 1 * clk_period; --on next clock cycle
 
 -- 0   1   1   1
-REPORT "Continue write to same block, valid, dirty, hit"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but in the cache, so hit
+REPORT "#1 Continue write to same block, valid, dirty, hit"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but has been brought in the cache, so hit
 s_writedata <= X"00000002";
 s_addr <= X"00001004";
 WAIT UNTIL falling_edge(s_waitrequest); -- wait until request = 0
@@ -154,7 +155,8 @@ s_write <='0';
 
 
 -- 1   1   1   1
-REPORT "Read what was written, valid, dirty, hit ";
+-- TEST 2: read the same block
+REPORT "#2 Read what was written, valid, dirty, hit "; --dirty because has been written to, hit bc is in cache, and data valid from the write
 s_read <='1'; --read to ensure write was successful
 s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest);
@@ -182,16 +184,17 @@ ASSERT ( s_readdata = X"00000004") REPORT "4: Write unsuccessful" SEVERITY ERROR
 s_read <='0';
 
 
--- 0   0   1   0
-REPORT "Write to same cache location but different tag: invalid, dirty, miss";
+-- 0   0   0   0
+-- TEST 3: Writing to same block, but different tag. Forces the data from Test #1 to be written back to the memory
+REPORT "#3 Write to same cache location but different tag: invalid, clean, miss"; 
 s_write <='1';
 s_writedata <= X"00000011";
-s_addr <= X"00000808"; --TO DO FIGURE OUT THE CORRECT ADDRESS WITH SAME OFFSET AND INDEX BUT DIFFERENT TAG
+s_addr <= X"00000808"; 
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
 -- 0   1   1   1
-REPORT "Continue writing from same block, so now: valid, dirty, hit";
+REPORT "#3 Continue writing from same block, so now: valid, dirty, hit";
 s_writedata <= X"00000012";
 s_addr <= X"00000804";
 WAIT UNTIL falling_edge(s_waitrequest);
@@ -210,8 +213,9 @@ s_write <='0';
 -- now since this one has been swapped with the previous block, remember to check if it was succesfully written back
 
 -- 1   1   1   1
-REPORT "Read what was written, valid, dirty, hit";
-s_read <='1'; --read to ensure write was successful
+-- TEST 4: Read data from test 5 to check if write was succesful
+REPORT "#4 Read what was written, valid, dirty, hit";
+s_read <='1'; 
 s_addr <= X"00000808";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
@@ -239,7 +243,8 @@ s_read <='0';
 
 
 -- 1   1   0   0
-REPORT "Read from memory what we replaced in previous test, valid, clean, miss";
+-- TEST 5: read data from test 2, which triggers yet another block replacement
+REPORT "#5 Read from memory what we replaced from test 2, valid, clean, miss"; -- data is valid and clean because from memory and we wrote to it previously
 s_read <='1';
 s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest);
@@ -248,7 +253,7 @@ WAIT FOR 1 * clk_period;
 ASSERT ( s_readdata = X"00000001") REPORT "9: Write unsuccessful" SEVERITY ERROR;
 
 -- 1   1   0   1
-REPORT "Continue reading words from same block, valid, clean, hit";
+REPORT "#5 Continue reading words from same block, valid, clean, hit";
 s_addr <= X"00001004";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
@@ -271,7 +276,8 @@ s_read <='0';
 
 
 -- 0   1   0   0
-REPORT "Write to the block that was swapped back to memory, valid, not dirty, miss";
+-- TEST 6: Write directly to a block that we know is in memory and that we have written to before
+REPORT "#6 Write to the block that was swapped back to memory in test 5, valid, not dirty, miss";
 s_write <='1';
 s_writedata <= X"00000011";
 s_addr <= X"00000800";
@@ -279,7 +285,7 @@ WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
 -- 0   1   1   1
-REPORT "Continue writing to same block, so now: valid, dirty, hit";
+REPORT "#6 Continue writing to same block, so now: valid, dirty, hit"; --block now back in cache,hit, and dirty since we have written to it
 s_writedata <= X"00000012";
 s_addr <= X"00000804";
 WAIT UNTIL falling_edge(s_waitrequest);
@@ -297,16 +303,78 @@ WAIT FOR 1 * clk_period;
 s_write <='0';
 
 
--- 0   1   0   1
-REPORT "Write to what is in the cache already, valid, clean, hit";
-s_write <='1';
-s_writedata <= X"0000004A";
+-- 1   1   1   1
+-- TEST 7: read data from test 6, to verify it has been written
+REPORT "#7 Read block from test 6, valid, dirty, hit"; -- data is valid and dirty we wrote to it previously
+s_read <='1';
+s_addr <= X"00000800";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"00000011") REPORT "13: Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"00000804";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"00000012") REPORT "14: Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"00000808";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"00000013") REPORT "15: Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"0000080C";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"00000014") REPORT "16: Write unsuccessful" SEVERITY ERROR;
+s_read <='0';
+
+
+-- 1   1   0   0
+-- TEST 5: bring back a valid clean block for test 7
+REPORT "#7 Read from memory a valid, clean block: miss"; -- data is valid and clean because from memory and we wrote to it previously
+s_read <='1';
 s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
+ASSERT ( s_readdata = X"00000001") REPORT "17: Block not brought back properly" SEVERITY ERROR;
+
+-- 1   1   0   1
+REPORT "#5 Continue reading words from same block, valid, clean, hit";
+s_addr <= X"00001004";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"00000002") REPORT "18: Block not brought back properly" SEVERITY ERROR;
+
+s_addr <= X"00001008";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"00000003") REPORT "19: Block not brought back properly" SEVERITY ERROR;
+
+s_addr <= X"0000100C";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"00000004") REPORT "20: Block not brought back properly" SEVERITY ERROR;
+s_read <='0';
+
+-- 0   1   0   1
+-- TEST 7: Write to a block which we know is in the cache
+REPORT "#7 Write to what is in the cache already, valid, clean, hit";
+s_write <='1';
+s_writedata <= X"0000004A";
+s_addr <= X"000001000";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
 -- 0   1   1   1
-REPORT "Write to what is in the cache already, valid, dirty, hit"; --block was clean, but writing to makes it dirty
+REPORT "#7 Write to what is in the cache already, valid, dirty, hit"; --block was clean, but writing to makes it dirty
 s_writedata <= X"0000004B";
 s_addr <= X"00001004";
 WAIT UNTIL falling_edge(s_waitrequest);
@@ -323,80 +391,80 @@ WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 s_write <='0';
 
+
 -- 1   1   1   1
-REPORT "Read what was written, valid, dirty, hit"; --the block we are reading is dirty
+REPORT "#7 Read what was written, valid, dirty, hit"; --the block we are reading is dirty
 s_read <='1';
 s_addr <= X"00001000";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"0000004A") REPORT "13: Write unsuccessful" SEVERITY ERROR;
+ASSERT ( s_readdata = X"0000004A") REPORT "21: Write unsuccessful" SEVERITY ERROR;
 
 s_addr <= X"00001004";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"0000004B") REPORT "14: Write unsuccessful" SEVERITY ERROR;
+ASSERT ( s_readdata = X"0000004B") REPORT "22: Write unsuccessful" SEVERITY ERROR;
 
 s_addr <= X"00001008";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"0000004C") REPORT "15: Write unsuccessful" SEVERITY ERROR;
+ASSERT ( s_readdata = X"0000004C") REPORT "23: Write unsuccessful" SEVERITY ERROR;
 
 s_addr <= X"0000100C";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"0000004D") REPORT "16: Write unsuccessful" SEVERITY ERROR;
+ASSERT ( s_readdata = X"0000004D") REPORT "24: Write unsuccessful" SEVERITY ERROR;
 s_read <='0';
 
 
----------------------- Testing for write, not valid, not dirty, tag equal
--- to do so, must read first from random unaccessed memory where nothing has been written to (bc then it is invalid)
 -- 1   0   0   0
-REPORT "Read some random memory location, not valid, not dirty, miss";
+-- TEST 8: Testing for write, not valid, not dirty, tag equal ---- to do so, must read first from random unaccessed memory where nothing has been written to (bc then it is invalid)
+REPORT "#8 Read some random memory location, not valid, not dirty, miss";
 s_read <='1';
 s_addr <= X"00FF0000";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"00000000") REPORT "Cache not initialised" SEVERITY ERROR;
+ASSERT ( s_readdata = X"00000000") REPORT "25: Cache not initialised" SEVERITY ERROR;
 
 -- block gets brought from memory to cache after the miss
 -- 1   0   0   1
-REPORT "Continue reading from same block,so now not valid, not dirty, hit";
+REPORT "#8 Continue reading from same block,so not valid, not dirty, hit";
 s_addr <= X"00FF0004";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"00000000") REPORT "Cache not initialised" SEVERITY ERROR;
+ASSERT ( s_readdata = X"00000000") REPORT "26: Cache not initialised" SEVERITY ERROR;
 
 s_addr <= X"00FF0008";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"00000000") REPORT "Cache not initialised" SEVERITY ERROR;
+ASSERT ( s_readdata = X"00000000") REPORT "27: Cache not initialised" SEVERITY ERROR;
 
 s_addr <= X"00FF000C";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
-ASSERT ( s_readdata = X"00000000") REPORT "Cache not initialised" SEVERITY ERROR;
+ASSERT ( s_readdata = X"00000000") REPORT "28: Cache not initialised" SEVERITY ERROR;
 s_read <='0';
 
 
 -- 0   0   0   1
---and then write to that block
-REPORT "Write to an invalid block, invalid, clean, hit";
+--Test 9: write to that random block
+REPORT "#9 Write to an invalid block, invalid, clean, hit";
 s_write <='1';
 s_writedata <= X"FFFFFFFF";
 s_addr <= X"00FF0000";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
--- 0   0   1   1
-REPORT "Write to an invalid block, invalid, dirty, hit"; --block was clean, but writing to makes it dirty
+-- 0   1   1   1
+REPORT "#9 Continue writing to same block, which is now valid, dirty, hit"; --block was clean, but writing to makes it dirty
 s_writedata <= X"EEEEEEEE";
 s_addr <= X"00FF0004";
 WAIT UNTIL falling_edge(s_waitrequest);
@@ -412,6 +480,35 @@ s_addr <= X"00FF000C";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 s_write <='0';
+
+-- 1   1    1   1
+REPORT "#9 Read to check if written properly: valid, dirty, hit";
+s_read <='1';
+s_addr <= X"00FF0000";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"FFFFFFFF") REPORT "29: Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"00FF0004";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"EEEEEEEE") REPORT "30: Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"00FF0008";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"DDDDDDDD") REPORT "31: Write unsuccessful" SEVERITY ERROR;
+
+s_addr <= X"00FF000C";
+WAIT UNTIL falling_edge(s_waitrequest);
+WAIT FOR 1 * clk_period;
+
+ASSERT ( s_readdata = X"CCCCCCCC") REPORT "32: Write unsuccessful" SEVERITY ERROR;
+s_read <='0';
+
 
 
 
@@ -436,7 +533,7 @@ REPORT "Testing for write, not valid, not dirty, tag equal";
 -- 0   0   1   1
 --Not testing for write, not valid, dirty, tag equal because impossible
 
--- 0   1   0   0
+-- 0   1   0   0 DONE
 REPORT "Testing for write, valid, not dirty, tag not equal";
 
 
@@ -445,7 +542,7 @@ REPORT "Testing for write, valid, not dirty, tag equal";
 
 
 -- 0   1   1   0
-REPORT "Testing for write, valid, dirty, tag not equal";
+-- REPORT "Testing for write, valid, dirty, tag not equal";
 
 
 -- 0   1   1   1 DONE
@@ -462,7 +559,7 @@ REPORT "Testing for write, valid, dirty, tag equal";
 REPORT "Testing for read, not valid, not dirty, tag not equal";
 
 
--- 1   0   0   1
+-- 1   0   0   1 DONE
 REPORT "Testing for read, not valid, not dirty, tag equal";
 
 
@@ -473,7 +570,7 @@ REPORT "Testing for read, not valid, not dirty, tag equal";
 --Not testing for read, not valid, dirty, tag equal because impossible
 
 
--- 1   1   0   0
+-- 1   1   0   0 DONE
 REPORT "Testing for read, valid, not dirty, tag not equal";
 
 
@@ -482,7 +579,7 @@ REPORT "Testing for read, valid, not dirty, tag equal";
 
 
 -- 1   1   1   0
-REPORT "Testing for read, valid, dirty, tag not equal";
+--REPORT "Testing for read, valid, dirty, tag not equal";
 
 
 -- 1   1   1   1 DONE
