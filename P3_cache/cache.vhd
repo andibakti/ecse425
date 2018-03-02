@@ -38,6 +38,7 @@ architecture arch of cache is
 	type state_type is (init, default, write_to_default, write_valid, write_invalid, write_invalid_dirty, read_valid, read_invalid, read_invalid_dirty);
 	signal next_state, current_state: state_type := init;
 
+	signal m_addr_sig: std_logic_vector(14 downto 0);
 
 	signal row : std_logic_vector(135 downto 0);
 	signal r_counter,  w_counter : integer := 0;
@@ -162,6 +163,7 @@ begin
 							when default =>
 								next_state_read <= reading;
 								row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
+								m_addr_sig(14 downto 9) <= s_addr(14 downto 9);
 							 -- Do nothing
 							when reading =>
 								if(r_counter = 16) then
@@ -172,8 +174,8 @@ begin
 									r_counter <= 0;		 			 --reset r_counter
 								elsif(falling_edge(m_waitrequest)) then
 									next_state_read <= reading;
-									r_counter <= r_counter + 1;
 									row(8*(1 + r_counter)-1 downto 8*(r_counter)) <= m_readdata;
+									r_counter <= r_counter + 1;
 									m_read <= '0';
 								else
 									m_read <= '1';
@@ -190,7 +192,8 @@ begin
 								when default =>
 									next_state_write <= writing;
 									row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
-									m_writedata <= row(8*(w_counter+1)-1 downto 8*(w_counter));
+									m_addr_sig(14 downto 9) <= row(133 downto 128);
+									--m_writedata <= row(8*(w_counter+1)-1 downto 8*(w_counter));
 									m_write <= '1';
 								 -- Do nothing
 								when writing =>
@@ -200,8 +203,8 @@ begin
 										row(134) <= '1'; -- Dirty
 									elsif(falling_edge(m_waitrequest)) then
 										next_state_write <= writing;
-										w_counter <= w_counter + 1;
 										m_writedata <= row(8*(w_counter+1)-1 downto 8*(w_counter));
+										w_counter <= w_counter + 1;
 										m_write <= '0';
 									else
 										m_write <= '1';
@@ -228,6 +231,7 @@ begin
 						when default =>
 							next_state_read <= reading;
 							row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
+							m_addr_sig(14 downto 9) <= s_addr(14 downto 9);
 						 -- Do nothing
 						when reading =>
 							if(r_counter = 16) then
@@ -238,8 +242,8 @@ begin
 								r_counter <= 0;	--reset r_counter
 							elsif(falling_edge(m_waitrequest)) then
 								next_state_read <= reading;
-								r_counter <= r_counter + 1;
 								row(8*(1 + r_counter)-1 downto 8*(r_counter)) <= m_readdata;
+								r_counter <= r_counter + 1;
 								m_read <= '0';
 							--else
 							else
@@ -257,7 +261,8 @@ begin
 						when default =>
 							next_state_write <= writing;
 							row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
-							m_writedata <= row(8*(w_counter+1)-1 downto 8*(w_counter));
+							m_addr_sig(14 downto 9) <= row(133 downto 128);
+							--m_writedata <= row(8*(w_counter+1)-1 downto 8*(w_counter));
 							m_write <= '1';
 						 -- Do nothing
 						when writing =>
@@ -267,8 +272,8 @@ begin
 								row(134) <= '1'; -- Dirty
 							elsif(falling_edge(m_waitrequest)) then
 								next_state_write <= writing;
-								w_counter <= w_counter + 1;
 								m_writedata <= row(8*(w_counter+1)-1 downto 8*(w_counter));
+								w_counter <= w_counter + 1;
 								m_write <= '0';
 							else
 								m_write <= '1';
@@ -283,43 +288,9 @@ begin
 			end case;
 	end process; --end of state_logic fsm-------------------------------------------------------------------
 
-
-	-- read fsm for the avalon interface
-	--read_process: process(s_addr, m_waitrequest, current_state, m_readdata, ram)
-	--begin
-	--end process; --end of the read_process
-
-	-- write fsm for the avalon interface
-	--write_process: process(s_addr, m_waitrequest, current_state, m_readdata, ram)
-	--begin
-	--	case write_state is
-	--		when default =>
-	--			if (current_state = write_invalid_dirty or current_state = read_invalid_dirty) then
-	--				next_state_write <= writing;
-	--				row <= ram(to_integer(unsigned(s_addr(8 downto 4))));
-	--				m_write <= '1';
-	--			end if;
-	--		 -- Do nothing
-	--		when writing =>
-	--			if(w_counter = 16) then
-	--				next_state_write <= done_write;
-	--				w_counter <= 0;		 			 --reset counter
-	--				row(134) <= '1'; -- Not dirty
-	--			elsif( m_waitrequest = '0') then
-	--				next_state_write <= writing;
-	--				w_counter <= w_counter + 1;
-	--			else
-	--				m_write <= '1';
-	--				m_writedata <= rowFound(8*(10 + w_counter) downto 8*(10 + w_counter - 1));
-	--			end if;
-
-	--		when done_write =>
-	--			ram(to_integer(unsigned(s_addr(8 downto 4))))<= row;
-	--			next_state_write <= default;
-	--		end case;
 	--end process; --end of the write_process
-
-	m_addr <= to_integer(unsigned(s_addr(14 downto 0)) + w_counter + r_counter);
+	m_addr_sig(8 downto 0) <= s_addr(8 downto 0);
+	m_addr <= to_integer(unsigned(m_addr_sig) + w_counter + r_counter);
 
 
 end arch;
