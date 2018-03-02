@@ -196,7 +196,7 @@ s_read <='0';
 REPORT "#3 Write to same cache location but different tag: invalid, dirty, miss"; --the previous block is dirty
 s_write <='1';
 s_writedata <= X"00000011";
-s_addr <= X"00000808"; 
+s_addr <= X"00000800";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;
 
@@ -222,7 +222,7 @@ s_write <='0';
 -- 1   1   1   1
 -- TEST 4: Read data from test 5 to check if write was succesful
 REPORT "#4 Read what was written, valid, dirty, hit";
-s_read <='1'; 
+s_read <='1';
 s_addr <= X"00000800";
 WAIT UNTIL falling_edge(s_waitrequest);
 WAIT FOR 1 * clk_period;

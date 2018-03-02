@@ -9,22 +9,22 @@ z2
 cModel Technology
 dC:/Users/camille/OneDrive - McGill University/P2_pipeline
 Ecache
-Z0 w1519912214
+Z0 w1519898225
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dC:/Users/chloe/Documents/Univ/McGill/Winter2018/ECSE 425/ecse425/P3_cache
+Z4 dD:/McGill/ECSE 425/ecse425/P3_cache
 Z5 8cache.vhd
 Z6 Fcache.vhd
 l0
 L5
 Vb?j<AEzjl0EagZ0z_az;h1
 !s100 KD7GLK746Q`^=@mMTV9G]3
-Z7 OV;C;10.5c;63
+Z7 OV;C;10.5b;63
 32
-Z8 !s110 1519917546
+Z8 !s110 1519958037
 !i10b 1
-Z9 !s108 1519917546.000000
+Z9 !s108 1519958037.000000
 Z10 !s90 -reportprogress|300|cache.vhd|
 Z11 !s107 cache.vhd|
 !i113 1
@@ -48,7 +48,7 @@ R11
 !i113 1
 R12
 Ecache_tb
-Z13 w1519917494
+Z13 w1519958024
 R1
 R2
 R3
@@ -61,9 +61,9 @@ Vi]X^50aNb6mMEU7GdLLX93
 !s100 N8hTJD?ado=UI;TQE4:Ql3
 R7
 32
-Z16 !s110 1519917547
+Z16 !s110 1519958038
 !i10b 1
-Z17 !s108 1519917547.000000
+Z17 !s108 1519958038.000000
 Z18 !s90 -reportprogress|300|cache_tb.vhd|
 Z19 !s107 cache_tb.vhd|
 !i113 1
@@ -75,8 +75,8 @@ R3
 Z20 DEx4 work 8 cache_tb 0 22 i]X^50aNb6mMEU7GdLLX93
 l71
 L8
-Z21 V5]eYLPEcl;?0^b4ReeC0c2
-Z22 !s100 i:3mEa17n;Ze1mA?El>690
+V1I8mIbIK]=XW90`aoTA_E3
+!s100 5_haFCR[n`bC]6_FAgaVC3
 R7
 32
 R16
@@ -87,13 +87,13 @@ R19
 !i113 1
 R12
 Ememory
-Z23 w1518819906
+Z21 w1519420600
 R1
 R2
 R3
 R4
-Z24 8memory.vhd
-Z25 Fmemory.vhd
+Z22 8memory.vhd
+Z23 Fmemory.vhd
 l0
 L6
 VZZOY7^jPlIl9c8[XGY0KB1
@@ -103,8 +103,8 @@ R7
 R8
 !i10b 1
 R9
-Z26 !s90 -reportprogress|300|memory.vhd|
-Z27 !s107 memory.vhd|
+Z24 !s90 -reportprogress|300|memory.vhd|
+Z25 !s107 memory.vhd|
 !i113 1
 R12
 Artl
@@ -121,29 +121,29 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R24
+R25
 !i113 1
 R12
 Ememory_tb
-R23
+R21
 R1
 R2
 R3
 R4
-Z28 8memory_tb.vhd
-Z29 Fmemory_tb.vhd
+Z26 8memory_tb.vhd
+Z27 Fmemory_tb.vhd
 l0
 L5
 V:gamI`Z?1_z;8ed=KM?Nm2
 !s100 K:h_7;_e46:2;TAj@4dAB3
 R7
 32
-R16
+R8
 !i10b 1
 R9
-Z30 !s90 -reportprogress|300|memory_tb.vhd|
-Z31 !s107 memory_tb.vhd|
+Z28 !s90 -reportprogress|300|memory_tb.vhd|
+Z29 !s107 memory_tb.vhd|
 !i113 1
 R12
 Abehaviour
@@ -157,10 +157,10 @@ V@Dl3oQ1F5JEaJ[^]_8OQ81
 !s100 :i96VH_8DL4G91ZkR7MdH1
 R7
 32
-R16
+R8
 !i10b 1
 R9
-R30
-R31
+R28
+R29
 !i113 1
 R12
