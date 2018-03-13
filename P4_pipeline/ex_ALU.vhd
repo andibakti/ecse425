@@ -4,9 +4,9 @@ use ieee.std_logic_1164.all;
 entity ALU is
     port(
         clock: in std_logic;
-        A: in std_logic_vector(31 downto 0);
-	B: in std_logic_vector(31 downto 0);
-	select: in std_logic_vector(3 downto 0);
+        a: in std_logic_vector(31 downto 0);
+	b: in std_logic_vector(31 downto 0);
+	select: in std_logic_vector(5 downto 0);
         reset: in std_logic;
         output: out std_logic_vector(31 downto 0)
         );
@@ -22,8 +22,21 @@ begin
             output <= (OTHERS => '0');
         elsif rising_edge(clock) then
             case select is
-		when "????" => temp <= A+B --add?
-		--put other shit
+		when "????" => temp <= a+b --add?
+		when "????" => temp <= a-b--sub
+		when "????" => temp <= std_logic_vector(signed(a)*signed(b))--mul
+		when "????" => temp <= ????--div
+		--slt
+	
+		when "????" => temp <= a and b--and
+		when "????" => temp <= a or b--or
+		when "????" => temp <= a nor b--nor
+		when "????" => temp <= a xor b--xor
+
+		--sll
+		--srl
+	
+
         end if;
     end process;
 output <= temp;
