@@ -1,0 +1,34 @@
+R:
+'mult': {'format': 'R', 'op':'000000','funct':'011000'}, done
+'mflo': {'format': 'R', 'op': '000000','funct':'010010'}, done
+'jr': {'format': 'R', 'op': '000000','funct':'001000'}, done
+'mfhi': {'format': 'R', 'op': '000000','funct':'010000'}, done
+'add': {'format': 'R', 'op': '000000','funct':'100000'}, done
+'sub': {'format': 'R', 'op': '000000','funct':'100010'}, done
+'and': {'format': 'R', 'op': '000000','funct':'100100'}, done
+'div': {'format': 'R', 'op':'000000','funct':'011010'}, done
+'slt': {'format': 'R', 'op':'000000','funct':'101010'}, done
+'or': {'format': 'R', 'op':'000000','funct':'100101'}, done
+'nor': {'format': 'R', 'op':'000000','funct':'100111'}, done
+'xor': {'format': 'R', 'op':'000000','funct':'101000'}, done
+'sra': {'format': 'R', 'op': '000000','funct':'000011'}, done
+'srl': {'format': 'R', 'op': '000000','funct':'000010'}, done
+'sll': {'format': 'R', 'op': '000000','funct':'000000'}, done
+
+I:
+'addi': {'format': 'I', 'op':'001000'}, done
+'slti': {'format': 'I', 'op': '001010'}, done
+'bne': {'format': 'I', 'op': '000101'}, done
+'sw': {'format': 'I', 'op': '101011'}, done
+'beq': {'format': 'I', 'op': '000100'}, done
+'lw': {'format': 'I', 'op': '100011'}, done
+'lb': {'format': 'I', 'op': '100000'}, done
+'sb': {'format': 'I', 'op': '101000'}, done
+'lui': {'format': 'I', 'op': '001111'}, done
+'andi': {'format': 'I', 'op': '001100'}, done
+'ori': {'format': 'I', 'op': '001101'}, done
+'xori': {'format': 'I', 'op': '001110'}, done
+
+J:
+'jal': {'format': 'J', 'op': '000011'}, done
+'j': {'format': 'J', 'op': '000010'}, done
