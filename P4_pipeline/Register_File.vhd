@@ -33,7 +33,9 @@ BEGIN
 	
     	IF (rst = '1') THEN
         	
-        	register_file <= (OTHERS => "00000000000000000000000000000000");
+        	FOR i IN 0 TO 31 LOOP
+			register_file(i) <= "00000000000000000000000000000000";
+		END LOOP;
         	
         ELSIF (rising_edge(clk)) THEN
 	
