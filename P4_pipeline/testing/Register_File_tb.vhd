@@ -9,17 +9,17 @@ ARCHITECTURE arch OF register_file_tb IS
 
     COMPONENT register_file IS
     	PORT(
-    		clk,rst : IN std_ulogic;
-		write_en : IN std_ulogic;
+    		clk,rst : IN std_logic;
+		write_en : IN std_logic;
     
-		writedata : IN std_ulogic_vector(31 DOWNTO 0);
+		writedata : IN std_logic_vector(31 DOWNTO 0);
     
-		addr_write : IN std_ulogic_vector(4 DOWNTO 0);
-		addr_regA : IN std_ulogic_vector(4 DOWNTO 0);
-		addr_regB : IN std_ulogic_vector(4 DOWNTO 0);
+		addr_write : IN std_logic_vector(4 DOWNTO 0);
+		addr_regA : IN std_logic_vector(4 DOWNTO 0);
+		addr_regB : IN std_logic_vector(4 DOWNTO 0);
     
-		read_regA : OUT std_ulogic_vector(31 DOWNTO 0);
-		read_regB : OUT std_ulogic_vector(31 DOWNTO 0)
+		read_regA : OUT std_logic_vector(31 DOWNTO 0);
+		read_regB : OUT std_logic_vector(31 DOWNTO 0)
     	);
     END COMPONENT;
 
@@ -61,15 +61,15 @@ BEGIN
     clock_process : PROCESS
     BEGIN
         clk <= '1';
-        wait for clock_period/2;
+        wait for clk_period/2;
         clk <= '0';
-        wait for clock_period/2;
+        wait for clk_period/2;
     END PROCESS;
 
     test_process : PROCESS
     BEGIN
 
-        wait for clock_period;
+        wait for clk_period;
 
         -- test 1 : read reg 0 and do not write
         rst <= '0';
@@ -79,7 +79,7 @@ BEGIN
         addr_write <= "00001";
         writedata <= "11100000000000000000000000000111";
 		
-        wait for clock_period;
+        wait for clk_period;
 		
         -- test 2 : read reg0 and write to reg1
         rst <= '0';
@@ -89,7 +89,7 @@ BEGIN
         addr_write <= "00001";
         writedata <= "11100000000000000000000000000111";
 		
-        wait for clock_period;
+        wait for clk_period;
 		
         -- test 3: read reg1 and write to reg 4
         rst <= '0';
@@ -99,7 +99,7 @@ BEGIN
         addr_write <= "00100";
         writedata <= "00000000000000000000000001111000";
 		
-        wait for clock_period;
+        wait for clk_period;
 		
         -- test 4 : read reg1 and reg4
         rst <= '0';
@@ -109,7 +109,7 @@ BEGIN
         addr_write <= "00001";
         writedata <= "00000000000000000000000000000111";
 		
-        wait for clock_period;
+        wait for clk_period;
 		
         -- test 5 : reset
         rst <= '1';
@@ -119,7 +119,7 @@ BEGIN
         addr_write <= "00001";
         writedata <= "00000000000000000000000000000111";
         
-        wait for clock_period;
+        wait for clk_period;
 		
         -- test 6 : read reg1 and reg4 after reset
         rst <= '0';
