@@ -17,7 +17,7 @@ ENTITY registerfile IS
 	read_regB : OUT std_ulogic_vector(31 DOWNTO 0)
 	);
     
-END regfile;
+END registerfile;
 
 
 ARCHITECTURE arch OF registerfile IS 
