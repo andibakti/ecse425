@@ -9,164 +9,172 @@ z2
 cModel Technology
 dD:/McGill/ECSE 325/Lab2
 Einstr_memory
-Z0 w1520975227
-Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dD:/McGill/ECSE 425/ecse425/P4_pipeline
-Z5 8D:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd
-Z6 FD:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd
+Z0 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+32
+Z3 !s110 1520975767
+!i10b 1
+Z4 OP;C;10.4a;61
+Z5 w1520975227
+Z6 dD:/McGill/ECSE 425/ecse425/P4_pipeline
+Z7 8D:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd
+Z8 FD:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd
 l0
 L6
 Vn>z<[eTKFGggI72bjOgO>3
 !s100 gzkL>6YN[43MR3Y:H[8?B0
-Z7 OV;C;10.5b;63
-32
-Z8 !s110 1520975767
-!i10b 1
-Z9 !s108 1520975767.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd|
-Z11 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd|
+Z9 OV;C;10.5b;63
+Z10 !s108 1520975767.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd|
+Z12 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd|
 !i113 1
-Z12 o-work work -2002 -explicit
-Z13 tExplicit 1 CvgOpt 0
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
 Artl
+R0
 R1
 R2
-R3
 DEx4 work 12 instr_memory 0 22 n>z<[eTKFGggI72bjOgO>3
+32
+R3
+!i10b 1
+R4
 l29
 L23
 V@D=_G2GGWBzk]@ERKJc4_0
 !s100 ;hQfYB4f[ZG=hSmz1K;[Q3
-R7
-32
-R8
-!i10b 1
 R9
 R10
 R11
-!i113 1
 R12
+!i113 1
 R13
+R14
 Ememory
-Z14 w1520974383
+R0
 R1
 R2
-R3
+32
+Z15 !s110 1520975129
+!i10b 1
 R4
-Z15 8D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
-Z16 FD:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
+Z16 w1520974383
+R6
+Z17 8D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
+Z18 FD:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
 l0
 L6
 VD^^OC7h`KW;I<zgNUd@[j2
 !s100 A9?IB]XHYkkPM:DodIJ:z0
-R7
-32
-Z17 !s110 1520975129
-!i10b 1
-Z18 !s108 1520975129.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
-Z20 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
+R9
+Z19 !s108 1520975129.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
+Z21 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
 !i113 1
-R12
 R13
+R14
 Artl
+R0
 R1
 R2
-R3
 DEx4 work 6 memory 0 22 D^^OC7h`KW;I<zgNUd@[j2
+32
+R15
+!i10b 1
+R4
 l29
 L23
 VYm6X9CQm4DoZz>9M12;F]3
 !s100 ]<THhl5U9b8eRYeiR4TZQ1
-R7
-32
-R17
-!i10b 1
-R18
+R9
 R19
 R20
+R21
 !i113 1
-R12
 R13
+R14
 Epc
-Z21 w1520975127
+R1
 R2
+32
 R3
+!i10b 1
 R4
-Z22 8D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd
-Z23 FD:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd
+Z22 w1520975127
+R6
+Z23 8D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd
+Z24 FD:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd
 l0
 L4
 VPgii4B5ezPD`]L0L^35zG2
 !s100 5eYG_UgG>ioNbKnzc>4gX1
-R7
-32
-R8
-!i10b 1
 R9
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd|
-Z25 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd|
+R10
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd|
+Z26 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd|
 !i113 1
-R12
 R13
+R14
 Aarch
+R1
 R2
-R3
 DEx4 work 2 pc 0 22 Pgii4B5ezPD`]L0L^35zG2
+32
+R3
+!i10b 1
+R4
 l15
 L13
 V10Z2ICc@jELoKGIPgNbXV0
 !s100 `<1h3CGmoFDfFdb?fJkod2
-R7
-32
-R8
-!i10b 1
 R9
-R24
+R10
 R25
+R26
 !i113 1
-R12
 R13
+R14
 Epc_adder
-Z26 w1520975754
+R0
 R1
 R2
+32
 R3
+!i10b 1
 R4
-Z27 8D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd
-Z28 FD:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd
+Z27 w1520975754
+R6
+Z28 8D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd
+Z29 FD:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd
 l0
 L5
 V5S:RTkXMQG]]FM?3;5m120
 !s100 lMRVnLbg@YOlQE<WQ^9m[0
-R7
-32
-R8
-!i10b 1
 R9
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd|
-Z30 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd|
+R10
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd|
+Z31 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd|
 !i113 1
-R12
 R13
+R14
 Aarch
+R0
 R1
 R2
-R3
 DEx4 work 8 pc_adder 0 22 5S:RTkXMQG]]FM?3;5m120
+32
+R3
+!i10b 1
+R4
 l16
 L14
 V>CAb_AM8=i_ifSmHMTJ?Y0
 !s100 c1UjNDi[j6@zOfCB_NjJI0
-R7
-32
-R8
-!i10b 1
 R9
-R29
+R10
 R30
+R31
 !i113 1
-R12
 R13
+R14
