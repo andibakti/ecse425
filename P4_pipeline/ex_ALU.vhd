@@ -2,20 +2,20 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity ALU is
+entity ex_ALU is
     port(
         clock: in std_logic;
         a: in std_logic_vector(31 downto 0);
 		b: in std_logic_vector(31 downto 0);
 		signExtendImmediate: in std_logic_vector(31 downto 0);
-		s: in std_logic_vector(4 downto 0);
+		sel: in std_logic_vector(4 downto 0);
         reset: in std_logic;
         zero: out std_logic;
         output: out std_logic_vector(31 downto 0)
         );
 end entity;
 
-architecture arch of ALU is
+architecture arch of ex_ALU is
 --declare signals
 signal temp: std_logic_vector(31 downto 0);
 signal hi, lo: std_logic_vector(31 downto 0);
@@ -27,12 +27,15 @@ begin
         if(reset = '1') then
             output <= (OTHERS => '0');
         elsif rising_edge(clock) then
-            case s is
+            case sel is
 				when "00000" => temp <= a+b; --add?
 				when "00001" => temp <= a-b;--sub
 				when "00010" => temp <= a+signExtendImmediate;--add immediate
 				when "00011" => temp <= std_logic_vector(signed(a)*signed(b));--mul
-				when "00100" => temp <= std_logic_vector(signed(a)/signed(b)); --div
+				when "00100" => 
+					lo <= std_logic_vector(signed(a)/signed(b)); --div
+					hi <= std_logic_vector(signed(a) mod signed(b)); --div
+
 				when "00101" => --set less than (slt)
 						if(signed(a) < signed(b)) then
 							temp <= (others => '0') + '1';
