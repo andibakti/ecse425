@@ -12,7 +12,7 @@ entity data_memory is
 	port (
 		clock: in std_logic;
 		opcode: in std_logic_vector(5 downto 0):=(others => '0');
-		ALU_in: in std_logic_vector(4 downto 0):=(others => '0');
+		ALU_in: in std_logic_vector(31 downto 0):=(others => '0');
 		writeMem: in std_logic;
 		WB_buffer_in: in std_logic_vector(31 downto 0);
 		WB_buffer_out: out std_logic_vector(31 downto 0);
