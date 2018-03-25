@@ -71,6 +71,6 @@ begin
 			end loop;
 			file_close(memory_file);
 		end if;
-	end write_file;
+	end process;
 
 end rtl;

@@ -8,6 +8,7 @@ z2
 !i10f 100
 cModel Technology
 dD:/McGill/ECSE 325/Lab2
+<<<<<<< Updated upstream
 Einstr_memory
 Z0 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -31,10 +32,35 @@ Z12 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/instr_memory.vhd|
 !i113 1
 Z13 o-work work -2002 -explicit
 Z14 tExplicit 1 CvgOpt 0
+=======
+Edata_memory
+Z0 w1521834662
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline
+Z5 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/data_memory.vhd
+Z6 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/data_memory.vhd
+l0
+L6
+VbnZh8Z0nMM4K2a>o0F;=K0
+!s100 8UjLjV]6GP=32>VL2gjQi1
+Z7 OP;C;10.4a;61
+32
+Z8 !s110 1521836935
+!i10b 1
+Z9 !s108 1521836935.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/data_memory.vhd|
+Z11 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/data_memory.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+>>>>>>> Stashed changes
 Artl
 R0
 R1
 R2
+<<<<<<< Updated upstream
 DEx4 work 12 instr_memory 0 22 n>z<[eTKFGggI72bjOgO>3
 32
 R3
@@ -44,14 +70,30 @@ l29
 L23
 V@D=_G2GGWBzk]@ERKJc4_0
 !s100 ;hQfYB4f[ZG=hSmz1K;[Q3
+=======
+R3
+DEx4 work 11 data_memory 0 22 bnZh8Z0nMM4K2a>o0F;=K0
+l29
+L23
+VSPnM492SlZU`d]g@UT>5]2
+!s100 @iCzm:R>h95UL4S5`QQ6i2
+R7
+32
+R8
+!i10b 1
+>>>>>>> Stashed changes
 R9
 R10
 R11
 R12
 !i113 1
 R13
+<<<<<<< Updated upstream
 R14
 Ememory
+=======
+Einstr_memory
+>>>>>>> Stashed changes
 R0
 R1
 R2
@@ -59,6 +101,7 @@ R2
 Z15 !s110 1520975129
 !i10b 1
 R4
+<<<<<<< Updated upstream
 Z16 w1520974383
 R6
 Z17 8D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
@@ -71,6 +114,21 @@ R9
 Z19 !s108 1520975129.000000
 Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
 Z21 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
+=======
+Z14 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/instr_memory.vhd
+Z15 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/instr_memory.vhd
+l0
+L6
+VF76;K65QeSZB76TYbe:_W3
+!s100 gzkL>6YN[43MR3Y:H[8?B0
+R7
+32
+Z16 !s110 1521850446
+!i10b 1
+Z17 !s108 1521850446.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/instr_memory.vhd|
+Z19 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/instr_memory.vhd|
+>>>>>>> Stashed changes
 !i113 1
 R13
 R14
@@ -78,6 +136,7 @@ Artl
 R0
 R1
 R2
+<<<<<<< Updated upstream
 DEx4 work 6 memory 0 22 D^^OC7h`KW;I<zgNUd@[j2
 32
 R15
@@ -91,47 +150,138 @@ R9
 R19
 R20
 R21
+=======
+R3
+DEx4 work 12 instr_memory 0 22 F76;K65QeSZB76TYbe:_W3
+l29
+L23
+V5lW<=nG@55`HAHaY5@O4T1
+!s100 ;hQfYB4f[ZG=hSmz1K;[Q3
+R7
+32
+R16
+!i10b 1
+R17
+R18
+R19
+>>>>>>> Stashed changes
 !i113 1
 R13
+<<<<<<< Updated upstream
 R14
 Epc
 R1
+=======
+Ememory
+Z20 w1520974383
+R1
+R2
+R3
+Z21 dD:/McGill/ECSE 425/ecse425/P4_pipeline
+Z22 8D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
+Z23 FD:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
+l0
+L6
+VD^^OC7h`KW;I<zgNUd@[j2
+!s100 A9?IB]XHYkkPM:DodIJ:z0
+Z24 OV;C;10.5b;63
+32
+Z25 !s110 1520975129
+!i10b 1
+Z26 !s108 1520975129.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
+Z28 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
+!i113 1
+Z29 o-work work -2002 -explicit
+Z30 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+DEx4 work 6 memory 0 22 D^^OC7h`KW;I<zgNUd@[j2
+l29
+L23
+VYm6X9CQm4DoZz>9M12;F]3
+!s100 ]<THhl5U9b8eRYeiR4TZQ1
+R24
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R29
+R30
+Epc
+R0
+>>>>>>> Stashed changes
 R2
 32
 R3
 !i10b 1
 R4
+<<<<<<< Updated upstream
 Z22 w1520975127
 R6
 Z23 8D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd
 Z24 FD:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd
+=======
+Z31 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC.vhd
+Z32 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC.vhd
+>>>>>>> Stashed changes
 l0
 L4
-VPgii4B5ezPD`]L0L^35zG2
+Vjh1>ZFz=ISfc1MPC4CaQ91
 !s100 5eYG_UgG>ioNbKnzc>4gX1
+<<<<<<< Updated upstream
 R9
 R10
 Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd|
 Z26 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd|
+=======
+R7
+32
+R16
+!i10b 1
+R17
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC.vhd|
+Z34 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC.vhd|
+>>>>>>> Stashed changes
 !i113 1
 R13
 R14
 Aarch
 R1
 R2
+<<<<<<< Updated upstream
 DEx4 work 2 pc 0 22 Pgii4B5ezPD`]L0L^35zG2
 32
 R3
 !i10b 1
 R4
+=======
+R3
+DEx4 work 2 pc 0 22 jh1>ZFz=ISfc1MPC4CaQ91
+>>>>>>> Stashed changes
 l15
 L13
-V10Z2ICc@jELoKGIPgNbXV0
+Vd`02^1B60M96XC4ag@Jn01
 !s100 `<1h3CGmoFDfFdb?fJkod2
+<<<<<<< Updated upstream
 R9
 R10
 R25
 R26
+=======
+R7
+32
+R16
+!i10b 1
+R17
+R33
+R34
+>>>>>>> Stashed changes
 !i113 1
 R13
 R14
@@ -143,18 +293,33 @@ R2
 R3
 !i10b 1
 R4
+<<<<<<< Updated upstream
 Z27 w1520975754
 R6
 Z28 8D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd
 Z29 FD:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd
+=======
+Z35 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC_adder.vhd
+Z36 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC_adder.vhd
+>>>>>>> Stashed changes
 l0
 L5
-V5S:RTkXMQG]]FM?3;5m120
+V8d5;5PWV^OOolON>lh4Ok3
 !s100 lMRVnLbg@YOlQE<WQ^9m[0
+<<<<<<< Updated upstream
 R9
 R10
 Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd|
 Z31 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/PC_adder.vhd|
+=======
+R7
+32
+Z37 !s110 1521850447
+!i10b 1
+R17
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC_adder.vhd|
+Z39 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC_adder.vhd|
+>>>>>>> Stashed changes
 !i113 1
 R13
 R14
@@ -162,6 +327,7 @@ Aarch
 R0
 R1
 R2
+<<<<<<< Updated upstream
 DEx4 work 8 pc_adder 0 22 5S:RTkXMQG]]FM?3;5m120
 32
 R3
@@ -175,6 +341,21 @@ R9
 R10
 R30
 R31
+=======
+R3
+Z40 DEx4 work 8 pc_adder 0 22 8d5;5PWV^OOolON>lh4Ok3
+l16
+L14
+Z41 V@064Hbh_NiMK<hJDJ@g7D1
+Z42 !s100 c1UjNDi[j6@zOfCB_NjJI0
+R7
+32
+R37
+!i10b 1
+R17
+R38
+R39
+>>>>>>> Stashed changes
 !i113 1
 R13
 R14

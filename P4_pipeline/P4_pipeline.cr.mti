@@ -1,4 +1,30 @@
-{D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd}
+./PC.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PC
+-- Compiling architecture arch of PC
+
+} {} {}} ./instr_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/instr_memory.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity instr_memory
+-- Compiling architecture rtl of instr_memory
+
+} {} {}} ./PC_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/GithubGroup/ecse425/P4_pipeline/PC_adder.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PC_adder
+-- Compiling architecture arch of PC_adder
+
+} {} {}} {D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {D:/McGill/ECSE 425/ecse425/P4_pipeline/PC.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
