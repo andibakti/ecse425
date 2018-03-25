@@ -11,8 +11,8 @@ entity data_memory is
 	);
 	port (
 		clock: in std_logic;
-		opcode: in std_logic_vector(5 downto 0);
-		ALU_in: in std_logic_vector(4 downto 0);
+		opcode: in std_logic_vector(5 downto 0):=(others => '0');
+		ALU_in: in std_logic_vector(4 downto 0):=(others => '0');
 		writeMem: in std_logic;
 		WB_buffer_in: in std_logic_vector(31 downto 0);
 		WB_buffer_out: out std_logic_vector(31 downto 0);
@@ -61,8 +61,8 @@ begin
 			-- since the data memory has 32768 bytes,
 			--"memory.txt" should have 32768/4 lines,
 			--on for each 32 bit word
-			for i in 1 to 8192 
-				for j in 1 to 4
+			for i in 1 to 8192 loop
+				for j in 1 to 4 loop
 					--ex j = 1 : 7 downto 0
 					reg_value(8*j-1 downto 8*j-8) := ram_block(i*4 + j-5);
 				end loop;
@@ -71,6 +71,6 @@ begin
 			end loop;
 			file_close(memory_file);
 		end if;
-	end process;
+	end write_file;
 
 end rtl;
