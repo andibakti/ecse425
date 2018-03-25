@@ -61,14 +61,14 @@ begin
 	write_file: process(writeMem)
 		--file memory_file : text open write_mode is "memory.txt";
 		file memory_file : text;
-		variable num: line;
+		variable line_num: line;
 		variable file_status : file_open_status;
 		variable reg_value : std_logic_vector(31 downto 0);
 		
 		begin
 		
 		if (writeMem = '1') then
-			file_open(memory_file);
+			file_open(memory_file, "memory.txt", write_mode);
 			-- since the data memory has 32768 bytes,
 			--"memory.txt" should have 32768/4 lines,
 			--on for each 32 bit word
@@ -78,10 +78,10 @@ begin
 					reg_value(8*j-1 downto 8*j-8) := ram_block(i*4 + j-5);
 				end loop;
 				write(line_num, reg_value);
-				writeline(memory_file, num);
+				writeline(memory_file, line_num);
 			end loop;
 			file_close(memory_file);
 		end if;
-	end write_file;
+	end process;
 
 end rtl;
