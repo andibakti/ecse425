@@ -5,12 +5,13 @@ use ieee.numeric_std.all;
 
 entity ex_ALU is
     port(
-        clock: in std_logic;
+        clock, rst: in std_logic;
         a: in std_logic_vector(31 downto 0);
 	b: in std_logic_vector(31 downto 0);
-	signExtendImmediate: in std_logic_vector(31 downto 0);
-	sel: in std_logic_vector(4 downto 0);
-        reset: in std_logic;
+	signExtendImmediate: in std_logic_vector(15 downto 0);
+	sel: in std_logic_vector(5 downto 0);
+	funct: in std_logic_vector(5 downto 0);
+	
         zero: out std_logic;
         output: out std_logic_vector(31 downto 0)
         );
@@ -26,44 +27,64 @@ signal zeroExtendImmediate: std_logic_vector(31 downto 0);
 
 begin
     process (clock) begin
-        if(reset = '1') then
-            output <= (OTHERS => '0');
+        if(rst = '1') then
+            temp <= (OTHERS => '0');
         elsif rising_edge(clock) then
 	    zeroExtendImmediate <= "00000000000000000000000000000000" & signExtendImmediate;
             case sel is
-				when "00000" => temp <= std_logic_vector(signed(a) + signed(b)); --add?
-				when "00001" => temp <= std_logic_vector(signed(a) - signed(b));--sub
-				when "00010" => temp <= std_logic_vector(signed(a) + signed(signExtendImmediate));--add immediate
-				when "00011" => temp <= std_logic_vector(signed(a)*signed(b));--mul
-				when "00100" => 
-					lo <= std_logic_vector(signed(a)/signed(b)); --div
-					hi <= std_logic_vector(signed(a) mod signed(b)); --div
+				when "000000" => 
+					case funct is
+						when "100000" =>
+							temp <= std_logic_vector(signed(a) + signed(b)); --add
+						when "100010" =>
+							temp <= std_logic_vector(signed(a) - signed(b));--sub
+						when "100100" =>
+							temp <=  temp <= a and b;--and
+						when "100111" =>
+							temp <= a nor b;--nor
+						when "100101" =>
+							temp <= a or b;--or
+						when "100011" =>
+							temp <= a xor b;--xor
+						when "000000" => 
+							temp <= std_logic_vector(shift_left(unsigned(a), to_integer(signed(b)))); --shift left logical (unsigned)
+						when "000010" =>
+							temp <= std_logic_vector(shift_right(unsigned(a), to_integer(signed(b)))); --shift right logical
+						when "000011" =>
+							temp <= std_logic_vector(shift_right(signed(a), to_integer(signed(b)))); --shift right arithmetic (signed)
+						when "011010" =>
+							lo <= std_logic_vector(signed(a)/signed(b)); --div
+							hi <= std_logic_vector(signed(a) mod signed(b)); --div
+						when "011000" =>
+							temp <= std_logic_vector(signed(a)*signed(b));--mul
+						when "010000" =>
+							temp <= hi;
+						when "010010" =>
+							temp <= lo;
+						when "101010" => --set less than (slt)
+							if(signed(a) < signed(b)) then
+								temp <= X"00000001";
+							else
+								temp <= (others => '0');
+							end if;
+					end case;
 
-				when "00101" => --set less than (slt)
-						if(signed(a) < signed(b)) then
-							temp <= X"00000001";
-						else
-							temp <= (others => '0');
-						end if;
-				when "00110" => --set less than immediate (slti)
+				when "001000" => 
+					temp <= std_logic_vector(signed(a) + signed(signExtendImmediate));--add immediate
+				when "001010" => --set less than immediate (slti)
 						if(signed(a) < signed(signExtendImmediate)) then
 							temp <= X"00000001";
 						else
 							temp <= (others => '0');
 						end if;
-				when "00111" => temp <= a and b;--and
-				when "01000" => temp <= a or b;--or
-				when "01001" => temp <= a nor b;--nor
-				when "01010" => temp <= a xor b;--xor
-				when "01011" => temp <= a and zeroExtendImmediate; --and immediate
-				when "01100" => temp <= a or zeroExtendImmediate; --or immediate
-				when "01101" => temp <= a xor zeroExtendImmediate; --xor immediate
-				when "01110" => temp <= hi;--move from HI 
-				when "01111" => temp <= lo;--move from LO
-				when "10000" => temp <= std_logic_vector(shift_left(signed(a),16));	--load upper immediate
-				when "10001" => temp <= std_logic_vector(shift_left(unsigned(a), to_integer(signed(b)))); --shift left logical (unsigned)
-				when "10010" => temp <= std_logic_vector(shift_right(unsigned(a), to_integer(signed(b)))); --shift right logical
-				when "10011" => temp <= std_logic_vector(shift_right(signed(a), to_integer(signed(b)))); --shift right arithmetic (signed)
+				when "001100" => 
+					temp <= a and zeroExtendImmediate; --and immediate
+				when "001101" => 
+					temp <= a or zeroExtendImmediate; --or immediate
+				when "001110" => 
+					temp <= a xor zeroExtendImmediate; --xor immediate
+				when "001111" => 
+					temp <= std_logic_vector(shift_left(signed(a),16)); --load upper immediate
 				when others => 
 					temp <= (others => '0');
 					-- stall
