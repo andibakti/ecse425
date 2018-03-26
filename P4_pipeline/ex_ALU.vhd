@@ -7,9 +7,9 @@ entity ex_ALU is
     port(
         clock: in std_logic;
         a: in std_logic_vector(31 downto 0);
-		b: in std_logic_vector(31 downto 0);
-		signExtendImmediate: in std_logic_vector(31 downto 0);
-		sel: in std_logic_vector(4 downto 0);
+	b: in std_logic_vector(31 downto 0);
+	signExtendImmediate: in std_logic_vector(31 downto 0);
+	sel: in std_logic_vector(4 downto 0);
         reset: in std_logic;
         zero: out std_logic;
         output: out std_logic_vector(31 downto 0)
@@ -21,6 +21,7 @@ architecture arch of ex_ALU is
 signal temp: std_logic_vector(31 downto 0);
 signal hi, lo: std_logic_vector(31 downto 0);
 signal stall : std_logic;
+signal zeroExtendImmediate: std_logic_vector(31 downto 0);
 
 
 begin
@@ -28,6 +29,7 @@ begin
         if(reset = '1') then
             output <= (OTHERS => '0');
         elsif rising_edge(clock) then
+	    zeroExtendImmediate <= "00000000000000000000000000000000" & signExtendImmediate;
             case sel is
 				when "00000" => temp <= std_logic_vector(signed(a) + signed(b)); --add?
 				when "00001" => temp <= std_logic_vector(signed(a) - signed(b));--sub
@@ -53,15 +55,15 @@ begin
 				when "01000" => temp <= a or b;--or
 				when "01001" => temp <= a nor b;--nor
 				when "01010" => temp <= a xor b;--xor
-				when "01011" => temp <= a and signExtendImmediate; --and immediate
-				when "01100" => temp <= a or signExtendImmediate; --or immediate
-				when "01101" => temp <= a xor signExtendImmediate; --xor immediate
+				when "01011" => temp <= a and zeroExtendImmediate; --and immediate
+				when "01100" => temp <= a or zeroExtendImmediate; --or immediate
+				when "01101" => temp <= a xor zeroExtendImmediate; --xor immediate
 				when "01110" => temp <= hi;--move from HI 
 				when "01111" => temp <= lo;--move from LO
 				when "10000" => temp <= std_logic_vector(shift_left(signed(a),16));	--load upper immediate
 				when "10001" => temp <= std_logic_vector(shift_left(unsigned(a), to_integer(signed(b)))); --shift left logical (unsigned)
 				when "10010" => temp <= std_logic_vector(shift_right(unsigned(a), to_integer(signed(b)))); --shift right logical
-				when "10011" => temp <= std_logic_vector(shift_left(signed(a), to_integer(signed(b)))); --shift right arithmetic (signed)
+				when "10011" => temp <= std_logic_vector(shift_right(signed(a), to_integer(signed(b)))); --shift right arithmetic (signed)
 				when others => 
 					temp <= (others => '0');
 					-- stall
