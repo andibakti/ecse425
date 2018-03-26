@@ -9,7 +9,7 @@ entity id_reg is
 		instruction_in: in std_logic_vector(31 downto 0);
 
 		pc_out: 	out std_logic_vector(31 downto 0);
-		opCode_out: out std_logic_vector(5 downto 0);
+		opCode_out: 	out std_logic_vector(5 downto 0);
 		reg1_out:	out std_logic_vector(4 downto 0);
 		reg2_out:	out std_logic_vector(4 downto 0);
 		address_out:	out std_logic_vector(25 downto 0);
@@ -25,7 +25,6 @@ architecture arch of id_reg is
 
 begin
     process(clock,rst)
-	--signal opCode: std_logic_vector(5 downto 0);
 
 	begin
 
