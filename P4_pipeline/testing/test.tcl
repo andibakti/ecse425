@@ -6,7 +6,7 @@ proc AddWaves {} {
 	add wave -position end  sim:/ex_alu_tb/signExtendImmediate
 	add wave -position end  sim:/ex_alu_tb/sel
 	add wave -position end  sim:/ex_alu_tb/zero
-	add wave -position end  sim:/ex_alu_tb/result
+	add wave -position end  sim:/ex_alu_tb/output
 	}
 
 vlib work

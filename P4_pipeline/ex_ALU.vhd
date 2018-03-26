@@ -19,7 +19,8 @@ end entity;
 
 architecture arch of ex_ALU is
 --declare signals
-signal temp: std_logic_vector(31 downto 0);
+signal temp : std_logic_vector(31 downto 0);
+signal temp2 : std_logic_vector(63 downto 0);
 signal hi, lo: std_logic_vector(31 downto 0);
 signal stall : std_logic;
 signal zeroExtendImmediate: std_logic_vector(31 downto 0);
@@ -30,7 +31,7 @@ begin
         if(rst = '1') then
             temp <= (OTHERS => '0');
         elsif rising_edge(clock) then
-	    zeroExtendImmediate <= "00000000000000000000000000000000" & signExtendImmediate;
+	    zeroExtendImmediate <= "0000000000000000" & signExtendImmediate;
             case sel is
 				when "000000" => 
 					case funct is
@@ -39,7 +40,7 @@ begin
 						when "100010" =>
 							temp <= std_logic_vector(signed(a) - signed(b));--sub
 						when "100100" =>
-							temp <=  temp <= a and b;--and
+							temp <= a and b;--and
 						when "100111" =>
 							temp <= a nor b;--nor
 						when "100101" =>
@@ -56,7 +57,9 @@ begin
 							lo <= std_logic_vector(signed(a)/signed(b)); --div
 							hi <= std_logic_vector(signed(a) mod signed(b)); --div
 						when "011000" =>
-							temp <= std_logic_vector(signed(a)*signed(b));--mul
+							temp2 <= std_logic_vector(signed(a) * signed(b));--mul
+							hi <= temp2(63 downto 32);
+							lo <= temp2(31 downto 0);
 						when "010000" =>
 							temp <= hi;
 						when "010010" =>
@@ -67,6 +70,10 @@ begin
 							else
 								temp <= (others => '0');
 							end if;
+						when others =>
+							temp <= (others => '0');
+							-- stall
+							stall <= '1';
 					end case;
 
 				when "001000" => 
