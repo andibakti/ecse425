@@ -26,7 +26,7 @@ signal stall : std_logic;
 begin
     process (clock) begin
         if(reset = '1') then
-            output <= (OTHERS => '0');
+            temp <= (OTHERS => '0');
         elsif rising_edge(clock) then
             case sel is
 				when "00000" => temp <= std_logic_vector(signed(a) + signed(b)); --add?
