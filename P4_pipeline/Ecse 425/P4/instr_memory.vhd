@@ -12,7 +12,7 @@ entity instr_memory is
 	port (
 		clock: in std_logic;
 		writedata: in std_logic_vector (31 downto 0);
-		address: in integer range 0 to ram_size-1;
+		address: in std_logic_vector (31 downto 0);
 		memwrite: in std_logic;
 		memread: in std_logic;
 		readdata: out std_logic_vector (31 downto 0);
@@ -40,9 +40,9 @@ begin
 		--this is the actual synthesizable sram block
 		if (clock'event and clock = '1') then
 			if (memwrite = '1') then
-				ram_block(address) <= writedata;
+				ram_block(to_integer(unsigned(address))) <= writedata;
 			end if;
-		read_address_reg <= address;
+		read_address_reg <= to_integer(unsigned(address));
 		end if;
 	end process;
 	readdata <= ram_block(read_address_reg);
