@@ -11,12 +11,13 @@ entity data_memory is
 	);
 	port (
 		clock: in std_logic;
-		opcode: in std_logic_vector(5 downto 0):=(others => '0');
-		ALU_in: in std_logic_vector(31 downto 0):=(others => '0');
+		data_in: in std_logic_vector(31 downto 0):=(others => '0');
+		do_load: in std_logic := '0';
+		do_write: in std_logic := '0';
 		writeMem: in std_logic;
-		WB_buffer_in: in std_logic_vector(31 downto 0);
-		WB_buffer_out: out std_logic_vector(31 downto 0);
-		ALU_out: out std_logic_vector(31 downto 0)
+		addr: in std_logic_vector(31 downto 0);
+		data_out: out std_logic_vector(31 downto 0);
+		reg_id_out: out std_logic_vector(4 downto 0);
 		--mem_data: out std_logic_vector(31 downto 0);
 	);
 end data_memory;
@@ -40,20 +41,17 @@ begin
 		
 		if rising_edge(clock) then
 			--sw
-			if(opcode = "101011")then
-				--nothing
+			if(do_write = '1') then
+				ram_block(to_integer(unsigned(addr))) <= data_in;
+				data_out <= data_in;
 			--lw
-			elsif(opcode = "101011")then
-				--nothing
-			--branch
-			elsif(opcode = "000101")then
-				--nothing
+			elsif(do_load = '1') then
+				data_out <= ram_block(to_integer(unsigned(addr)));
 			else
-				--Assuming opcode is not sw, lw, or branch
-				ALU_out <= ALU_in;
+				data_out <= data_in;
 			end if;
-		else
-			WB_buffer_out <= WB_buffer_in;
+			
+			reg_id_out = reg_id_in;
 		end if;
 
 	end process;
