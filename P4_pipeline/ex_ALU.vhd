@@ -8,10 +8,11 @@ entity ex_ALU is
         clock, rst: in std_logic;
         a: in std_logic_vector(31 downto 0);
 	b: in std_logic_vector(31 downto 0);
-	signExtendImmediate: in std_logic_vector(15 downto 0);
+	signExtendImmediate: in std_logic_vector(31 downto 0);
+   uSignExtendImmediate: in std_logic_vector(31 downto 0);
 	sel: in std_logic_vector(5 downto 0);
 	funct: in std_logic_vector(5 downto 0);
-	
+
         zero: out std_logic;
         output: out std_logic_vector(31 downto 0)
         );
@@ -19,11 +20,9 @@ end entity;
 
 architecture arch of ex_ALU is
 --declare signals
-signal temp : std_logic_vector(31 downto 0);
-signal temp2 : std_logic_vector(63 downto 0);
+signal temp: std_logic_vector(31 downto 0);
 signal hi, lo: std_logic_vector(31 downto 0);
 signal stall : std_logic;
-signal zeroExtendImmediate: std_logic_vector(31 downto 0);
 
 
 begin
@@ -31,9 +30,8 @@ begin
         if(rst = '1') then
             temp <= (OTHERS => '0');
         elsif rising_edge(clock) then
-	    zeroExtendImmediate <= "0000000000000000" & signExtendImmediate;
             case sel is
-				when "000000" => 
+				when "000000" =>
 					case funct is
 						when "100000" =>
 							temp <= std_logic_vector(signed(a) + signed(b)); --add
@@ -47,7 +45,7 @@ begin
 							temp <= a or b;--or
 						when "100011" =>
 							temp <= a xor b;--xor
-						when "000000" => 
+						when "000000" =>
 							temp <= std_logic_vector(shift_left(unsigned(a), to_integer(signed(b)))); --shift left logical (unsigned)
 						when "000010" =>
 							temp <= std_logic_vector(shift_right(unsigned(a), to_integer(signed(b)))); --shift right logical
@@ -57,9 +55,7 @@ begin
 							lo <= std_logic_vector(signed(a)/signed(b)); --div
 							hi <= std_logic_vector(signed(a) mod signed(b)); --div
 						when "011000" =>
-							temp2 <= std_logic_vector(signed(a) * signed(b));--mul
-							hi <= temp2(63 downto 32);
-							lo <= temp2(31 downto 0);
+							temp <= std_logic_vector(signed(a)*signed(b));--mul
 						when "010000" =>
 							temp <= hi;
 						when "010010" =>
@@ -70,13 +66,9 @@ begin
 							else
 								temp <= (others => '0');
 							end if;
-						when others =>
-							temp <= (others => '0');
-							-- stall
-							stall <= '1';
 					end case;
 
-				when "001000" => 
+				when "001000" =>
 					temp <= std_logic_vector(signed(a) + signed(signExtendImmediate));--add immediate
 				when "001010" => --set less than immediate (slti)
 						if(signed(a) < signed(signExtendImmediate)) then
@@ -84,15 +76,15 @@ begin
 						else
 							temp <= (others => '0');
 						end if;
-				when "001100" => 
-					temp <= a and zeroExtendImmediate; --and immediate
-				when "001101" => 
-					temp <= a or zeroExtendImmediate; --or immediate
-				when "001110" => 
-					temp <= a xor zeroExtendImmediate; --xor immediate
-				when "001111" => 
+				when "001100" =>
+					temp <= a and uSignExtendImmediate; --and immediate
+				when "001101" =>
+					temp <= a or uSignExtendImmediate; --or immediate
+				when "001110" =>
+					temp <= a xor uSignExtendImmediate; --xor immediate
+				when "001111" =>
 					temp <= std_logic_vector(shift_left(signed(a),16)); --load upper immediate
-				when others => 
+				when others =>
 					temp <= (others => '0');
 					-- stall
 					stall <= '1';

@@ -30,15 +30,21 @@ begin
 
 	if rst = '1' then --reset all outputs
 		pc_out <= (others=> '0');
-		instruction_out <= (others=> '0');
+		opCode_out <= (others=> '0');
+		reg1_out <= (others=> '0');
+		reg2_out <= (others=> '0');
+		address_out <= (others=> '0');
+		immediateValue_out <= (others=> '0');
+		shamt_out <= (others=> '0');
+		funct_out <= (others=> '0');	
 	elsif rising_edge(clock) then --assign
 		pc_out <= pc_in;
-		opCode <= instruction_in(31 downto 26);
+		opCode_out <= instruction_in(31 downto 26);
 		reg1_out <= instruction_in(25 downto 21);
 		reg2_out <= instruction_in(20 downto 16);
 		address_out <= instruction_in(25 downto 0);
 		immediateValue_out <= instruction_in(15 downto 0);
-		shamt_out <= instruction_in(10 downto 6);
+		shamt_out <= instruction_in(11 downto 6);
 		funct_out <= instruction_in(5 downto 0);		
 	end if;
     end process;
