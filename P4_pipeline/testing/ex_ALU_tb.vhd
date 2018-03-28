@@ -7,53 +7,54 @@ end ex_alu_tb;
 
 architecture behavior of ex_alu_tb is
 
-component alu is
+component ex_alu is
 port(
-	clock : in std_logic;
-	reset : in std_logic;
+	clock, rst: in std_logic;
 	a: in std_logic_vector(31 downto 0);
 	b: in std_logic_vector(31 downto 0);
-	signExtendImmediate: in std_logic_vector(31 downto 0);
-	sel: in std_logic_vector(4 downto 0);
+	signExtendImmediate: in std_logic_vector(15 downto 0);
+	sel: in std_logic_vector(5 downto 0);
+	funct: in std_logic_vector(5 downto 0);
+
 	zero: out std_logic;
-	result: out std_logic_vector(31 downto 0)
+	output: out std_logic_vector(31 downto 0)
 );
 end component;
 
 
 -- test signals
-signal reset : std_logic := '0';
-signal clk : std_logic := '0';
+signal rst : std_logic := '0';
+signal clock : std_logic := '0';
 constant clk_period : time := 1 ns;
-signal a: std_logic_vector(31 downto 0);
-signal b: std_logic_vector(31 downto 0);
-signal signExtendImmediate: std_logic_vector(31 downto 0);
-signal sel: std_logic_vector(4 downto 0);
+signal a, b: std_logic_vector(31 downto 0);
+signal signExtendImmediate: std_logic_vector(15 downto 0);
+signal sel, funct: std_logic_vector(5 downto 0);
 signal zero: std_logic;
-signal result: std_logic_vector(31 downto 0);
+signal output: std_logic_vector(31 downto 0);
 
 --signal s_addr : std_logic_vector (31 downto 0);
 
 begin
 
-alu_instance: alu
+alu_instance: ex_alu
 port map(
-	clock => clk,
-	reset => reset,
+	clock => clock,
+	rst => rst,
 	a => a,
 	b => b,
 	signExtendImmediate => signExtendImmediate,
 	sel => sel,
+	funct => funct,
 	zero => zero,
-	result => result
+	output => output
 );
 
 
 clk_process : process
 begin
-  clk <= '0';
+  clock <= '0';
   wait for clk_period/2;
-  clk <= '1';
+  clock <= '1';
   wait for clk_period/2;
 end process;
 
@@ -61,21 +62,48 @@ test_process : process
 begin
 
 -- begin by setting up the cache
-reset <= '1';
+rst <= '1';
 wait for 1 * clk_period;
-assert ( result = X"00000000") report "reset successfull" severity error;
+assert ( output = X"00000000") report "reset successfull" severity error;
 
-reset <= '0';
+rst <= '0';
 wait for 1 * clk_period;
 
 
 report "#1 test 'add'"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but has been brought in the cache, so hit
 a <= std_logic_vector( to_signed(40,32));
 b <= std_logic_vector( to_signed(29,32));
-sel <= "00000";
+sel <= "000000";
+funct <= "100000";
 wait for 1 * clk_period;
 
-assert ( result = std_logic_vector(to_signed(69,32))) report "1: 'add' successfull" severity error;
+assert ( output = std_logic_vector(to_signed(69,32))) report "1: 'add' successfull" severity error;
+
+report "#2 test 'sub'"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but has been brought in the cache, so hit
+a <= std_logic_vector( to_signed(40,32));
+b <= std_logic_vector( to_signed(29,32));
+sel <= "000000";
+funct <= "100010";
+wait for 1 * clk_period;
+assert ( output = std_logic_vector(to_signed(11,32))) report "2: 'sub' unsuccessful" severity error;
+
+
+report "#3 test 'mult'"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but has been brought in the cache, so hit
+a <= std_logic_vector( to_signed(40,32));
+b <= std_logic_vector( to_signed(29,32));
+sel <= "000000";
+funct <= "011000";
+wait for 1 * clk_period;
+wait for 1 * clk_period;
+report "#3.1 test 'movelo'";
+funct <= "010010";
+wait for 1 * clk_period;
+assert ( output = std_logic_vector(to_signed(1160,32))) report "3: 'mult' unsuccessful (lo)" severity error;
+wait for 1 * clk_period;
+report "#3.2 test 'movehi'";
+funct <= "010000";
+wait for 1 * clk_period;
+assert ( output = std_logic_vector(to_signed(0,32))) report "3: 'mult' unsuccessful (hi)" severity error;
 
 
 
