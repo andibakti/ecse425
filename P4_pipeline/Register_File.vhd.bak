@@ -2,7 +2,7 @@ library IEEE;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
-ENTITY Register_File IS
+ENTITY registerfile IS
 
 	PORT (
 	clk,rst : IN std_logic;
@@ -18,10 +18,10 @@ ENTITY Register_File IS
 	read_regB : OUT std_logic_vector(31 DOWNTO 0)
 	);
     
-END Register_File;
+END registerfile;
 
 
-ARCHITECTURE arch OF Register_File IS 
+ARCHITECTURE arch OF registerfile IS 
 	
 	TYPE registers IS ARRAY (0 to 31) OF STD_LOGIC_VECTOR(31 downto 0);
 	SIGNAL register_file: registers := (
@@ -75,6 +75,7 @@ BEGIN
 			END LOOP;
         	
         ELSIF (rising_edge(clk)) THEN
+	
 			IF (write_en = '1') THEN
 				register_file(to_integer(unsigned(addr_write))) <= writedata;
 			END IF;
