@@ -15,10 +15,10 @@ BEGIN
 process (data_in)
 begin
 	if data_in(15) = '1' then
-		data_out(31 downto 16) <= "1000000000000000";
+		data_out(31 downto 15) <= "10000000000000000";
 	else
-		data_out(31 downto 16) <= "0000000000000000";
+		data_out(31 downto 15) <= "00000000000000000";
 	end if;
-	data_out(15 downto 0) <= data_in;
+	data_out(14 downto 0) <= data_in(14 downto 0);
 end process;
 END arch;
