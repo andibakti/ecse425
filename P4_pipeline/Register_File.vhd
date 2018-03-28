@@ -75,7 +75,6 @@ BEGIN
 			END LOOP;
         	
         ELSIF (rising_edge(clk)) THEN
-	
 			IF (write_en = '1') THEN
 				register_file(to_integer(unsigned(addr_write))) <= writedata;
 			END IF;
