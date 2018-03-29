@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/camille/workspace/ECSE 325/ecse325/lab4
 Eex_alu
-Z0 w1521841710
+Z0 w1522090373
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -18,13 +18,13 @@ Z5 8ex_ALU.vhd
 Z6 Fex_ALU.vhd
 l0
 L6
-VXj2mJ_FFSQNc;VK:W`=bg3
-!s100 MILSC5ZYFa3eC<5m3o>]l3
+V?NzQMf_YC6W6=j_Z^Kb@D1
+!s100 R_jRCF^1nRARe;DeY>AJ83
 Z7 OV;C;10.5c;63
 32
-Z8 !s110 1521842202
+Z8 !s110 1522090378
 !i10b 1
-Z9 !s108 1521842202.000000
+Z9 !s108 1522090378.000000
 Z10 !s90 -reportprogress|300|ex_ALU.vhd|
 Z11 !s107 ex_ALU.vhd|
 !i113 1
@@ -33,11 +33,11 @@ Aarch
 R1
 R2
 R3
-DEx4 work 6 ex_alu 0 22 Xj2mJ_FFSQNc;VK:W`=bg3
-l26
-L19
-V:GL^>e1dfDW^4e:C7H4mg0
-!s100 om6S8TK_HBk73Mefl@?KP2
+DEx4 work 6 ex_alu 0 22 ?NzQMf_YC6W6=j_Z^Kb@D1
+l29
+L20
+VdF8=3>89W[g;WOM57GQ2O0
+!s100 1m3EG=e_ZP`Y2zk5DYLWl2
 R7
 32
 R8
@@ -48,7 +48,7 @@ R11
 !i113 1
 R12
 Eex_alu_tb
-Z13 w1521842200
+Z13 w1522090125
 R1
 R2
 R3
@@ -61,28 +61,28 @@ Vj=^QZc07CPEXUCY4a0i<?3
 !s100 h4nUG^H4K1WJSOEao89AQ2
 R7
 32
-R8
+Z16 !s110 1522090379
 !i10b 1
 R9
-Z16 !s90 -reportprogress|300|ex_ALU_tb.vhd|
-Z17 !s107 ex_ALU_tb.vhd|
+Z17 !s90 -reportprogress|300|ex_ALU_tb.vhd|
+Z18 !s107 ex_ALU_tb.vhd|
 !i113 1
 R12
 Abehavior
 R1
 R2
 R3
-Z18 DEx4 work 9 ex_alu_tb 0 22 j=^QZc07CPEXUCY4a0i<?3
+Z19 DEx4 work 9 ex_alu_tb 0 22 j=^QZc07CPEXUCY4a0i<?3
 l37
 L8
-VFL`cic16L67FUA611@cjn3
-!s100 icoF[zOM>bY9dTX`ZlTUf3
+Z20 VHM4Tg:];XQF=;o785JV7<3
+Z21 !s100 Hh6kn91EGFhH;j5V;7T9Q2
 R7
 32
-R8
+R16
 !i10b 1
 R9
-R16
 R17
+R18
 !i113 1
 R12

@@ -2,14 +2,14 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
-ENTITY usignext IS
+ENTITY usign_ext IS
     PORT (
         data_in: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
         data_out: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
     );
-END usignext;
+END usign_ext;
 
-ARCHITECTURE arch OF usignext IS
+ARCHITECTURE arch OF usign_ext IS
 
 BEGIN
 process (data_in)

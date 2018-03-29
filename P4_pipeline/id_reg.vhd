@@ -17,7 +17,7 @@ entity id_reg is
 		shamt_out:	out std_logic_vector(5 downto 0);
 		funct_out:	out std_logic_vector(5 downto 0);
 		reg_write_out: in std_logic_vector(4 downto 0);
-		pc_out: out std_logic_vector(31 downto 0);
+		pc_out: out std_logic_vector(31 downto 0)
 		);
 
 end id_reg;
