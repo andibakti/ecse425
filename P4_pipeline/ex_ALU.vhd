@@ -22,8 +22,8 @@ entity ex_ALU is
         mem: out std_logic;
         load: out std_logic;
         store: out std_logic;
-        jumpAddress: out std_logic(31 downto 0);
-        memAddress: out std_logic(31 downto 0);
+        jumpAddress: out std_logic_vector( 31 downto 0);
+        memAddress: out std_logic_vector(31 downto 0);
         regWrite_out: out std_logic_vector(4 downto 0);
         result: out std_logic_vector(31 downto 0)
    	);
@@ -82,7 +82,7 @@ begin
 						when others =>
 							temp <= (others => '0');
 							jumpCheck <= '0';
-							memCheck <= '0';
+							memoryCheck <= '0';
 							loadCheck <= '0';
 							storeCheck <= '0';
 					end case;
@@ -109,14 +109,14 @@ begin
 					else
 						jumpCheck <= '0';
 					end if;
-					jA <= std_logic_vector(signed(offset_in) + unsigned(pc_in));
+					jA <= std_logic_vector(signed(offset_in) + signed(pc_in));
 				when "000101" => --branch on not equal (beq)
 					if(signed(a) = signed(b)) then
 						jumpCheck <= '0';
 					else
 						jumpCheck <= '1';
 					end if;
-					jA <= std_logic_vector(signed(offset_in) + unsigned(pc_in));
+					jA <= std_logic_vector(signed(offset_in) + signed(pc_in));
 				when "000010" => --jump
 					jumpCheck <= '1'; 
 					jA <= address_in;
@@ -124,17 +124,17 @@ begin
 					jumpCheck <= '1';
 					jA <= address_in;
 				when "100011" => --load word (lw)
-					memCheck <= '1';
+					memoryCheck <= '1';
 					loadCheck <= '1';
 					storeCheck <= '0';
 				when "101011" => --store word (sw)
-					memCheck <= '1';
+					memoryCheck <= '1';
 					storeCheck <= '1';
 					loadCheck <= '0';
 				when others =>
 					temp <= (others => '0');
 					jumpCheck <= '0';
-					memCheck <= '0';
+					memoryCheck <= '0';
 					loadCheck <= '0';
 					storeCheck <= '0';
 			end case;
@@ -144,7 +144,7 @@ begin
 result <= temp;
 jump <= jumpCheck;
 jumpAddress <= jA;
-mem <= memCheck;
+mem <= memoryCheck;
 store <= storeCheck;
 load <= loadCheck;
 regWrite_out <= regWrite_in;

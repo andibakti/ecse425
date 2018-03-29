@@ -91,7 +91,7 @@ port(
 	immediateValue_out:	out std_logic_vector(15 downto 0);
 	shamt_out:	out std_logic_vector(5 downto 0);
 	funct_out:	out std_logic_vector(5 downto 0);
-	reg_write_out: in std_logic_vector(4 downto 0);
+	reg_write_out: out std_logic_vector(4 downto 0);
 	pc_out: out std_logic_vector(31 downto 0)
 );
 end component;
@@ -125,14 +125,14 @@ port(
     mem: out std_logic;
     load: out std_logic;
     store: out std_logic;
-    jumpAddress: out std_logic(31 downto 0);
-    memAddress: out std_logic(31 downto 0);
+    jumpAddress: out std_logic_vector(31 downto 0);
+    memAddress: out std_logic_vector(31 downto 0);
     regWrite_out: out std_logic_vector(4 downto 0);
     result: out std_logic_vector(31 downto 0)
 );
 end component;
 
-component ex_ALU is
+component data_memory is
 port(
 	clock: in std_logic;
 	data_in: in std_logic_vector(31 downto 0):=(others => '0');
@@ -140,6 +140,7 @@ port(
 	do_write: in std_logic := '0';
 	writeMem: in std_logic;
 	addr: in std_logic_vector(31 downto 0);
+	reg_id_in: in std_logic_vector(4 downto 0);
 	data_out: out std_logic_vector(31 downto 0);
 	reg_id_out: out std_logic_vector(4 downto 0)
 
@@ -227,6 +228,7 @@ signal clock_data_mem: std_logic;
 signal data_in_data_mem: std_logic_vector(31 downto 0):=(others => '0');
 signal do_load_data_mem: std_logic := '0';
 signal do_write_data_mem: std_logic := '0';
+signal reg_id_in_data_mem: std_logic_vector(4 downto 0);
 signal writeMem_data_mem: std_logic;
 signal addr_data_mem: std_logic_vector(31 downto 0);
 signal data_out_data_mem:  std_logic_vector(31 downto 0);

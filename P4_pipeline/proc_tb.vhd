@@ -9,8 +9,7 @@ architecture behavior of proc_tb is
 
 component proc is
 port(
-	clock, rst: in std_logic;
-
+	clock, rst: in std_logic
 );
 end component;
 

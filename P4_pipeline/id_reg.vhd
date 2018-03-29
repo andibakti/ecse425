@@ -16,7 +16,7 @@ entity id_reg is
 		immediateValue_out:	out std_logic_vector(15 downto 0);
 		shamt_out:	out std_logic_vector(5 downto 0);
 		funct_out:	out std_logic_vector(5 downto 0);
-		reg_write_out: in std_logic_vector(4 downto 0);
+		reg_write_out: out std_logic_vector(4 downto 0);
 		pc_out: out std_logic_vector(31 downto 0)
 		);
 
@@ -49,7 +49,7 @@ begin
 			reg1_out <= "00000";
 			reg2_out <= "00000";
 			reg_write_out <= "00000";
-			func_out <= "100000";
+			funct_out <= "100000";
 
 		else
 			opCode_out <= instruction_in(31 downto 26);

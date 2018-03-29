@@ -1,0 +1,1437 @@
+# Load canceled
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:10 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 14:59:11 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:11 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 14:59:11 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:11 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 14:59:11 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:11 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 14:59:12 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:12 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 14:59:12 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:12 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 14:59:12 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:12 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 14:59:12 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 14:59:12 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# ** Error: id_reg.vhd(42): Cannot drive signal 'reg_write_out' of mode IN.
+# ** Error: id_reg.vhd(51): Cannot drive signal 'reg_write_out' of mode IN.
+# ** Error: id_reg.vhd(52): Illegal target for signal assignment.
+# ** Error: id_reg.vhd(52): (vcom-1136) Unknown identifier "func_out".
+# ** Error: id_reg.vhd(63): Cannot drive signal 'reg_write_out' of mode IN.
+# ** Error: id_reg.vhd(68): VHDL Compiler exiting
+# End time: 14:59:13 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:55 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:01:55 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:55 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:01:55 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:56 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:01:56 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:56 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:01:56 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:56 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:01:56 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:56 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:01:56 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:57 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:01:57 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:01:57 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# ** Error: id_reg.vhd(52): Illegal target for signal assignment.
+# ** Error: id_reg.vhd(52): (vcom-1136) Unknown identifier "func_out".
+# ** Error: id_reg.vhd(68): VHDL Compiler exiting
+# End time: 15:01:57 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:55 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:02:56 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:56 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:02:56 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:56 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:02:56 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:56 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:02:57 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:57 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:02:57 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:57 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:02:57 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:57 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:02:57 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:02:58 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# ** Error: id_reg.vhd(52): Illegal target for signal assignment.
+# ** Error: id_reg.vhd(52): (vcom-1136) Unknown identifier "func_out".
+# ** Error: id_reg.vhd(68): VHDL Compiler exiting
+# End time: 15:02:58 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:08 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:03:08 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:08 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:03:08 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:08 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:03:08 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:09 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:03:09 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:09 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:03:09 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:09 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:03:10 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:10 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:03:10 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:10 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:03:10 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:10 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:03:10 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:11 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# ** Error: ex_ALU.vhd(25): Index constraint cannot be applied to non-array type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: ex_ALU.vhd(26): Index constraint cannot be applied to non-array type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: ex_ALU.vhd(30): VHDL Compiler exiting
+# End time: 15:03:11 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:45 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:03:45 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:45 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:03:45 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:45 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:03:45 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:45 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:03:46 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:46 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:03:46 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:46 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:03:46 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:46 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:03:46 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:46 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:03:47 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:47 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:03:47 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:03:47 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Error: ex_ALU.vhd(85): Illegal target for signal assignment.
+# ** Error: ex_ALU.vhd(85): (vcom-1136) Unknown identifier "memCheck".
+# ** Error: ex_ALU.vhd(112): (vcom-1581) No feasible entries for infix operator '+'.
+# ** Error: ex_ALU.vhd(112): Cannot resolve expression type of infix expression.
+# ** Error: ex_ALU.vhd(112): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
+# ** Error: ex_ALU.vhd(119): (vcom-1581) No feasible entries for infix operator '+'.
+# ** Error: ex_ALU.vhd(119): Cannot resolve expression type of infix expression.
+# ** Error: ex_ALU.vhd(119): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
+# ** Error: ex_ALU.vhd(127): Illegal target for signal assignment.
+# ** Error: ex_ALU.vhd(127): (vcom-1136) Unknown identifier "memCheck".
+# ** Error: ex_ALU.vhd(131): Illegal target for signal assignment.
+# ** Error: ex_ALU.vhd(131): (vcom-1136) Unknown identifier "memCheck".
+# ** Error: ex_ALU.vhd(137): Illegal target for signal assignment.
+# ** Error: ex_ALU.vhd(137): (vcom-1136) Unknown identifier "memCheck".
+# ** Error: ex_ALU.vhd(147): (vcom-1136) Unknown identifier "memCheck".
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Error: ex_ALU.vhd(152): VHDL Compiler exiting
+# End time: 15:03:47 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 16, Warnings: 3
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:10 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:07:10 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:11 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:07:11 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:11 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:07:11 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:11 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:07:11 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:11 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:07:11 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:11 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:07:12 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:12 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:07:12 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:12 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:07:12 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:12 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:07:12 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:12 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Error: ex_ALU.vhd(127): Illegal target for signal assignment.
+# ** Error: ex_ALU.vhd(127): (vcom-1136) Unknown identifier "memCheck".
+# ** Error: ex_ALU.vhd(131): Illegal target for signal assignment.
+# ** Error: ex_ALU.vhd(131): (vcom-1136) Unknown identifier "memCheck".
+# ** Error: ex_ALU.vhd(137): Illegal target for signal assignment.
+# ** Error: ex_ALU.vhd(137): (vcom-1136) Unknown identifier "memCheck".
+# ** Error: ex_ALU.vhd(147): (vcom-1136) Unknown identifier "memCheck".
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(112): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(119): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Error: ex_ALU.vhd(152): VHDL Compiler exiting
+# End time: 15:07:13 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 8, Warnings: 5
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:48 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:07:48 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:48 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:07:48 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:48 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:07:48 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:48 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:07:49 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:49 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:07:49 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:49 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:07:49 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:49 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:07:50 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:50 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:07:50 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:50 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:07:50 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:50 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(112): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(119): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 15:07:50 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:07:50 on Mar 29,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# ** Error: data_memory.vhd(22): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 15:07:51 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:03 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:08:04 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:04 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:08:04 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:04 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:08:04 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:04 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:08:05 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:05 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:08:05 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:05 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:08:05 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:05 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:08:06 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:06 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:08:06 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:06 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:08:06 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:06 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(112): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(119): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 15:08:07 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 5
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:07 on Mar 29,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Error: data_memory.vhd(54): near "=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Error: data_memory.vhd(85): VHDL Compiler exiting
+# End time: 15:08:07 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:22 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:08:22 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:23 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:08:23 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:23 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:08:23 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:23 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:08:23 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:23 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:08:23 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:24 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:08:24 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:24 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:08:24 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:24 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:08:24 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:25 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:08:25 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:25 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(112): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(119): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 15:08:25 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:08:25 on Mar 29,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Error: data_memory.vhd(54): (vcom-1136) Unknown identifier "reg_id_in".
+# ** Error: data_memory.vhd(85): VHDL Compiler exiting
+# End time: 15:08:25 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:50 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:11:50 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:50 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:11:50 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:50 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:11:51 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:51 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:11:51 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:51 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:11:51 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:51 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:11:51 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:51 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:11:52 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:52 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:11:52 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:52 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:11:53 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:53 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(112): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(119): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 15:11:53 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:11:53 on Mar 29,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 15:11:53 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim proc_tb 
+# Start time: 15:11:55 on Mar 29,2018
+# ** Error: (vsim-3170) Could not find 'proc_tb'.
+#         Searched libraries:
+#             C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/work
+# Error loading design
+# End time: 15:11:56 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# No Design Loaded!
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:24 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:12:24 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:24 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:12:25 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:25 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:12:25 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:25 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:12:25 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:26 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:12:26 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:26 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:12:26 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:26 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:12:27 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:27 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:12:27 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:27 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:12:27 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:27 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(112): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(119): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 15:12:28 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 5
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:28 on Mar 29,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 15:12:28 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:12:28 on Mar 29,2018
+# vcom -reportprogress 300 proc_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity proc_tb
+# -- Compiling architecture behavior of proc_tb
+# ** Error: proc_tb.vhd(14): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 15:12:28 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.
+source proc_tb_script.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:15 on Mar 29,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 15:14:15 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:15 on Mar 29,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 15:14:16 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:16 on Mar 29,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 15:14:16 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:17 on Mar 29,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 15:14:17 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:17 on Mar 29,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 15:14:17 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:17 on Mar 29,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 15:14:18 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:18 on Mar 29,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 15:14:18 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:18 on Mar 29,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 15:14:18 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:18 on Mar 29,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 15:14:19 on Mar 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:19 on Mar 29,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
+# ** Warning: ex_ALU.vhd(112): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(119): (vcom-1272) Length of expected is 32; length of actual is 33.
+# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 15:14:19 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:19 on Mar 29,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 15:14:19 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:14:19 on Mar 29,2018
+# vcom -reportprogress 300 proc_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity proc_tb
+# -- Compiling architecture behavior of proc_tb
+# ** Error: proc_tb.vhd(35): (vcom-1484) Unknown formal identifier "a".
+# ** Error: proc_tb.vhd(36): (vcom-1484) Unknown formal identifier "b".
+# ** Error: proc_tb.vhd(37): (vcom-1484) Unknown formal identifier "signExtendImmediate".
+# ** Error: proc_tb.vhd(38): (vcom-1484) Unknown formal identifier "sel".
+# ** Error: proc_tb.vhd(39): (vcom-1484) Unknown formal identifier "funct".
+# ** Error: proc_tb.vhd(40): (vcom-1484) Unknown formal identifier "zero".
+# ** Error: proc_tb.vhd(41): (vcom-1484) Unknown formal identifier "output".
+# ** Error: proc_tb.vhd(79): VHDL Compiler exiting
+# End time: 15:14:19 on Mar 29,2018, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# C:/Program Files/modelsim_ase/win32aloem/vcom failed.

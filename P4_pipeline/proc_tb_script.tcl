@@ -17,6 +17,7 @@ vcom id_reg.vhd
 vcom hazard_Detection.vhd
 vcom ex_ALU.vhd
 vcom data_memory.vhd
+vcom proc_tb.vhd
 
 ;# Start simulation
 vsim proc_tb

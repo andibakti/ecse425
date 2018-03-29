@@ -15,9 +15,10 @@ entity data_memory is
 		do_load: in std_logic := '0';
 		do_write: in std_logic := '0';
 		writeMem: in std_logic;
+		reg_id_in: in std_logic_vector(4 downto 0);
 		addr: in std_logic_vector(31 downto 0);
 		data_out: out std_logic_vector(31 downto 0);
-		reg_id_out: out std_logic_vector(4 downto 0);
+		reg_id_out: out std_logic_vector(4 downto 0)
 		--mem_data: out std_logic_vector(31 downto 0);
 	);
 end data_memory;
@@ -51,7 +52,7 @@ begin
 				data_out <= data_in;
 			end if;
 			
-			reg_id_out = reg_id_in;
+			reg_id_out <= reg_id_in;
 		end if;
 
 	end process;
