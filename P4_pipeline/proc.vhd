@@ -132,6 +132,20 @@ port(
 );
 end component;
 
+component ex_ALU is
+port(
+	clock: in std_logic;
+	data_in: in std_logic_vector(31 downto 0):=(others => '0');
+	do_load: in std_logic := '0';
+	do_write: in std_logic := '0';
+	writeMem: in std_logic;
+	addr: in std_logic_vector(31 downto 0);
+	data_out: out std_logic_vector(31 downto 0);
+	reg_id_out: out std_logic_vector(4 downto 0)
+
+);
+end component;
+
 
 -- test signals
 signal data_in_usign_ext : std_logic_vector(15 downto 0);
@@ -187,28 +201,36 @@ signal regB_id_hazard_dect : std_logic_vector (4 downto 0);
 signal regA_id_hazard_dect : std_logic_vector (4 downto 0);
 signal hazOut_hazard_dect : std_logic;
 
---signal clock, rst: in std_logic;
---signal a: in std_logic_vector(31 downto 0);
---signal b: in std_logic_vector(31 downto 0);
---signal address_in: in std_logic_vector(25 downto 0);
---signal offset_in: in std_logic_vector(15 downto 0);
---signal shift_in: in std_logic_vector(5 downto 0);
---signal signExtendImmediate: in std_logic_vector(31 downto 0);
---signal uSignExtendImmediate: in std_logic_vector(31 downto 0);
---signal sel: in std_logic_vector(5 downto 0);
---signal funct: in std_logic_vector(5 downto 0);
---signal pc_in: in std_logic_vector(32 downto 0);
---signal regWrite_in: in std_logic_vector(4 downto 0);
+signal clock_ex_alu, rst_ex_alu: std_logic;
+signal a_ex_alu: std_logic_vector(31 downto 0);
+signal b_ex_alu: std_logic_vector(31 downto 0);
+signal address_in_ex_alu: std_logic_vector(25 downto 0);
+signal offset_in_ex_alu: std_logic_vector(15 downto 0);
+signal shift_in_ex_alu: std_logic_vector(5 downto 0);
+signal signExtendImmediate_ex_alu: std_logic_vector(31 downto 0);
+signal uSignExtendImmediate_ex_alu: std_logic_vector(31 downto 0);
+signal sel_ex_alu: std_logic_vector(5 downto 0);
+signal funct_ex_alu: std_logic_vector(5 downto 0);
+signal pc_in_ex_alu: std_logic_vector(32 downto 0);
+signal regWrite_in_ex_alu: std_logic_vector(4 downto 0);
+signal jump_ex_alu: std_logic;
+signal mem_ex_alu: std_logic;
+signal load_ex_alu: std_logic;
+signal store_ex_alu: std_logic;
+signal jumpAddress_ex_alu: std_logic(31 downto 0);
+signal memAddress_ex_alu: std_logic(31 downto 0);
+signal regWrite_out_ex_alu: std_logic_vector(4 downto 0);
+signal result_ex_alu: std_logic_vector(31 downto 0);
 
---signal jump: out std_logic;
---signal mem: out std_logic;
---signal load: out std_logic;
---signal store: out std_logic;
---signal jumpAddress: out std_logic(31 downto 0);
---signal memAddress: out std_logic(31 downto 0);
---signal regWrite_out: out std_logic_vector(4 downto 0);
---signal result: out std_logic_vector(31 downto 0);
 
+signal clock_data_mem: std_logic;
+signal data_in_data_mem: std_logic_vector(31 downto 0):=(others => '0');
+signal do_load_data_mem: std_logic := '0';
+signal do_write_data_mem: std_logic := '0';
+signal writeMem_data_mem: std_logic;
+signal addr_data_mem: std_logic_vector(31 downto 0);
+signal data_out_data_mem:  std_logic_vector(31 downto 0);
+signal reg_id_out_data_mem:  std_logic_vector(4 downto 0);
 
 
 
