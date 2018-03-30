@@ -98,8 +98,8 @@ BEGIN
             file_open(reg_file, "register_file.txt", write_mode);
 
             for i in 0 to 31 loop
-                write(line_num,register_file(i));
                 writeline(reg_file, line_num);
+                write(line_num,register_file(i));
             end loop;
             file_close(reg_file);
         end if;

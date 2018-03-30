@@ -10,7 +10,7 @@ entity ex_ALU is
 		b: in std_logic_vector(31 downto 0);
 		address_in: in std_logic_vector(25 downto 0);
 		offset_in: in std_logic_vector(15 downto 0);
-		shift_in: in std_logic_vector(5 downto 0);
+		shift_in: in std_logic_vector(4 downto 0);
 		signExtendImmediate: in std_logic_vector(31 downto 0);
     	uSignExtendImmediate: in std_logic_vector(31 downto 0);
 		sel: in std_logic_vector(5 downto 0);

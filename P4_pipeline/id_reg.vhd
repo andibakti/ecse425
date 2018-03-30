@@ -14,7 +14,7 @@ entity id_reg is
 		reg_write_in: in std_logic_vector(4 downto 0);
 		address_out:	out std_logic_vector(25 downto 0);
 		immediateValue_out:	out std_logic_vector(15 downto 0);
-		shamt_out:	out std_logic_vector(5 downto 0);
+		shamt_out:	out std_logic_vector(4 downto 0);
 		funct_out:	out std_logic_vector(5 downto 0);
 		reg_write_out: out std_logic_vector(4 downto 0);
 		pc_out: out std_logic_vector(31 downto 0)
@@ -57,7 +57,7 @@ begin
 			reg2_out <= instruction_in(20 downto 16);
 			address_out <= instruction_in(25 downto 0);
 			immediateValue_out <= instruction_in(15 downto 0);
-			shamt_out <= instruction_in(10 downto 6);
+			shamt_out <=instruction_in(10 downto 6);
 			funct_out <= instruction_in(5 downto 0);
 			pc_out <= pc_in;
 			reg_write_out <=  instruction_in(15 downto 11);

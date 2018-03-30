@@ -34,11 +34,16 @@ begin
 		file program_file : text;
 		variable x_line	: line;
 		variable x: std_logic_vector(31 downto 0);
+		variable file_status : file_open_status;
 		variable i: integer:= 0;
 		--variable x_in	: std_logic_vector(31 downto 0);
 	begin
 		--this is a cheap trick to initialize the sram in simulation
 		if(now < 1 ps) then
+			for i in 0 to ram_size-1 loop
+				ram_block(i) <= std_logic_vector(to_unsigned(i,32));
+			end loop;
+
 			file_open(program_file, "program.txt", read_mode);
 
 			while not endfile(program_file) loop
@@ -47,6 +52,7 @@ begin
 				ram_block(i) <= x;
 				i := i + 1;
 			end loop;
+			file_close(program_file);
 		end if;
 
 		--this is the actual synthesizable sram block

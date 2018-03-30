@@ -85,7 +85,7 @@ port(
 	reg_write_in: in std_logic_vector(4 downto 0);
 	address_out:	out std_logic_vector(25 downto 0);
 	immediateValue_out:	out std_logic_vector(15 downto 0);
-	shamt_out:	out std_logic_vector(5 downto 0);
+	shamt_out:	out std_logic_vector(4 downto 0);
 	funct_out:	out std_logic_vector(5 downto 0);
 	reg_write_out: out std_logic_vector(4 downto 0);
 	pc_out: out std_logic_vector(31 downto 0)
@@ -109,7 +109,7 @@ port(
 	b: in std_logic_vector(31 downto 0);
 	address_in: in std_logic_vector(25 downto 0);
 	offset_in: in std_logic_vector(15 downto 0);
-	shift_in: in std_logic_vector(5 downto 0);
+	shift_in: in std_logic_vector(4 downto 0);
 	signExtendImmediate: in std_logic_vector(31 downto 0);
 	uSignExtendImmediate: in std_logic_vector(31 downto 0);
 	sel: in std_logic_vector(5 downto 0);
@@ -186,7 +186,7 @@ signal reg1_out_id_reg: std_logic_vector(4 downto 0);
 signal reg2_out_id_reg: std_logic_vector(4 downto 0);
 signal address_out_id_reg: std_logic_vector(25 downto 0);
 signal immediateValue_out_id_reg: std_logic_vector(15 downto 0);
-signal shamt_out_id_reg: std_logic_vector(5 downto 0);
+signal shamt_out_id_reg: std_logic_vector(4 downto 0);
 signal funct_out_id_reg: std_logic_vector(5 downto 0);
 signal pc_out_id_reg: std_logic_vector(31 downto 0);
 
@@ -200,7 +200,7 @@ signal a_ex_alu: std_logic_vector(31 downto 0);
 signal b_ex_alu: std_logic_vector(31 downto 0);
 signal address_in_ex_alu: std_logic_vector(25 downto 0);
 signal offset_in_ex_alu: std_logic_vector(15 downto 0);
-signal shift_in_ex_alu: std_logic_vector(5 downto 0);
+signal shift_in_ex_alu: std_logic_vector(4 downto 0);
 signal signExtendImmediate_ex_alu: std_logic_vector(31 downto 0);
 signal uSignExtendImmediate_ex_alu: std_logic_vector(31 downto 0);
 signal sel_ex_alu: std_logic_vector(5 downto 0);
@@ -370,7 +370,7 @@ rst <= reset;
 
 
 
-main : process(clock)
+main : process(clock, reset)
 	begin
 		if(rising_edge(clock)) then
 

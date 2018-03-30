@@ -68,26 +68,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Compiling entity data_memory
 -- Compiling architecture rtl of data_memory
 
-} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/id_reg.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/id_reg.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity id_reg
--- Compiling architecture arch of id_reg
-** Warning: C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/id_reg.vhd(60): (vcom-1272) Length of expected is 6; length of slice name is 5.
-
-} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/Register_File.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/Register_File.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Compiling entity Register_File
--- Compiling architecture arch of Register_File
-
 } {} {}} ./PC_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/PC_adder.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD
