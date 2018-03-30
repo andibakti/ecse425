@@ -57,10 +57,10 @@ begin
 			reg2_out <= instruction_in(20 downto 16);
 			address_out <= instruction_in(25 downto 0);
 			immediateValue_out <= instruction_in(15 downto 0);
-			shamt_out <= instruction_in(11 downto 6);
+			shamt_out <= instruction_in(10 downto 6);
 			funct_out <= instruction_in(5 downto 0);
 			pc_out <= pc_in;
-			reg_write_out <= reg_write_in;
+			reg_write_out <=  instruction_in(15 downto 11);
 
 		end if;
 	end if;
