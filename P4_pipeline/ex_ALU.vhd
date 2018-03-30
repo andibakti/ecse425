@@ -15,7 +15,7 @@ entity ex_ALU is
     	uSignExtendImmediate: in std_logic_vector(31 downto 0);
 		sel: in std_logic_vector(5 downto 0);
 		funct: in std_logic_vector(5 downto 0);
-		pc_in: in std_logic_vector(32 downto 0);
+		pc_in: in std_logic_vector(31 downto 0);
 		regWrite_in: in std_logic_vector(4 downto 0);
 
         jump: out std_logic;
@@ -127,10 +127,15 @@ begin
 					memoryCheck <= '1';
 					loadCheck <= '1';
 					storeCheck <= '0';
+					--R[rt] = M[R[rs]+SignExtImm] 
+					temp <= std_logic_vector(signed(a) + signed(signExtendImmediate));
+
 				when "101011" => --store word (sw)
 					memoryCheck <= '1';
 					storeCheck <= '1';
 					loadCheck <= '0';
+					--M[R[rs]+SignExtImm] = R[rt] 
+					temp <= std_logic_vector(signed(a) + signed(signExtendImmediate)); 
 				when others =>
 					temp <= (others => '0');
 					jumpCheck <= '0';

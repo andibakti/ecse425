@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity proc is
-port(clock, reset: in std_logic;
-	instruction: in std_logic_vector(31 downto 0)
+port(clock, reset: in std_logic
+	--instruction: in std_logic_vector(31 downto 0)
 	--TODO-----------------------------------------------
 
 	);
@@ -31,7 +31,7 @@ port(
 	clk, rst, write_en: in std_logic;
 	writedata: in std_logic_vector(31 downto 0);
 	addr_write, addr_regA, addr_regB: in std_logic_vector(4 downto 0);
-	read_regA, read_regB: out std_logic_vector(15 downto 0)
+	read_regA, read_regB: out std_logic_vector(31 downto 0)
 );
 end component;
 
@@ -114,7 +114,7 @@ port(
 	uSignExtendImmediate: in std_logic_vector(31 downto 0);
 	sel: in std_logic_vector(5 downto 0);
 	funct: in std_logic_vector(5 downto 0);
-	pc_in: in std_logic_vector(32 downto 0);
+	pc_in: in std_logic_vector(31 downto 0);
 	regWrite_in: in std_logic_vector(4 downto 0);
 
     jump: out std_logic;
@@ -156,7 +156,7 @@ signal data_out_sign_ext : std_logic_vector(31 downto 0);
 signal write_en_reg_file: std_logic;
 signal writedata_reg_file: std_logic_vector(31 downto 0);
 signal addr_write_reg_file, addr_regA_reg_file, addr_regB_reg_file: std_logic_vector(4 downto 0);
-signal read_regA_reg_file, read_regB_reg_file: std_logic_vector(15 downto 0);
+signal read_regA_reg_file, read_regB_reg_file: std_logic_vector(31 downto 0);
 
 signal override: std_logic;
 signal program_counter, override_pc: std_logic_vector(31 downto 0);
@@ -205,7 +205,7 @@ signal signExtendImmediate_ex_alu: std_logic_vector(31 downto 0);
 signal uSignExtendImmediate_ex_alu: std_logic_vector(31 downto 0);
 signal sel_ex_alu: std_logic_vector(5 downto 0);
 signal funct_ex_alu: std_logic_vector(5 downto 0);
-signal pc_in_ex_alu: std_logic_vector(32 downto 0);
+signal pc_in_ex_alu: std_logic_vector(31 downto 0);
 signal regWrite_in_ex_alu: std_logic_vector(4 downto 0);
 signal jump_ex_alu: std_logic;
 signal mem_ex_alu: std_logic;
@@ -227,7 +227,7 @@ signal data_out_data_mem:  std_logic_vector(31 downto 0);
 signal reg_id_out_data_mem:  std_logic_vector(4 downto 0);
 
 
---INTERSTAGE REGISTERS
+--INTERSTAGE REGISTERS (not used)
 signal IF_ID_reg: std_logic_vector(31 downto 0);
 signal ID_EX_reg: std_logic_vector(31 downto 0);
 signal EX_MEM_reg: std_logic_vector(31 downto 0);
@@ -389,7 +389,7 @@ main : process
 
 
 
-			-- instr_mem/ id_reg
+			-- instr_mem/ id_reg-----------------
 			pc_in_id_reg <= output_pc;
 			memread_instr_mem <= '1';
 			address_instr_mem <= output_pc;
@@ -399,16 +399,18 @@ main : process
 			end if;
 			pc_in_id_reg <= output_pc; 
 			instruction_in_id_reg <= IF_ID_reg;
-			--reg_write_in_id_reg <= ??
+			reg_write_in_id_reg <= reg_id_out_data_mem;
 
-			--id_reg/register_file
+
+			--id_reg/register_file---------------
+			write_en_reg_file <= '1';
 			writedata_reg_file <=  data_out_usign_ext;
 			addr_write_reg_file <= reg_write_out_id_reg;
 			addr_regA_reg_file <= reg1_out_id_reg;
 			addr_regB_reg_file <= reg2_out_id_reg;
 
 
-			--register_file/ex_alu
+			--register_file/ex_alu----------------
 			pc_in_ex_alu <= pc_out_id_reg;
 			a_ex_alu <= read_regA_reg_file;
 			b_ex_alu <= read_regB_reg_file;
@@ -422,16 +424,39 @@ main : process
 			pc_in_ex_alu <= pc_in_id_reg;
 			regWrite_in_ex_alu <= reg_write_out_id_reg;
 
+			--ex_alu/data_mem
+			reg_id_in_data_mem <= regWrite_out_ex_alu;
 
+			if(mem_ex_alu = '1') then
+				if(load_ex_alu = '1') then
 
+					do_load_data_mem <= '1';
+					--R[rt] = M[R[rs]+SignExtImm] 
+					addr_data_mem <= result_ex_alu;
+					write_en_reg_file <= '1';
+					addr_write_reg_file <= reg2_out_id_reg; -- NOT SURE 
+					writedata_reg_file <= data_out_data_mem;
 
+				elsif(store_ex_alu = '1') then
+				    --M[R[rs]+SignExtImm] = R[rt] 
+				    do_write_data_mem <= '1';
+					data_in_data_mem <= b_ex_alu;
+					addr_data_mem <= result_ex_alu;
+				end if;	
+			else
+				--write back
+				--store into the appropriate register the result from alu
+				write_en_reg_file <= '1';
+				addr_write_reg_file <= regWrite_out_ex_alu;
+				writedata_reg_file <= result_ex_alu;
 
+			end if;
 
-
+			--hazard detection
+			--EN_hazard_dect <= '1';
+			--regA_ex_hazard_dect <= reg
 
 		end if;
-
-
 
 end process;
 

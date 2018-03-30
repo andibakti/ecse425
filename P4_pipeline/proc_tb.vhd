@@ -9,7 +9,7 @@ architecture behavior of proc_tb is
 
 component proc is
 port(
-	clock, rst: in std_logic
+	clock, reset: in std_logic
 );
 end component;
 
@@ -31,7 +31,7 @@ begin
 proc_instance: proc
 port map(
 	clock => clock,
-	rst => rst
+	reset => rst
 );
 
 
@@ -47,7 +47,7 @@ test_process : process
 begin
 
 ---- begin by setting up the cache
---rst <= '1';
+	rst <= '1';
 --wait for 1 * clk_period;
 --assert ( output = X"00000000") report "reset successfull" severity error;
 
