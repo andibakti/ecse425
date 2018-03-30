@@ -31,7 +31,7 @@ end entity;
 
 architecture arch of ex_ALU is
 --declare signals
-signal temp,jA: std_logic_vector(31 downto 0);
+signal temp,jA, memAddr: std_logic_vector(31 downto 0);
 signal hi, lo: std_logic_vector(31 downto 0);
 signal memoryCheck,jumpCheck,storeCheck,loadCheck: std_logic;
 
@@ -128,14 +128,14 @@ begin
 					loadCheck <= '1';
 					storeCheck <= '0';
 					--R[rt] = M[R[rs]+SignExtImm] 
-					temp <= std_logic_vector(signed(a) + signed(signExtendImmediate));
+					memAddr <= std_logic_vector(signed(a) + signed(signExtendImmediate));
 
 				when "101011" => --store word (sw)
 					memoryCheck <= '1';
 					storeCheck <= '1';
 					loadCheck <= '0';
 					--M[R[rs]+SignExtImm] = R[rt] 
-					temp <= std_logic_vector(signed(a) + signed(signExtendImmediate)); 
+					memAddr <= std_logic_vector(signed(a) + signed(signExtendImmediate)); 
 				when others =>
 					temp <= (others => '0');
 					jumpCheck <= '0';
@@ -149,6 +149,7 @@ begin
 result <= temp;
 jump <= jumpCheck;
 jumpAddress <= jA;
+memAddress <= memAddr;
 mem <= memoryCheck;
 store <= storeCheck;
 load <= loadCheck;

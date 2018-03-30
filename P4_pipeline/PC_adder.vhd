@@ -7,14 +7,14 @@ entity PC_adder is
         override: in std_logic;
         pc: in std_logic_vector(31 downto 0);
         override_pc: in std_logic_vector(31 downto 0);
-        output: out std_logic_vector(31 downto 0)
+        output_add: out std_logic_vector(31 downto 0)
         );
 end entity;
 
 architecture arch of PC_adder is
 
 begin
-    with override select output <=
+    with override select output_add <=
         override_pc when '1',
         std_logic_vector(unsigned(pc) + 4) when others;
 end arch;

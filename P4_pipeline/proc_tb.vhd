@@ -15,7 +15,7 @@ end component;
 
 
 -- test signals
-signal rst : std_logic := '0';
+signal reset : std_logic := '0';
 signal clock : std_logic := '0';
 constant clk_period : time := 1 ns;
 signal a, b: std_logic_vector(31 downto 0);
@@ -31,7 +31,7 @@ begin
 proc_instance: proc
 port map(
 	clock => clock,
-	reset => rst
+	reset => reset
 );
 
 
@@ -47,12 +47,12 @@ test_process : process
 begin
 
 ---- begin by setting up the cache
-	rst <= '1';
---wait for 1 * clk_period;
+	wait for 1 * clk_period;
+	reset <= '1';
+	wait for 1 * clk_period;
 --assert ( output = X"00000000") report "reset successfull" severity error;
 
 --rst <= '0';
---wait for 1 * clk_period;
 
 
 --report "#1 test 'add'"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but has been brought in the cache, so hit
@@ -66,7 +66,7 @@ begin
 
 
 --report "done testing";
---wait;
+	wait;
 end process;
 
 end;

@@ -39,7 +39,7 @@ component PC_adder is
 port(
 	override: in std_logic;
 	pc, override_pc: in std_logic_vector(31 downto 0);
-	output: in std_logic_vector(31 downto 0)
+	output_add: out std_logic_vector(31 downto 0)
 );
 end component;
 
@@ -48,7 +48,7 @@ port(
 	clock: in std_logic;
 	input: in std_logic_vector(31 downto 0);
 	reset: in std_logic;
-	output: out std_logic_vector(31 downto 0)
+	output_pc: out std_logic_vector(31 downto 0)
 );
 end component;
 
@@ -268,7 +268,7 @@ port map(
 	override => override,
 	pc => program_counter,
 	override_pc => override_pc,
-	output => output_pc_add
+	output_add => output_pc_add
 	);
 
 pc_instance: pc
@@ -276,7 +276,7 @@ port map(
 	clock => clk,
 	input => input_pc,
 	reset => rst,
-	output => output_pc
+	output_pc => output_pc
 	);
 
 mux_2to1_instance1: mux_2to1
@@ -370,7 +370,7 @@ rst <= reset;
 
 
 
-main : process
+main : process(clock)
 	begin
 		if(rising_edge(clock)) then
 
@@ -432,7 +432,7 @@ main : process
 
 					do_load_data_mem <= '1';
 					--R[rt] = M[R[rs]+SignExtImm] 
-					addr_data_mem <= result_ex_alu;
+					addr_data_mem <= memAddress_ex_alu;
 					write_en_reg_file <= '1';
 					addr_write_reg_file <= reg2_out_id_reg; -- NOT SURE 
 					writedata_reg_file <= data_out_data_mem;
@@ -441,7 +441,7 @@ main : process
 				    --M[R[rs]+SignExtImm] = R[rt] 
 				    do_write_data_mem <= '1';
 					data_in_data_mem <= b_ex_alu;
-					addr_data_mem <= result_ex_alu;
+					addr_data_mem <= memAddress_ex_alu;
 				end if;	
 			else
 				--write back

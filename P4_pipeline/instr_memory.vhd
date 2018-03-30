@@ -2,6 +2,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
 
 entity instr_memory is
 	generic(
@@ -29,11 +31,21 @@ architecture rtl of instr_memory is
 begin
 	--this is the main section of the sram model
 	mem_process: process (clock)
+		file program_file : text;
+		variable x_line	: line;
+		variable x: std_logic_vector(31 downto 0);
+		variable i: integer:= 0;
+		--variable x_in	: std_logic_vector(31 downto 0);
 	begin
 		--this is a cheap trick to initialize the sram in simulation
-		if(now < 1 ps)then
-			for i in 0 to ram_size-1 loop
-				ram_block(i) <= std_logic_vector(to_unsigned(i,32));
+		if(now < 1 ps) then
+			file_open(program_file, "program.txt", read_mode);
+
+			while not endfile(program_file) loop
+				readline(program_file, x_line);
+				read(x_line, x);
+				ram_block(i) <= x;
+				i := i + 1;
 			end loop;
 		end if;
 
@@ -61,7 +73,7 @@ begin
 	waitreq_r_proc: process (memread)
 	begin
 		if(memread'event and memread = '1')then
-			read_waitreq_reg <= '0' after mem_delay, '1' after mem_delay + clock_period;
+			read_waitreq_reg <= '0' after mem_delay, '1' after mem_delay + clock_period; 
 		end if;
 	end process;
 	waitrequest <= write_waitreq_reg and read_waitreq_reg;
