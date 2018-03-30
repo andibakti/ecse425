@@ -28,17 +28,10 @@ signal output: std_logic_vector(31 downto 0);
 
 begin
 
-alu_instance: proc
+proc_instance: proc
 port map(
 	clock => clock,
-	rst => rst,
-	a => a,
-	b => b,
-	signExtendImmediate => signExtendImmediate,
-	sel => sel,
-	funct => funct,
-	zero => zero,
-	output => output
+	rst => rst
 );
 
 
@@ -53,27 +46,27 @@ end process;
 test_process : process
 begin
 
--- begin by setting up the cache
-rst <= '1';
-wait for 1 * clk_period;
-assert ( output = X"00000000") report "reset successfull" severity error;
+---- begin by setting up the cache
+--rst <= '1';
+--wait for 1 * clk_period;
+--assert ( output = X"00000000") report "reset successfull" severity error;
 
-rst <= '0';
-wait for 1 * clk_period;
-
-
-report "#1 test 'add'"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but has been brought in the cache, so hit
-a <= std_logic_vector( to_signed(40,32));
-b <= std_logic_vector( to_signed(29,32));
-sel <= "000000";
-funct <= "100000";
-wait for 1 * clk_period;
-
-assert ( output = std_logic_vector(to_signed(69,32))) report "1: 'add' successfull" severity error;
+--rst <= '0';
+--wait for 1 * clk_period;
 
 
-report "done testing";
-wait;
+--report "#1 test 'add'"; -- because we already wrote to the block when writing the 1st word, then the block is now dirty, but has been brought in the cache, so hit
+--a <= std_logic_vector( to_signed(40,32));
+--b <= std_logic_vector( to_signed(29,32));
+--sel <= "000000";
+--funct <= "100000";
+--wait for 1 * clk_period;
+
+--assert ( output = std_logic_vector(to_signed(69,32))) report "1: 'add' successfull" severity error;
+
+
+--report "done testing";
+--wait;
 end process;
 
 end;
