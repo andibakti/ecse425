@@ -14,17 +14,18 @@ public class Driver {
      *
      * @param args
      */
+	
     public static void main(String[] args) {
         String read_from;
         String write_to;
-	String this_directory;
+        String this_directory;
         boolean testing = false;
         if (args.length < 1) {
             Tools.print("Missing .asm file input. Please add this to command line.");
             System.exit(-1);
         }
         read_from = getPath("Driver.java");
-	this_directory = read_from.substring(0, read_from.length() - ("Driver.java").length());
+        this_directory = read_from.substring(0, read_from.length() - ("Driver.java").length());
         read_from = this_directory + args[0];
         write_to = "program.txt";
         Assembler.assemble(read_from, write_to);
