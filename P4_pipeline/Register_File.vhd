@@ -1,6 +1,8 @@
 library IEEE;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
+use STD.textio.all;
+use ieee.std_logic_textio.all;
 
 ENTITY Register_File IS
 
@@ -65,7 +67,7 @@ BEGIN
 	read_regA <= register_file(to_integer(unsigned(addr_regA)));
 	read_regB <= register_file(to_integer(unsigned(addr_regB)));
 	
-	PROCESS (clk)
+	register_process: PROCESS (clk)
 	BEGIN
 	
     	IF (rst = '1') THEN
@@ -82,5 +84,26 @@ BEGIN
 			
 		END IF;
 	END PROCESS;
+
+    -- this process writes the contents of the registers to an output text file
+    write_file : process(write_en)
+        file reg_file : text;
+        variable line_num: line;
+        variable file_status : file_open_status;
+        variable reg_value : std_logic_vector(31 downto 0);
+
+        begin
+
+        if(write_en = '1') then
+            file_open(reg_file, "register_file.txt", write_mode);
+
+            for i in 0 to 31 loop
+                write(line_num,register_file(i));
+                writeline(reg_file, line_num);
+            end loop;
+            file_close(reg_file);
+        end if;
+
+    end process;
     
 END arch;
