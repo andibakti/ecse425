@@ -28,5 +28,5 @@ vsim proc_tb
 ;# Add the waves
 AddWaves
 
-;# Run for 100 ns
-run 100ns
+;# Run for 10'000 clock cycles
+run 10000ns

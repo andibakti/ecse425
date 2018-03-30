@@ -3,7 +3,11 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity proc is
---Todo
+port(clock, reset: in std_logic;
+	instruction: in std_logic_vector(31 downto 0)
+	--TODO-----------------------------------------------
+
+	);
 end proc;
 
 architecture arch of proc is
@@ -27,7 +31,7 @@ port(
 	clk, rst, write_en: in std_logic;
 	writedata: in std_logic_vector(31 downto 0);
 	addr_write, addr_regA, addr_regB: in std_logic_vector(4 downto 0);
-	read_regA, read_regB: in std_logic_vector(15 downto 0)
+	read_regA, read_regB: out std_logic_vector(15 downto 0)
 );
 end component;
 
@@ -155,7 +159,7 @@ signal addr_write_reg_file, addr_regA_reg_file, addr_regB_reg_file: std_logic_ve
 signal read_regA_reg_file, read_regB_reg_file: std_logic_vector(15 downto 0);
 
 signal override: std_logic;
-signal pc, override_pc: std_logic_vector(31 downto 0);
+signal program_counter, override_pc: std_logic_vector(31 downto 0);
 signal output_pc_add: std_logic_vector(31 downto 0);
 
 signal input_pc: std_logic_vector(31 downto 0);
@@ -207,8 +211,8 @@ signal jump_ex_alu: std_logic;
 signal mem_ex_alu: std_logic;
 signal load_ex_alu: std_logic;
 signal store_ex_alu: std_logic;
-signal jumpAddress_ex_alu: std_logic(31 downto 0);
-signal memAddress_ex_alu: std_logic(31 downto 0);
+signal jumpAddress_ex_alu: std_logic_vector(31 downto 0);
+signal memAddress_ex_alu: std_logic_vector(31 downto 0);
 signal regWrite_out_ex_alu: std_logic_vector(4 downto 0);
 signal result_ex_alu: std_logic_vector(31 downto 0);
 
@@ -221,6 +225,13 @@ signal writeMem_data_mem: std_logic;
 signal addr_data_mem: std_logic_vector(31 downto 0);
 signal data_out_data_mem:  std_logic_vector(31 downto 0);
 signal reg_id_out_data_mem:  std_logic_vector(4 downto 0);
+
+
+--INTERSTAGE REGISTERS
+signal IF_ID_reg: std_logic_vector(31 downto 0);
+signal ID_EX_reg: std_logic_vector(31 downto 0);
+signal EX_MEM_reg: std_logic_vector(31 downto 0);
+signal MEM_WB_reg: std_logic_vector(31 downto 0);
 
 
 
@@ -255,7 +266,7 @@ port map(
 pc_adder_instance: pc_adder
 port map(
 	override => override,
-	pc => pc,
+	pc => program_counter,
 	override_pc => override_pc,
 	output => output_pc_add
 	);
@@ -268,7 +279,7 @@ port map(
 	output => output_pc
 	);
 
-mux_2to1_instance: mux_2to1
+mux_2to1_instance1: mux_2to1
 port map(
 	sel => SEL_mux,
 	a => A_mux,
@@ -309,11 +320,12 @@ hazard_detection_instance: hazard_detection
 port map(
 	en => EN_hazard_dect,
 	regA_ex => regA_ex_hazard_dect,
+	regA_id => regA_id_hazard_dect,
 	regB_id => regB_id_hazard_dect,
 	hazOut => hazOut_hazard_dect
 	);
 
-ex_alu_instance: ex_ALUx
+ex_alu_instance: ex_ALU
 port map(
 	clock => clk,
 	rst => rst,
@@ -351,8 +363,76 @@ port map(
 	reg_id_out => reg_id_out_data_mem
 	);
 
-test_process: process
-begin
+
+clk <= clock;
+rst <= reset;
+
+
+
+
+main : process
+	begin
+		if(rising_edge(clock)) then
+
+
+			--pc <- pc-add
+			override <= jump_ex_alu;
+			override_pc <= jumpAddress_ex_alu;
+
+			input_pc <= output_pc_add;
+
+			--pc of pc adder <- output of pc
+			program_counter <= output_pc;
+
+			data_in_sign_ext <= immediateValue_out_id_reg;
+			data_in_usign_ext <= immediateValue_out_id_reg;
+
+
+
+			-- instr_mem/ id_reg
+			pc_in_id_reg <= output_pc;
+			memread_instr_mem <= '1';
+			address_instr_mem <= output_pc;
+			--because we simulate little to no delay this if statement is always true
+			if(falling_edge(waitrequest_instr_mem)) then
+				IF_ID_reg <= readdata_instr_mem;		
+			end if;
+			pc_in_id_reg <= output_pc; 
+			instruction_in_id_reg <= IF_ID_reg;
+			--reg_write_in_id_reg <= ??
+
+			--id_reg/register_file
+			writedata_reg_file <=  data_out_usign_ext;
+			addr_write_reg_file <= reg_write_out_id_reg;
+			addr_regA_reg_file <= reg1_out_id_reg;
+			addr_regB_reg_file <= reg2_out_id_reg;
+
+
+			--register_file/ex_alu
+			pc_in_ex_alu <= pc_out_id_reg;
+			a_ex_alu <= read_regA_reg_file;
+			b_ex_alu <= read_regB_reg_file;
+			address_in_ex_alu <= address_out_id_reg;
+			--offset_in_ex_alu <= immediateValue_out_id_reg; --not sure about this
+			shift_in_ex_alu <= shamt_out_id_reg;
+			signExtendImmediate_ex_alu <= data_out_sign_ext;
+			uSignExtendImmediate_ex_alu <= data_out_usign_ext;
+			sel_ex_alu <= opCode_out_id_reg;
+			funct_ex_alu <= funct_out_id_reg;
+			pc_in_ex_alu <= pc_in_id_reg;
+			regWrite_in_ex_alu <= reg_write_out_id_reg;
+
+
+
+
+
+
+
+
+		end if;
+
+
+
 end process;
 
 
