@@ -7,39 +7,40 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/McGill/ECSE 325/Lab2
+Z0 dC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline
 Edata_memory
-Z0 w1522442069
-Z1 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z5 dC:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline
-Z6 8data_memory.vhd
-Z7 Fdata_memory.vhd
+Z1 w1522457027
+Z2 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/data_memory.vhd
+Z7 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/data_memory.vhd
 l0
 L8
-VDnXJm_39CQ4hW<8GVIKEE3
-!s100 :e2;g<n==P@T?FNODNUL<1
-Z8 OV;C;10.5c;63
+VlkgNOO]L3Z56UHeLRhB1P0
+!s100 Y]MAXRS=P>DoCkJH2jR9f1
+Z8 OP;C;10.4a;61
 32
-Z9 !s110 1522451021
+Z9 !s110 1522457206
 !i10b 1
-Z10 !s108 1522451021.000000
-Z11 !s90 -reportprogress|300|data_memory.vhd|
-Z12 !s107 data_memory.vhd|
+Z10 !s108 1522457206.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/data_memory.vhd|
+Z12 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/data_memory.vhd|
 !i113 1
-Z13 tExplicit 1 CvgOpt 0
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
 Artl
-R1
 R2
 R3
 R4
-DEx4 work 11 data_memory 0 22 DnXJm_39CQ4hW<8GVIKEE3
-l31
-L26
-V5e1W^?R5YW3^;KiPj4K1T0
-!s100 8iW]:k[GPPW`ToeE>c?Ea0
+R5
+DEx4 work 11 data_memory 0 22 lkgNOO]L3Z56UHeLRhB1P0
+l32
+L27
+V:inPfB[aHS44ZmH53GEUK3
+!s100 ecXUl`2CcZP@6^5D0i3_Z0
 R8
 32
 R9
@@ -49,512 +50,494 @@ R11
 R12
 !i113 1
 R13
+R14
 Eex_alu
-Z14 w1522450914
-R2
+Z15 w1522451932
 R3
 R4
 R5
-Z15 8ex_ALU.vhd
-Z16 Fex_ALU.vhd
+R0
+Z16 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/ex_ALU.vhd
+Z17 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/ex_ALU.vhd
 l0
 L6
-VS4hjh>fEjF8[>?[3ZBmm60
+VG3@o?W`fNK1Q?4JO`iCnn0
 !s100 ZFldA=DbU>Zf:0>4VYfd>2
 R8
 32
 R9
 !i10b 1
 R10
-Z17 !s90 -reportprogress|300|ex_ALU.vhd|
-Z18 !s107 ex_ALU.vhd|
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/ex_ALU.vhd|
+Z19 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/ex_ALU.vhd|
 !i113 1
 R13
+R14
 Aarch
-R2
 R3
 R4
-DEx4 work 6 ex_alu 0 22 S4hjh>fEjF8[>?[3ZBmm60
+R5
+DEx4 work 6 ex_alu 0 22 G3@o?W`fNK1Q?4JO`iCnn0
 l38
 L32
-V4AWlFh<mcHgIIc?Y8^6Ma0
+VIUd:4YZ=OQYBS<cYYiQS<3
 !s100 Fmcdz2l]K7^8ZIH:nPOBi3
 R8
 32
 R9
 !i10b 1
 R10
-R17
 R18
+R19
 !i113 1
 R13
+R14
 Ehazard_detection
-Z19 w1522344191
-R3
+Z20 w1522435231
 R4
 R5
-Z20 8hazard_Detection.vhd
-Z21 Fhazard_Detection.vhd
+R0
+Z21 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/hazard_Detection.vhd
+Z22 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/hazard_Detection.vhd
 l0
 L4
-V0nCRBW94LCB9<DdzOPQ>h3
+VOAPbbi8nI1DCMeeoLAQU41
 !s100 =A:E`zz8^b5`?BF:RPZ7e0
 R8
 32
-Z22 !s110 1522451020
+R9
 !i10b 1
-Z23 !s108 1522451020.000000
-Z24 !s90 -reportprogress|300|hazard_Detection.vhd|
-Z25 !s107 hazard_Detection.vhd|
+R10
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/hazard_Detection.vhd|
+Z24 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/hazard_Detection.vhd|
 !i113 1
 R13
+R14
 Aarch
-R3
 R4
-DEx4 work 16 hazard_detection 0 22 0nCRBW94LCB9<DdzOPQ>h3
+R5
+DEx4 work 16 hazard_detection 0 22 OAPbbi8nI1DCMeeoLAQU41
 l15
 L13
-V3@XQcZNZ<T@d`EA@h]e<a0
+VALn;VblY7@c<Uj;22ddiW3
 !s100 MKHjJn@[CbY=_jS<YSR5Y0
 R8
 32
-R22
+R9
 !i10b 1
+R10
 R23
 R24
-R25
 !i113 1
 R13
+R14
 Eid_reg
-Z26 w1522450929
-R2
+R15
 R3
 R4
 R5
-Z27 8id_reg.vhd
-Z28 Fid_reg.vhd
+R0
+Z25 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/id_reg.vhd
+Z26 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/id_reg.vhd
 l0
 L5
-VQUl;k3mb]TK7M;CZ^0;iY3
+VJ@8ZCU7YoG0RAZO`kBG3b2
 !s100 35hDB=[<HTj<dUAP56YQ]1
 R8
 32
-R22
+R9
 !i10b 1
-R23
-Z29 !s90 -reportprogress|300|id_reg.vhd|
-Z30 !s107 id_reg.vhd|
+R10
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/id_reg.vhd|
+Z28 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/id_reg.vhd|
 !i113 1
 R13
+R14
 Aarch
-R2
 R3
 R4
-DEx4 work 6 id_reg 0 22 QUl;k3mb]TK7M;CZ^0;iY3
+R5
+DEx4 work 6 id_reg 0 22 J@8ZCU7YoG0RAZO`kBG3b2
 l28
 L25
-VGmnjm]^`7IgE^;SZ=55GM1
+VQ6PCBTZY^Rjl<c<`e[`U:0
 !s100 M:=IAZ5F`EB_zKNEJM2OM3
 R8
 32
-R22
+R9
 !i10b 1
-R23
-R29
-R30
+R10
+R27
+R28
 !i113 1
 R13
+R14
 Einstr_memory
-Z31 w1522450313
-R1
+R15
 R2
 R3
 R4
 R5
-Z32 8instr_memory.vhd
-Z33 Finstr_memory.vhd
+R0
+Z29 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/instr_memory.vhd
+Z30 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/instr_memory.vhd
 l0
 L8
-VA2_nIJKzN?fXH[MV_BdGR2
+Vj:Bn<IHc<C98b[e6Wibnk2
 !s100 T?MBKo;ZOCWP>2OP=OS8c2
 R8
 32
-R22
+Z31 !s110 1522457205
 !i10b 1
-R23
-Z34 !s90 -reportprogress|300|instr_memory.vhd|
-Z35 !s107 instr_memory.vhd|
+Z32 !s108 1522457205.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/instr_memory.vhd|
+Z34 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/instr_memory.vhd|
 !i113 1
 R13
+R14
 Artl
-R1
 R2
 R3
 R4
-DEx4 work 12 instr_memory 0 22 A2_nIJKzN?fXH[MV_BdGR2
+R5
+DEx4 work 12 instr_memory 0 22 j:Bn<IHc<C98b[e6Wibnk2
 l31
 L25
-Vkn[cm:l2VU8O8Aab^SJ2T3
+V]oc2??EUH3bj5k`lO8T302
 !s100 Rf?Qz;bcY=`Ha2mPnc8DC0
 R8
 32
-R22
+R31
 !i10b 1
-R23
+R32
+R33
 R34
-R35
 !i113 1
 R13
-Ememory
-R2
-R3
-R4
-32
-Z36 !s110 1520975129
-!i10b 1
-Z37 OP;C;10.4a;61
-Z38 w1520974383
-Z39 dD:/McGill/ECSE 425/ecse425/P4_pipeline
-Z40 8D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
-Z41 FD:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd
-l0
-L6
-VD^^OC7h`KW;I<zgNUd@[j2
-!s100 A9?IB]XHYkkPM:DodIJ:z0
-Z42 OV;C;10.5b;63
-Z43 !s108 1520975129.000000
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
-Z45 !s107 D:/McGill/ECSE 425/ecse425/P4_pipeline/memory.vhd|
-!i113 1
-Z46 o-work work -2002 -explicit
-R13
-Artl
-R2
-R3
-R4
-DEx4 work 6 memory 0 22 D^^OC7h`KW;I<zgNUd@[j2
-32
-R36
-!i10b 1
-R37
-l29
-L23
-VYm6X9CQm4DoZz>9M12;F]3
-!s100 ]<THhl5U9b8eRYeiR4TZQ1
-R42
-R43
-R44
-R45
-!i113 1
-R46
-R13
+R14
 Emux_2to1
-Z47 w1522343823
-R3
+R20
 R4
 R5
-Z48 8mux_2to1.vhd
-Z49 Fmux_2to1.vhd
+R0
+Z35 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/mux_2to1.vhd
+Z36 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/mux_2to1.vhd
 l0
 L4
-VgaLnOSXANL46g7ZRHc`e01
+VKed1V0]8o_Jbj2Ch@0<B^1
 !s100 @bi3=X87ZQkBX>i;cF8WL0
 R8
 32
-R22
+R9
 !i10b 1
-R23
-Z50 !s90 -reportprogress|300|mux_2to1.vhd|
-Z51 !s107 mux_2to1.vhd|
+R10
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/mux_2to1.vhd|
+Z38 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/mux_2to1.vhd|
 !i113 1
 R13
+R14
 Abehavioral
-R3
 R4
-DEx4 work 8 mux_2to1 0 22 gaLnOSXANL46g7ZRHc`e01
+R5
+DEx4 work 8 mux_2to1 0 22 Ked1V0]8o_Jbj2Ch@0<B^1
 l12
 L11
-V;3Fbmb5[Y?JbWSIGJE_;?1
+VJ>DPhU7X_[@cD76AQ;BoY2
 !s100 [Yd4]A9N;1^S>JoX@@0R03
 R8
 32
-R22
+R9
 !i10b 1
-R23
-R50
-R51
+R10
+R37
+R38
 !i113 1
 R13
+R14
 Epc
-Z52 w1522446593
-R3
+Z39 w1522449491
 R4
 R5
-Z53 8PC.vhd
-Z54 FPC.vhd
+R0
+Z40 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC.vhd
+Z41 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC.vhd
 l0
 L4
-VYzF<3UgPgBjljgoliTR8^2
+Vc08<0>m@EWQ:LkVGG1]a]3
 !s100 Z[1Bi40cUL5Mg7U<DaQ4m2
 R8
 32
-Z55 !s110 1522451019
+R31
 !i10b 1
-Z56 !s108 1522451019.000000
-Z57 !s90 -reportprogress|300|PC.vhd|
-Z58 !s107 PC.vhd|
+R32
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC.vhd|
+Z43 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC.vhd|
 !i113 1
 R13
+R14
 Aarch
-R3
 R4
-DEx4 work 2 pc 0 22 YzF<3UgPgBjljgoliTR8^2
+R5
+DEx4 work 2 pc 0 22 c08<0>m@EWQ:LkVGG1]a]3
 l15
 L13
-V?;M0?kVdL=6?[]Tjc;PcX1
+VgS_[fR0cTZo:mhXjlGG>>3
 !s100 zonkYo0hXYM<7Ga@:k3b51
 R8
 32
-R55
+R31
 !i10b 1
-R56
-R57
-R58
+R32
+R42
+R43
 !i113 1
 R13
+R14
 Epc_adder
-Z59 w1522446591
-R2
+R39
 R3
 R4
 R5
-Z60 8PC_adder.vhd
-Z61 FPC_adder.vhd
+R0
+Z44 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC_adder.vhd
+Z45 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC_adder.vhd
 l0
 L5
-VzA=H_4FEcz5lGbNBO;X_z0
+VMBCULI_zEW>zBOgBdFSJ:0
 !s100 hgTF=FV]M<W?@TbBIoQU>1
 R8
 32
-R55
+R31
 !i10b 1
-R56
-Z62 !s90 -reportprogress|300|PC_adder.vhd|
-Z63 !s107 PC_adder.vhd|
+R32
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC_adder.vhd|
+Z47 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/PC_adder.vhd|
 !i113 1
 R13
+R14
 Aarch
-R2
 R3
 R4
-DEx4 work 8 pc_adder 0 22 zA=H_4FEcz5lGbNBO;X_z0
+R5
+DEx4 work 8 pc_adder 0 22 MBCULI_zEW>zBOgBdFSJ:0
 l16
 L14
-VYc^3oO[I9U0PGTg5YeZJo2
+VG1Pch]HDVY_P0X[^]S<d:2
 !s100 BEXPf^D8<2df6TGVbZGcJ0
 R8
 32
-R55
+R31
 !i10b 1
-R56
-R62
-R63
+R32
+R46
+R47
 !i113 1
 R13
+R14
 Eproc
-Z64 w1522451016
-R2
+R15
 R3
 R4
 R5
-Z65 8proc.vhd
-Z66 Fproc.vhd
+R0
+Z48 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc.vhd
+Z49 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc.vhd
 l0
 L5
-V5Dg`KkS8Sh4lRM_CGVHC<1
+Vg9fRzo^@@jCDUbj<B^0XL3
 !s100 EBZ6^d75ge>za2CoeF2`n1
 R8
 32
-R9
+Z50 !s110 1522457207
 !i10b 1
 R10
-Z67 !s90 -reportprogress|300|proc.vhd|
-Z68 !s107 proc.vhd|
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc.vhd|
+Z52 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc.vhd|
 !i113 1
 R13
+R14
 Aarch
-R2
 R3
 R4
-DEx4 work 4 proc 0 22 5Dg`KkS8Sh4lRM_CGVHC<1
+R5
+DEx4 work 4 proc 0 22 g9fRzo^@@jCDUbj<B^0XL3
 l240
 L13
-VC]UQNU0mzCHGbg>M<@Y=M3
+V^b4VHjX2mh?Lb;>TmL_Ed0
 !s100 HR8V?^Y8a]f5:FY^^YZme0
 R8
 32
-R9
+R50
 !i10b 1
 R10
-R67
-R68
+R51
+R52
 !i113 1
 R13
+R14
 Eproc_tb
-Z69 w1522450766
-R2
+R15
 R3
 R4
 R5
-Z70 8proc_tb.vhd
-Z71 Fproc_tb.vhd
+R0
+Z53 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc_tb.vhd
+Z54 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc_tb.vhd
 l0
 L5
-V[ZW<K]J0PaIK^c502Z;Bm0
+VgRU>>^1j1U0Z5dD^CIDaZ3
 !s100 OQHLj;5N<`zX`2emK2TnW0
 R8
 32
-R9
+R50
 !i10b 1
-R10
-Z72 !s90 -reportprogress|300|proc_tb.vhd|
-Z73 !s107 proc_tb.vhd|
+Z55 !s108 1522457207.000000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc_tb.vhd|
+Z57 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/proc_tb.vhd|
 !i113 1
 R13
+R14
 Abehavior
-R2
 R3
 R4
-Z74 DEx4 work 7 proc_tb 0 22 [ZW<K]J0PaIK^c502Z;Bm0
+R5
+DEx4 work 7 proc_tb 0 22 gRU>>^1j1U0Z5dD^CIDaZ3
 l29
 L8
-Z75 VOojbJLLL;=NHU;:RD8oBH3
-Z76 !s100 h<Jo3`PcE>=oa<gIiS`Bz0
+VQTD^6mC`:eA08XZ?S=NGY1
+!s100 h<Jo3`PcE>=oa<gIiS`Bz0
 R8
 32
-R9
+R50
 !i10b 1
-R10
-R72
-R73
+R55
+R56
+R57
 !i113 1
 R13
+R14
 Eregister_file
-Z77 w1522450477
-R1
+R15
 R2
 R3
 R4
 R5
-Z78 8Register_File.vhd
-Z79 FRegister_File.vhd
+R0
+Z58 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Register_File.vhd
+Z59 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Register_File.vhd
 l0
 L7
-VbKl5fXcXZi:A;6W`OWlEa2
+VGMdYG0fNjTVGjo06zJghB1
 !s100 BaJzE9ekj:W82^7fzZaKX1
 R8
 32
-R55
+R50
 !i10b 1
-R56
-Z80 !s90 -reportprogress|300|Register_File.vhd|
-Z81 !s107 Register_File.vhd|
+R55
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Register_File.vhd|
+Z61 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Register_File.vhd|
 !i113 1
 R13
+R14
 Aarch
-R1
 R2
 R3
 R4
-DEx4 work 13 register_file 0 22 bKl5fXcXZi:A;6W`OWlEa2
+R5
+DEx4 work 13 register_file 0 22 GMdYG0fNjTVGjo06zJghB1
 l65
 L26
-VmJK<XK1UgR=8_JF@[[dTl0
+VA@Dke?B;enPaYMH1JE4Dl1
 !s100 Sozc:zCCBc>Lk88AIn[=U1
 R8
 32
-R55
+R50
 !i10b 1
-R56
-R80
-R81
+R55
+R60
+R61
 !i113 1
 R13
+R14
 Esign_ext
-Z82 w1522343346
-R2
+R20
 R3
 R4
 R5
-Z83 8Sign_Ext.vhd
-Z84 FSign_Ext.vhd
+R0
+Z62 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Sign_Ext.vhd
+Z63 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Sign_Ext.vhd
 l0
 L5
-VH<^I8mUhiZldC^SRUW4LW1
+V=T_J90?_cUa7ziGID?Sf[2
 !s100 HhL^B0ZmP1=`h?O@f5GE91
 R8
 32
-R55
+R50
 !i10b 1
-Z85 !s108 1522451018.000000
-Z86 !s90 -reportprogress|300|Sign_Ext.vhd|
-Z87 !s107 Sign_Ext.vhd|
+R55
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Sign_Ext.vhd|
+Z65 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/Sign_Ext.vhd|
 !i113 1
 R13
+R14
 Aarch
-R2
-R3
-R4
-DEx4 work 8 sign_ext 0 22 H<^I8mUhiZldC^SRUW4LW1
-l14
-L12
-VU<9I9_bn4fJQPA;EzE^XT2
-!s100 ]N9DkM7@[QTViC:c=dNkL3
-R8
-32
-R55
-!i10b 1
-R85
-R86
-R87
-!i113 1
-R13
-Eusign_ext
-Z88 w1522343218
-R2
 R3
 R4
 R5
-Z89 8USign_Ext.vhd
-Z90 FUSign_Ext.vhd
+DEx4 work 8 sign_ext 0 22 =T_J90?_cUa7ziGID?Sf[2
+l14
+L12
+VlTmD>^S1Xgb[OgmoH?zYn1
+Z66 !s100 ]N9DkM7@[QTViC:c=dNkL3
+R8
+32
+R50
+!i10b 1
+R55
+R64
+R65
+!i113 1
+R13
+R14
+Eusign_ext
+R20
+R3
+R4
+R5
+R0
+Z67 8C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/USign_Ext.vhd
+Z68 FC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/USign_Ext.vhd
 l0
 L5
-VTm8^eYQWV`jaOgZ`KT>8^3
+V;@mJBK<Dk2:5C>ATH?QkQ1
 !s100 ACAeRL3TaOG`Tf2MRJ@[a3
 R8
 32
-Z91 !s110 1522451018
+R9
 !i10b 1
-R85
-Z92 !s90 -reportprogress|300|USign_Ext.vhd|
-Z93 !s107 USign_Ext.vhd|
+R10
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/USign_Ext.vhd|
+Z70 !s107 C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/USign_Ext.vhd|
 !i113 1
 R13
+R14
 Aarch
-R2
 R3
 R4
-DEx4 work 9 usign_ext 0 22 Tm8^eYQWV`jaOgZ`KT>8^3
+R5
+DEx4 work 9 usign_ext 0 22 ;@mJBK<Dk2:5C>ATH?QkQ1
 l14
 L12
-V9:ITN]6O:T53:>iA;[jJo2
+VnJZP]i_ABG@?2fLCgzh<d1
 !s100 0PSRLnWl>jm>?dibG>jTQ0
 R8
 32
-R91
+R9
 !i10b 1
-R85
-R92
-R93
+R10
+R69
+R70
 !i113 1
 R13
+R14
