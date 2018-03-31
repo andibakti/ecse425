@@ -413,8 +413,6 @@ main : process(clock, reset)
 
 			--id_reg/register_file---------------
 			write_en_reg_file <= '1';
-			writedata_reg_file <=  data_out_usign_ext;
-			addr_write_reg_file <= reg_write_out_id_reg;
 			addr_regA_reg_file <= reg1_out_id_reg;
 			addr_regB_reg_file <= reg2_out_id_reg;
 
@@ -458,7 +456,6 @@ main : process(clock, reset)
 				write_en_reg_file <= '1';
 				addr_write_reg_file <= regWrite_out_ex_alu;
 				writedata_reg_file <= result_ex_alu;
-
 			end if;
 
 			--hazard detection

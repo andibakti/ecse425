@@ -86,7 +86,7 @@ BEGIN
 	END PROCESS;
 
     -- this process writes the contents of the registers to an output text file
-    write_file : process(write_en)
+    write_file : process(clk)
         file reg_file : text;
         variable line_num: line;
         variable file_status : file_open_status;
@@ -95,11 +95,11 @@ BEGIN
         begin
 
         if(write_en = '1') then
-            file_open(reg_file, "register_file.txt", write_mode);
+            file_open(file_status,reg_file, "register_file.txt", write_mode);
 
             for i in 0 to 31 loop
+                write(line_num, register_file(i));
                 writeline(reg_file, line_num);
-                write(line_num,register_file(i));
             end loop;
             file_close(reg_file);
         end if;
