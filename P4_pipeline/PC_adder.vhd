@@ -16,5 +16,6 @@ architecture arch of PC_adder is
 begin
     with override select output_add <=
         override_pc when '1',
-        std_logic_vector(unsigned(pc) + 4) when others;
+        std_logic_vector(unsigned(pc) + 1) when others;
 end arch;
+

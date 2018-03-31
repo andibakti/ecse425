@@ -1,11 +1,6 @@
-# Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
-# OpenFile {C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/P4_pipeline.mpf}
-# Loading project P4_pipeline
-run
-# No Design Loaded!
 source testbench.tcl
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:17 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:52 on Mar 30,2018
 # vcom -reportprogress 300 USign_Ext.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -13,10 +8,10 @@ source testbench.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity usign_ext
 # -- Compiling architecture arch of usign_ext
-# End time: 19:56:17 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:52 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:17 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:52 on Mar 30,2018
 # vcom -reportprogress 300 Sign_Ext.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -24,10 +19,10 @@ source testbench.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sign_ext
 # -- Compiling architecture arch of sign_ext
-# End time: 19:56:17 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:52 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:17 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:52 on Mar 30,2018
 # vcom -reportprogress 300 Register_File.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -36,10 +31,10 @@ source testbench.tcl
 # -- Loading package std_logic_textio
 # -- Compiling entity Register_File
 # -- Compiling architecture arch of Register_File
-# End time: 19:56:17 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:53 on Mar 30,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:17 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:53 on Mar 30,2018
 # vcom -reportprogress 300 PC_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -47,30 +42,30 @@ source testbench.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity PC_adder
 # -- Compiling architecture arch of PC_adder
-# End time: 19:56:17 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:53 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:17 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:53 on Mar 30,2018
 # vcom -reportprogress 300 PC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PC
 # -- Compiling architecture arch of PC
-# End time: 19:56:17 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:53 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:17 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:53 on Mar 30,2018
 # vcom -reportprogress 300 mux_2to1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux_2to1
 # -- Compiling architecture Behavioral of mux_2to1
-# End time: 19:56:17 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:53 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:18 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:53 on Mar 30,2018
 # vcom -reportprogress 300 instr_memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -79,10 +74,10 @@ source testbench.tcl
 # -- Loading package std_logic_textio
 # -- Compiling entity instr_memory
 # -- Compiling architecture rtl of instr_memory
-# End time: 19:56:18 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:54 on Mar 30,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:18 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:54 on Mar 30,2018
 # vcom -reportprogress 300 id_reg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -90,20 +85,20 @@ source testbench.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity id_reg
 # -- Compiling architecture arch of id_reg
-# End time: 19:56:18 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:54 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:18 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:54 on Mar 30,2018
 # vcom -reportprogress 300 hazard_Detection.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity hazard_detection
 # -- Compiling architecture arch of hazard_detection
-# End time: 19:56:18 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:54 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:18 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:54 on Mar 30,2018
 # vcom -reportprogress 300 ex_ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -111,16 +106,12 @@ source testbench.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ex_ALU
 # -- Compiling architecture arch of ex_ALU
-# ** Warning: ex_ALU.vhd(68): (vcom-1272) Length of expected is 32; length of actual is 64.
-# 
-# ** Warning: ex_ALU.vhd(122): (vcom-1272) Length of expected is 32; length of actual is 26.
-# 
 # ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
-# 
-# End time: 19:56:18 on Mar 30,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 3
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:18 on Mar 30,2018
+# ** Warning: ex_ALU.vhd(128): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 21:51:54 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:54 on Mar 30,2018
 # vcom -reportprogress 300 data_memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -129,10 +120,10 @@ source testbench.tcl
 # -- Loading package std_logic_textio
 # -- Compiling entity data_memory
 # -- Compiling architecture rtl of data_memory
-# End time: 19:56:18 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:54 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:18 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:55 on Mar 30,2018
 # vcom -reportprogress 300 proc.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -140,10 +131,10 @@ source testbench.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity proc
 # -- Compiling architecture arch of proc
-# End time: 19:56:18 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:55 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
-# Start time: 19:56:18 on Mar 30,2018
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:51:55 on Mar 30,2018
 # vcom -reportprogress 300 proc_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -151,28 +142,10 @@ source testbench.tcl
 # -- Loading package NUMERIC_STD
 # -- Compiling entity proc_tb
 # -- Compiling architecture behavior of proc_tb
-# End time: 19:56:18 on Mar 30,2018, Elapsed time: 0:00:00
+# End time: 21:51:55 on Mar 30,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# //  ModelSim PE Student Edition 10.4a Apr  7 2015 
-# //
-# //  Copyright 1991-2015 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
-# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
-# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
-# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
-# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
-# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
-# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
-# //
-# // NOT FOR CORPORATE OR PRODUCTION USE.
-# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
-# // FOR HIGHER EDUCATION PURPOSES ONLY
-# //
-# vsim -gui C:\Users\Ango\OneDrive\Documents\Ecse 425\Project\WORKSPACE\P4\ecse425\P4_pipeline\P4_pipeline.mpf 
-# Start time: 19:56:19 on Mar 30,2018
+# vsim proc_tb 
+# Start time: 21:51:56 on Mar 30,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -191,6 +164,11 @@ source testbench.tcl
 # Loading work.hazard_detection(arch)
 # Loading work.ex_alu(arch)
 # Loading work.data_memory(rtl)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: camille  Hostname: MYLAPTOP  ProcessID: 9120
+#           Attempting to use alternate WLF file "./wlftyigc74".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyigc74
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -207,29 +185,1138 @@ source testbench.tcl
 #    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+run
+run
+run
+run
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:21 on Mar 30,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 21:55:21 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:21 on Mar 30,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 21:55:22 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:22 on Mar 30,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 21:55:22 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:22 on Mar 30,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 21:55:22 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:22 on Mar 30,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 21:55:22 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:22 on Mar 30,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 21:55:23 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:23 on Mar 30,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 21:55:23 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:23 on Mar 30,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 21:55:23 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:23 on Mar 30,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 21:55:23 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:23 on Mar 30,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(128): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 21:55:24 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:24 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 21:55:24 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:24 on Mar 30,2018
+# vcom -reportprogress 300 proc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity proc
+# -- Compiling architecture arch of proc
+# End time: 21:55:24 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 21:55:24 on Mar 30,2018
+# vcom -reportprogress 300 proc_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity proc_tb
+# -- Compiling architecture behavior of proc_tb
+# End time: 21:55:25 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 21:55:25 on Mar 30,2018, Elapsed time: 0:03:29
+# Errors: 4, Warnings: 12
+# vsim proc_tb 
+# Start time: 21:55:26 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: camille  Hostname: MYLAPTOP  ProcessID: 9120
+#           Attempting to use alternate WLF file "./wlfte6ckna".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte6ckna
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 4500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 4500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 6500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 7500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+restart -f
+restart -f
+add wave -position end sim:/proc_tb/proc_instance/ex_alu_instance/*
+add wave -position 1 sim:/proc_tb/proc_instance/id_reg_instance/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+run
+run
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+run
+quit -sim
+# End time: 22:09:11 on Mar 30,2018, Elapsed time: 0:13:45
+# Errors: 8, Warnings: 18
+vsim work.proc
+# vsim work.proc 
+# Start time: 22:09:19 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+vsim work.proc
+# End time: 22:09:22 on Mar 30,2018, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# vsim work.proc 
+# Start time: 22:09:23 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+add wave -position end sim:/proc/register_file_instance/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: camille  Hostname: MYLAPTOP  ProcessID: 9120
+#           Attempting to use alternate WLF file "./wlftfe3yq4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfe3yq4
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc/register_file_instance
+restart -f
+add wave -position end sim:/proc/*
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc/register_file_instance
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:25 on Mar 30,2018
+# vcom -reportprogress 300 USign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity usign_ext
+# -- Compiling architecture arch of usign_ext
+# End time: 22:12:25 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:25 on Mar 30,2018
+# vcom -reportprogress 300 Sign_Ext.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sign_ext
+# -- Compiling architecture arch of sign_ext
+# End time: 22:12:25 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:25 on Mar 30,2018
+# vcom -reportprogress 300 Register_File.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# End time: 22:12:25 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:26 on Mar 30,2018
+# vcom -reportprogress 300 PC_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_adder
+# -- Compiling architecture arch of PC_adder
+# End time: 22:12:26 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:26 on Mar 30,2018
+# vcom -reportprogress 300 PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture arch of PC
+# End time: 22:12:26 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:26 on Mar 30,2018
+# vcom -reportprogress 300 mux_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2to1
+# -- Compiling architecture Behavioral of mux_2to1
+# End time: 22:12:26 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:26 on Mar 30,2018
+# vcom -reportprogress 300 instr_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity instr_memory
+# -- Compiling architecture rtl of instr_memory
+# End time: 22:12:26 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:26 on Mar 30,2018
+# vcom -reportprogress 300 id_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity id_reg
+# -- Compiling architecture arch of id_reg
+# End time: 22:12:27 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:27 on Mar 30,2018
+# vcom -reportprogress 300 hazard_Detection.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detection
+# -- Compiling architecture arch of hazard_detection
+# End time: 22:12:27 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:27 on Mar 30,2018
+# vcom -reportprogress 300 ex_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ex_ALU
+# -- Compiling architecture arch of ex_ALU
+# ** Warning: ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+# ** Warning: ex_ALU.vhd(128): (vcom-1272) Length of expected is 32; length of actual is 26.
+# End time: 22:12:27 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:27 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 22:12:27 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:27 on Mar 30,2018
+# vcom -reportprogress 300 proc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity proc
+# -- Compiling architecture arch of proc
+# End time: 22:12:28 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 22:12:28 on Mar 30,2018
+# vcom -reportprogress 300 proc_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity proc_tb
+# -- Compiling architecture behavior of proc_tb
+# End time: 22:12:28 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:12:29 on Mar 30,2018, Elapsed time: 0:03:06
+# Errors: 0, Warnings: 8
+# vsim proc_tb 
+# Start time: 22:12:29 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: camille  Hostname: MYLAPTOP  ProcessID: 9120
+#           Attempting to use alternate WLF file "./wlftqbzh21".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqbzh21
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+restart -f
+add wave -position 15  sim:/proc_tb/proc_instance/register_file_instance/register_file
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 41500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 42500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/ex_alu_instance
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
 # Compile of PC.vhd was successful.
 # Compile of instr_memory.vhd was successful.
 # Compile of PC_adder.vhd was successful.
-# Compile of mux_2to1.vhd was successful.
 # Compile of USign_Ext.vhd was successful.
-# Compile of data_memory.vhd was successful.
 # Compile of ex_ALU.vhd was successful with warnings.
 # Compile of hazard_Detection.vhd was successful.
 # Compile of id_reg.vhd was successful.
-# Compile of proc.vhd was successful.
-# Compile of proc_tb.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
 # Compile of Register_File.vhd was successful.
 # Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
 # 13 compiles, 0 failed with no errors.
-# End time: 20:47:24 on Mar 30,2018, Elapsed time: 0:51:05
-# Errors: 0, Warnings: 13
+# Compile of PC.vhd was successful.
+# Compile of instr_memory.vhd was successful.
+# Compile of PC_adder.vhd was successful.
+# Compile of USign_Ext.vhd was successful.
+# Compile of ex_ALU.vhd was successful with warnings.
+# Compile of hazard_Detection.vhd was successful.
+# Compile of id_reg.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+restart -f
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+# Compile of PC.vhd was successful.
+# Compile of instr_memory.vhd was successful.
+# Compile of PC_adder.vhd was successful.
+# Compile of USign_Ext.vhd was successful.
+# Compile of ex_ALU.vhd was successful with warnings.
+# Compile of hazard_Detection.vhd was successful.
+# Compile of id_reg.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# Compile of PC.vhd was successful.
+# Compile of instr_memory.vhd was successful.
+# Compile of PC_adder.vhd was successful.
+# Compile of USign_Ext.vhd was successful.
+# Compile of ex_ALU.vhd was successful with warnings.
+# Compile of hazard_Detection.vhd was successful.
+# Compile of id_reg.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+restart -f
+add wave -position 15  sim:/proc_tb/proc_instance/ex_alu_instance/regWrite_out
+add wave -position 15  sim:/proc_tb/proc_instance/id_reg_instance/reg_write_out
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# Compile of PC.vhd was successful.
+# Compile of instr_memory.vhd was successful.
+# Compile of PC_adder.vhd was successful.
+# Compile of USign_Ext.vhd was successful.
+# Compile of ex_ALU.vhd was successful with warnings.
+# Compile of hazard_Detection.vhd was successful.
+# Compile of id_reg.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# Compile of PC.vhd was successful.
+# Compile of instr_memory.vhd was successful.
+# Compile of PC_adder.vhd was successful.
+# Compile of USign_Ext.vhd was successful.
+# Compile of ex_ALU.vhd was successful with warnings.
+# Compile of hazard_Detection.vhd was successful.
+# Compile of id_reg.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
+# Compile of Register_File.vhd failed with 3 errors.
+# Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 13 compiles, 1 failed with 3 errors.
+restart -f
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+# Compile of PC.vhd was successful.
+# Compile of instr_memory.vhd was successful.
+# Compile of PC_adder.vhd was successful.
+# Compile of USign_Ext.vhd was successful.
+# Compile of ex_ALU.vhd was successful with warnings.
+# Compile of hazard_Detection.vhd was successful.
+# Compile of id_reg.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# Compile of PC.vhd was successful.
+# Compile of instr_memory.vhd was successful.
+# Compile of PC_adder.vhd was successful.
+# Compile of USign_Ext.vhd was successful.
+# Compile of ex_ALU.vhd was successful with warnings.
+# Compile of hazard_Detection.vhd was successful.
+# Compile of id_reg.vhd was successful.
+# Compile of mux_2to1.vhd was successful.
+# Compile of Register_File.vhd was successful.
+# Compile of Sign_Ext.vhd was successful.
+# Compile of proc_tb.vhd was successful.
+# Compile of proc.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.proc_tb(behavior)
+# Loading work.proc(arch)
+# Loading work.usign_ext(arch)
+# Loading work.sign_ext(arch)
+# Loading work.register_file(arch)
+# Loading work.pc_adder(arch)
+# Loading work.pc(arch)
+# Loading work.mux_2to1(behavioral)
+# Loading work.instr_memory(rtl)
+# Loading work.id_reg(arch)
+# Loading work.hazard_detection(arch)
+# Loading work.ex_alu(arch)
+# Loading work.data_memory(rtl)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Error: (vsim-3953) STD_LOGIC_1164.READ(STD_ULOGIC_VECTOR) End of string encountered
+#    Time: 0 ps  Iteration: 1  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/instr_memory_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 9500 ps  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 2  Instance: /proc_tb/proc_instance/register_file_instance

@@ -1,61 +1,29 @@
 proc AddWaves {} {
 	;#Add waves we're interested in to the Wave window
     ;#add wave -position end sim:/cache_tb/dut/clock
-    add wave -position end  sim:/proc_tb/proc_instance/clock
-	add wave -position end  sim:/proc_tb/proc_instance/reset
-	add wave -position end  sim:/proc_tb/proc_instance/sign_ext_instance/data_in
-	add wave -position end  sim:/proc_tb/proc_instance/sign_ext_instance/data_out
-	add wave -position end  sim:/proc_tb/proc_instance/register_file_instance/write_en
-	add wave -position end  sim:/proc_tb/proc_instance/register_file_instance/writedata
-	add wave -position end  sim:/proc_tb/proc_instance/register_file_instance/addr_write
-	add wave -position end  sim:/proc_tb/proc_instance/register_file_instance/addr_regA
-	add wave -position end  sim:/proc_tb/proc_instance/register_file_instance/addr_regB
-	add wave -position end  sim:/proc_tb/proc_instance/register_file_instance/read_regA
-	add wave -position end  sim:/proc_tb/proc_instance/register_file_instance/read_regB
-	add wave -position end  sim:/proc_tb/proc_instance/pc_adder_instance/override
-	add wave -position end  sim:/proc_tb/proc_instance/pc_adder_instance/pc
-	add wave -position end  sim:/proc_tb/proc_instance/pc_adder_instance/override_pc
-	add wave -position end  sim:/proc_tb/proc_instance/pc_adder_instance/output_add
-	add wave -position end  sim:/proc_tb/proc_instance/pc_instance/output_pc
-	add wave -position end  sim:/proc_tb/proc_instance/instr_memory_instance/writedata
-	add wave -position end  sim:/proc_tb/proc_instance/instr_memory_instance/address
-	add wave -position 19  sim:/proc_tb/proc_instance/id_reg_instance/pc_in
-	add wave -position 20  sim:/proc_tb/proc_instance/id_reg_instance/instruction_in
-	add wave -position 21  sim:/proc_tb/proc_instance/id_reg_instance/opCode_out
-	add wave -position 22  sim:/proc_tb/proc_instance/id_reg_instance/reg1_out
-	add wave -position 23  sim:/proc_tb/proc_instance/id_reg_instance/reg2_out
-	add wave -position 24  sim:/proc_tb/proc_instance/id_reg_instance/reg_write_in
-	add wave -position 25  sim:/proc_tb/proc_instance/id_reg_instance/address_out
-	add wave -position 26  sim:/proc_tb/proc_instance/id_reg_instance/immediateValue_out
-	add wave -position 27  sim:/proc_tb/proc_instance/id_reg_instance/shamt_out
-	add wave -position 28  sim:/proc_tb/proc_instance/id_reg_instance/funct_out
-	add wave -position 29  sim:/proc_tb/proc_instance/id_reg_instance/reg_write_out
-	add wave -position 30  sim:/proc_tb/proc_instance/id_reg_instance/pc_out
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/a
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/b
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/address_in
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/offset_in
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/shift_in
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/signExtendImmediate
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/uSignExtendImmediate
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/sel
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/funct
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/pc_in
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/regWrite_in
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/jump
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/mem
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/load
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/store
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/jumpAddress
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/memAddress
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/regWrite_out
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/result
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/temp
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/jA
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/memAddr
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/hi
-	add wave -position end  sim:/proc_tb/proc_instance/ex_alu_instance/lo
+# add wave -position end  sim:/proc/clk
+# add wave -position end  sim:/proc/rst
+# add wave -position end  sim:/proc/pc_adder_instance/override
+# add wave -position end  sim:/proc/pc_adder_instance/pc
+# add wave -position end  sim:/proc/pc_adder_instance/override_pc
+# add wave -position end  sim:/proc/pc_adder_instance/output_add
+# add wave -position end  sim:/proc/pc_instance/input
+# add wave -position end  sim:/proc/pc_instance/reset
+# add wave -position end  sim:/proc/pc_instance/output_pc
+# add wave -position end  sim:/proc/instr_memory_instance/clock
+# add wave -position end  sim:/proc/instr_memory_instance/writedata
+# add wave -position end  sim:/proc/instr_memory_instance/address
+# add wave -position end  sim:/proc/instr_memory_instance/memwrite
+# add wave -position end  sim:/proc/instr_memory_instance/memread
+# add wave -position end  sim:/proc/instr_memory_instance/readdata
+# add wave -position end  sim:/proc/instr_memory_instance/waitrequest
+# add wave -position end  sim:/proc/instr_memory_instance/ram_block
+add wave -position end sim:/proc_tb/proc_instance/*
 		}
+
+# proc GenerateClock {} { 
+#     force -deposit /proc/clock 0 0 ns, 1 0.5 ns -repeat 1 ns
+# }
 
 vlib work
 
@@ -82,6 +50,7 @@ vsim proc_tb
 
 ;# Add the waves
 AddWaves
+# GenerateClock
 
 ;# Run for 10'000 clock cycles
-run 10ns
+run 10000ns

@@ -32,6 +32,7 @@ end entity;
 architecture arch of ex_ALU is
 --declare signals
 signal temp,jA, memAddr: std_logic_vector(31 downto 0);
+signal temp2: std_logic_vector(63 downto 0);
 signal hi, lo: std_logic_vector(31 downto 0);
 signal memoryCheck,jumpCheck,storeCheck,loadCheck: std_logic;
 
@@ -65,7 +66,9 @@ begin
 							lo <= std_logic_vector(signed(a)/signed(b)); --div
 							hi <= std_logic_vector(signed(a) mod signed(b)); --div
 						when "011000" =>
-							temp <= std_logic_vector(signed(a)*signed(b));--mul
+							temp2 <= std_logic_vector(signed(a)*signed(b));--mul
+							hi <= temp2(63 downto 32);
+							lo <= temp2(31 downto 0);
 						when "010000" =>
 							temp <= hi;
 						when "010010" =>
