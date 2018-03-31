@@ -2,3 +2,8 @@ P3_cache/work/*
 P4_pipeline/work/*
 P4_pipeline/testing/test.cr.mti
 P4_pipeline/testing/work*
+P4_pipeline/vsim.wlf
+P4_pipeline/work/_lib.qdb
+P4_pipeline/transcript
+P4_pipeline/work/_info
+.gitignore

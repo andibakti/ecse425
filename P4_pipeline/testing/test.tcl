@@ -1,22 +1,23 @@
 proc AddWaves {} {
 	;#Add waves we're interested in to the Wave window
     ;#add wave -position end sim:/cache_tb/dut/clock
-    add wave -position end  sim:/ex_alu_tb/a
-	add wave -position end  sim:/ex_alu_tb/b
-	add wave -position end  sim:/ex_alu_tb/signExtendImmediate
-	add wave -position end  sim:/ex_alu_tb/sel
-	add wave -position end  sim:/ex_alu_tb/zero
-	add wave -position end  sim:/ex_alu_tb/output
+    add wave -position end  sim:/data_memory_tb/clk
+	add wave -position end  sim:/data_memory_tb/data_in
+	add wave -position end  sim:/data_memory_tb/data_out
+	add wave -position end  sim:/data_memory_tb/addr
+	add wave -position end  sim:/data_memory_tb/reg_id_in
+	add wave -position end  sim:/data_memory_tb/reg_id_out
+	#add wave -position end  sim:/data_memory_tb/output
 	}
 
 vlib work
 
 ;# Compile components if any
-vcom ex_ALU.vhd
-vcom ex_ALU_tb.vhd
+vcom data_memory.vhd
+vcom data_memory_tb.vhd
 
 ;# Start simulation
-vsim ex_ALU_tb
+vsim data_memory_tb
 
 ;# Generate a clock with 1ns period
 ;#force -deposit clk 0 0 ns, 1 0.5 ns -repeat 1 ns
@@ -25,4 +26,5 @@ vsim ex_ALU_tb
 AddWaves
 
 ;# Run for 20 ns
+#bp data_memory.vhd 43
 run 10ns

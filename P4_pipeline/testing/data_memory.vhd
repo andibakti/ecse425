@@ -17,7 +17,6 @@ entity data_memory is
 		writeMem: in std_logic;
 		reg_id_in: in std_logic_vector(4 downto 0);
 		addr: in std_logic_vector(31 downto 0);
-		
 		data_out: out std_logic_vector(31 downto 0);
 		reg_id_out: out std_logic_vector(4 downto 0)
 		--mem_data: out std_logic_vector(31 downto 0);
@@ -68,7 +67,7 @@ begin
 		begin
 		
 		if (writeMem = '1') then
-			file_open(file_status, memory_file, "memory.txt", write_mode);
+			file_open(memory_file, "memory.txt", write_mode);
 			-- since the data memory has 32768 bytes,
 			--"memory.txt" should have 32768/4 lines,
 			--on for each 32 bit word
