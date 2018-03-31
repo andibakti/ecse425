@@ -145,6 +145,8 @@ end component;
 
 signal clk: std_logic;
 signal rst:std_logic;
+constant clk_period : time := 1 ns;
+
 
 -- test signals
 signal data_in_usign_ext : std_logic_vector(15 downto 0);
@@ -369,6 +371,13 @@ rst <= reset;
 
 
 
+--clk_process : process
+--begin
+--  clk <= '0';
+--  wait for clk_period/2;
+--  clk <= '1';
+--  wait for clk_period/2;
+--end process;
 
 main : process(clock, reset)
 	begin
@@ -389,16 +398,16 @@ main : process(clock, reset)
 
 
 
-			-- instr_mem/ id_reg-----------------
-			pc_in_id_reg <= output_pc;
+			---- instr_mem/ id_reg-----------------
 			memread_instr_mem <= '1';
 			address_instr_mem <= output_pc;
+			pc_in_id_reg <= output_pc;
 			--because we simulate little to no delay this if statement is always true
-			if(falling_edge(waitrequest_instr_mem)) then
-				IF_ID_reg <= readdata_instr_mem;		
-			end if;
+			--if(falling_edge(waitrequest_instr_mem)) then
+			--	IF_ID_reg <= 		
+			--end if;
 			pc_in_id_reg <= output_pc; 
-			instruction_in_id_reg <= IF_ID_reg;
+			instruction_in_id_reg <= readdata_instr_mem;
 			reg_write_in_id_reg <= reg_id_out_data_mem;
 
 

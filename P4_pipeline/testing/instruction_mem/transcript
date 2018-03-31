@@ -1,0 +1,29 @@
+# Load canceled
+# Compile of instr_memory.vhd was successful.
+# Compile of instr_memory_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.instr_memory_tb
+# vsim work.instr_memory_tb 
+# Start time: 20:49:13 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.instr_memory_tb(behavior)
+# Loading ieee.std_logic_textio(body)
+# Loading work.instr_memory(rtl)
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/clock
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/writedata
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/address
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/memwrite
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/memread
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/readdata
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/waitrequest
+add wave -position end  sim:/instr_memory_tb/instr_mem_instance/ram_block
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 1  Instance: /instr_memory_tb/instr_mem_instance
+quit -sim
+project open {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/P4_pipeline}
+# End time: 20:51:54 on Mar 30,2018, Elapsed time: 0:02:41
+# Errors: 0, Warnings: 1

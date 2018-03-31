@@ -53,17 +53,12 @@ begin
 	reset <= '1';
 	wait for 1 * clk_period;
 	reset <= '0';
-
-	wait for 1 * clk_period;
-	wait for 1 * clk_period;
-	wait for 1 * clk_period;
 	wait for 1 * clk_period;
 	wait for 1 * clk_period;
 	wait for 1 * clk_period;
 	wait for 1 * clk_period;
 
-	wait for 1 * clk_period;
-	
+
 --assert ( output = X"00000000") report "reset successfull" severity error;
 
 --rst <= '0';
