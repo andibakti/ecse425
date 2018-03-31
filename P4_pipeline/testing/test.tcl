@@ -7,6 +7,7 @@ proc AddWaves {} {
 	add wave -position end  sim:/data_memory_tb/addr
 	add wave -position end  sim:/data_memory_tb/reg_id_in
 	add wave -position end  sim:/data_memory_tb/reg_id_out
+	add wave -position end  sim:/data_memory_tb/writeMem
 	#add wave -position end  sim:/data_memory_tb/output
 	}
 
@@ -26,5 +27,5 @@ vsim data_memory_tb
 AddWaves
 
 ;# Run for 20 ns
-#bp data_memory.vhd 43
+bp data_memory.vhd 81
 run 10ns

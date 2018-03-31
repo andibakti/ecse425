@@ -25,7 +25,7 @@ end data_memory;
 
 architecture rtl of data_memory is
 
-type MEM is array(ram_size-1 downto 0) of std_logic_vector(31 downto 0);
+type MEM is array(ram_size-1 downto 0) of std_logic_vector(7 downto 0);
 signal ram_block: MEM;
 
 begin
@@ -35,7 +35,7 @@ begin
 		--this is a cheap trick to initialize the sram in simulation
 		if(now < 1 ps)then
 			for i in 0 to ram_size-1 loop
-				ram_block(i) <= std_logic_vector(to_unsigned(i,32));
+				ram_block(i) <= std_logic_vector(to_signed(0,8));
 			end loop;
 		end if;
 
@@ -64,14 +64,18 @@ begin
 		variable file_status : file_open_status;
 		variable reg_value : std_logic_vector(31 downto 0);
 		
+		variable ram_size : integer := 32768;
+		variable endLoop : integer;
+		
 		begin
+		
+		--size
+		endLoop := ram_size/4;
 		
 		if (writeMem = '1') then
 			file_open(memory_file, "memory.txt", write_mode);
-			-- since the data memory has 32768 bytes,
-			--"memory.txt" should have 32768/4 lines,
-			--on for each 32 bit word
-			for i in 1 to 8192 loop
+
+			for i in 1 to endLoop loop
 				for j in 1 to 4 loop
 					--ex j = 1 : 7 downto 0
 					reg_value(8*j-1 downto 8*j-8) := ram_block(i*4 + j-5);

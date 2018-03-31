@@ -44,7 +44,7 @@ BEGIN
 	
 	--dut => Device Under Test
     dut: data_memory
-	GENERIC MAP( ram_size => 15  )
+	GENERIC MAP( ram_size => 16  )
     PORT MAP( 
         clk,
         data_in,
@@ -52,9 +52,9 @@ BEGIN
         do_write,
 		writeMem,
         reg_id_in,
-		addr
-
-
+		addr,
+		data_out,
+		reg_id_out
     );
 
     clock_process : PROCESS
@@ -68,7 +68,7 @@ BEGIN
     test_process : PROCESS
     BEGIN
 
-		-- test 2 : read reg0 and write to reg1
+		-- test 1 : no write
         wait for clk_period;
         data_in <= "00000000000000000000000000000001";
         do_load <= '0';
@@ -77,12 +77,12 @@ BEGIN
 		addr <= "00000000000000000000000000000001";
         reg_id_in <= "00000";
 		
-		-- test 2 : read reg0 and write to reg1
+		-- test 2 : write to file
 		wait for clk_period;
         data_in <= "00000000000000000000000000000001";
         do_load <= '0';
         do_write <='0';
-        writeMem <= '0';
+        writeMem <= '1';
 		addr <= "00000000000000000000000000000001";
         reg_id_in <= "00001";
         
