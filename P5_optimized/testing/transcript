@@ -1,0 +1,521 @@
+# Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
+# OpenFile {C:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/testing/test.mpf}
+# Loading project test
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 21:36:33 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 21:36:33 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 21:36:33 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 21:36:34 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# //  ModelSim PE Student Edition 10.4a Apr  7 2015 
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim -gui C:\Users\Ango\OneDrive\Documents\Ecse 425\Project\WORKSPACE\P4\ecse425\P4_pipeline\testing\test.mpf 
+# Start time: 21:36:34 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# Break in Process mem_process at data_memory.vhd line 43
+run -all
+clear
+# invalid command name "clear"
+clc
+# invalid command name "clc"
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 21:37:24 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 21:37:24 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 21:37:24 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 21:37:24 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 21:37:26 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:05:58 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 22:05:58 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:05:58 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:05:58 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:06:00 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:07:17 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 22:07:17 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:07:17 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:07:17 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:07:18 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 32 (31 downto 0).
+#    Time: 2 ns  Iteration: 1  Process: /data_memory_tb/dut/write_file File: data_memory.vhd
+# Fatal error in ForLoop loop at data_memory.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at data_memory.vhd 77 ForLoop loop
+# 
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:14:02 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 22:14:03 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:14:03 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:14:03 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:14:04 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# Break in ForLoop loop at data_memory.vhd line 77
+step -over -current
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 32 (31 downto 0).
+#    Time: 2 ns  Iteration: 1  Process: /data_memory_tb/dut/write_file File: data_memory.vhd
+# Fatal error in ForLoop loop at data_memory.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at data_memory.vhd 33 Process mem_process
+# 
+step -over -current
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at data_memory.vhd 77 ForLoop loop
+# 
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:21:48 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 22:21:48 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:21:48 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:21:48 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:21:50 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 32 (31 downto 0).
+#    Time: 2 ns  Iteration: 1  Process: /data_memory_tb/dut/write_file File: data_memory.vhd
+# Fatal error in ForLoop loop at data_memory.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at data_memory.vhd 77 ForLoop loop
+# 
+# Break key hit
+quit -sim
+# Compile of data_memory_tb.vhd was successful.
+# Compile of data_memory.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:31:24 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 22:31:25 on Mar 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:31:25 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:31:25 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:31:25 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 32 (31 downto 0).
+#    Time: 2 ns  Iteration: 1  Process: /data_memory_tb/dut/write_file File: data_memory.vhd
+# Fatal error in ForLoop loop at data_memory.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at data_memory.vhd 77 ForLoop loop
+# 
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:36:48 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Warning: data_memory.vhd(46): (vcom-1272) Length of expected is 8; length of actual is 32.
+# 
+# ** Warning: data_memory.vhd(50): (vcom-1272) Length of expected is 32; length of actual is 8.
+# 
+# End time: 22:36:48 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:36:48 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:36:48 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:36:50 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# ** Fatal: (vsim-3734) Index value 15 is out of range 14 downto 0.
+#    Time: 2 ns  Iteration: 1  Process: /data_memory_tb/dut/write_file File: data_memory.vhd
+# Fatal error in ForLoop loop at data_memory.vhd line 77
+# 
+# HDL call sequence:
+# Stopped at data_memory.vhd 77 ForLoop loop
+# 
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:46:42 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Error: data_memory.vhd(72): near "=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# 
+# ** Warning: data_memory.vhd(46): (vcom-1272) Length of expected is 8; length of actual is 32.
+# 
+# ** Warning: data_memory.vhd(50): (vcom-1272) Length of expected is 32; length of actual is 8.
+# 
+# ** Error: data_memory.vhd(90): VHDL Compiler exiting
+# End time: 22:46:42 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# C:/Modeltech_pe_edu_10.4a/win32pe_edu/vcom failed.
+quit -sim
+# Compile of data_memory.vhd was successful with warnings.
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:47:29 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Warning: data_memory.vhd(46): (vcom-1272) Length of expected is 8; length of actual is 32.
+# 
+# ** Warning: data_memory.vhd(50): (vcom-1272) Length of expected is 32; length of actual is 8.
+# 
+# End time: 22:47:29 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:47:29 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:47:29 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:47:29 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:49:09 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Warning: data_memory.vhd(46): (vcom-1272) Length of expected is 8; length of actual is 32.
+# 
+# ** Warning: data_memory.vhd(50): (vcom-1272) Length of expected is 32; length of actual is 8.
+# 
+# End time: 22:49:09 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:49:09 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:49:09 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:49:11 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# ** Error: (vsim-3330) Line 77 in file "data_memory.vhd" is not executable.
+# 
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:49:30 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Warning: data_memory.vhd(46): (vcom-1272) Length of expected is 8; length of actual is 32.
+# 
+# ** Warning: data_memory.vhd(50): (vcom-1272) Length of expected is 32; length of actual is 8.
+# 
+# End time: 22:49:30 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:49:30 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:49:30 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:49:32 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# Break in ForLoop loop at data_memory.vhd line 81
+quit -sim
+# Compile of data_memory_tb.vhd was successful.
+# Compile of data_memory.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+source test.tcl
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:51:03 on Mar 30,2018
+# vcom -reportprogress 300 data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# ** Warning: data_memory.vhd(46): (vcom-1272) Length of expected is 8; length of actual is 32.
+# 
+# ** Warning: data_memory.vhd(50): (vcom-1272) Length of expected is 32; length of actual is 8.
+# 
+# End time: 22:51:03 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 22:51:03 on Mar 30,2018
+# vcom -reportprogress 300 data_memory_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory_tb
+# -- Compiling architecture arch of data_memory_tb
+# End time: 22:51:03 on Mar 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 22:51:03 on Mar 30,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.data_memory_tb(arch)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(rtl)
+# Break in ForLoop loop at data_memory.vhd line 81
