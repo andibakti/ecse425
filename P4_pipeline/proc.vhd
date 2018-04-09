@@ -412,7 +412,7 @@ main : process(clock, reset)
 
 
 			--id_reg/register_file---------------
-			write_en_reg_file <= '1';
+			--write_en_reg_file <= '1';
 			addr_regA_reg_file <= reg1_out_id_reg;
 			addr_regB_reg_file <= reg2_out_id_reg;
 
