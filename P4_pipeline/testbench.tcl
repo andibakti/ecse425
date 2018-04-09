@@ -53,4 +53,4 @@ AddWaves
 # GenerateClock
 
 ;# Run for 10'000 clock cycles
-run 10000ns
+run 100ns

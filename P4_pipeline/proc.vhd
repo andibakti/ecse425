@@ -78,7 +78,8 @@ port(
 	clock,rst:	in std_logic;
 	pc_in: 		in std_logic_vector(31 downto 0);
 	instruction_in: in std_logic_vector(31 downto 0);
-
+	ex_ALU_result_in: in std_logic_vector(31 downto 0);
+	ex_ALU_result_out: out std_logic_vector(31 downto 0);
 	opCode_out: 	out std_logic_vector(5 downto 0);
 	reg1_out:	out std_logic_vector(4 downto 0);
 	reg2_out:	out std_logic_vector(4 downto 0);
@@ -183,6 +184,8 @@ signal pc_in_id_reg:		 std_logic_vector(31 downto 0);
 signal instruction_in_id_reg:  std_logic_vector(31 downto 0);
 signal reg_write_out_id_reg:  std_logic_vector(4 downto 0);
 signal reg_write_in_id_reg:  std_logic_vector(4 downto 0);
+signal ex_ALU_result_in_id_reg: std_logic_vector(31 downto 0);
+signal ex_ALU_result_out_id_reg: std_logic_vector(31 downto 0);
 signal opCode_out_id_reg: std_logic_vector(5 downto 0);
 signal reg1_out_id_reg: std_logic_vector(4 downto 0);
 signal reg2_out_id_reg: std_logic_vector(4 downto 0);
@@ -306,6 +309,8 @@ port map(
 	rst => rst,
 	pc_in => pc_in_id_reg,
 	instruction_in => instruction_in_id_reg,
+	ex_ALU_result_in => ex_ALU_result_in_id_reg,
+	ex_ALU_result_out => ex_ALU_result_out_id_reg, 
 	opCode_out => opCode_out_id_reg,
 	reg1_out => reg1_out_id_reg,
 	reg2_out => reg2_out_id_reg,
@@ -422,7 +427,6 @@ main : process(clock, reset)
 			a_ex_alu <= read_regA_reg_file;
 			b_ex_alu <= read_regB_reg_file;
 			address_in_ex_alu <= address_out_id_reg;
-			--offset_in_ex_alu <= immediateValue_out_id_reg; --not sure about this
 			shift_in_ex_alu <= shamt_out_id_reg;
 			signExtendImmediate_ex_alu <= data_out_sign_ext;
 			uSignExtendImmediate_ex_alu <= data_out_usign_ext;
@@ -432,6 +436,7 @@ main : process(clock, reset)
 			regWrite_in_ex_alu <= reg_write_out_id_reg;
 
 			--ex_alu/data_mem
+			ex_ALU_result_in_id_reg <= result_ex_alu;
 			reg_id_in_data_mem <= regWrite_out_ex_alu;
 
 			if(mem_ex_alu = '1') then
@@ -439,9 +444,11 @@ main : process(clock, reset)
 
 					do_load_data_mem <= '1';
 					--R[rt] = M[R[rs]+SignExtImm] 
-					addr_data_mem <= memAddress_ex_alu;
+					addr_data_mem <= memAddress_ex_alu; --load
+
 					write_en_reg_file <= '1';
-					addr_write_reg_file <= reg2_out_id_reg; -- NOT SURE 
+					--store result in register (write back)
+					addr_write_reg_file <= regWrite_out_ex_alu; 
 					writedata_reg_file <= data_out_data_mem;
 
 				elsif(store_ex_alu = '1') then
@@ -454,9 +461,9 @@ main : process(clock, reset)
 				--write back
 				--store into the appropriate register the result from alu
 				write_en_reg_file <= '1';
-				addr_write_reg_file <= regWrite_out_ex_alu;
-				writedata_reg_file <= result_ex_alu;
+				addr_write_reg_file <= reg_write_out_id_reg;
 			end if;
+				writedata_reg_file <= ex_ALU_result_out_id_reg;
 
 			--hazard detection
 			--EN_hazard_dect <= '1';

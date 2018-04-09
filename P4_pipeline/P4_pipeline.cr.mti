@@ -15,26 +15,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Compiling entity usign_ext
 -- Compiling architecture arch of usign_ext
 
-} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ex_ALU
--- Compiling architecture arch of ex_ALU
-** Warning: C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
-** Warning: C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd(128): (vcom-1272) Length of expected is 32; length of actual is 26.
-
-} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/id_reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/id_reg.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity id_reg
--- Compiling architecture arch of id_reg
-
 } {} {}} ./instr_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/instr_memory.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD

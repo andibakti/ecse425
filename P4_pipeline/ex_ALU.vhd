@@ -9,7 +9,7 @@ entity ex_ALU is
         a: in std_logic_vector(31 downto 0);
 		b: in std_logic_vector(31 downto 0);
 		address_in: in std_logic_vector(25 downto 0);
-		offset_in: in std_logic_vector(15 downto 0);
+		offset_in: in std_logic_vector(15 downto 0);	--not used
 		shift_in: in std_logic_vector(4 downto 0);
 		signExtendImmediate: in std_logic_vector(31 downto 0);
     	uSignExtendImmediate: in std_logic_vector(31 downto 0);
@@ -20,7 +20,7 @@ entity ex_ALU is
 
         jump: out std_logic;
         mem: out std_logic;
-        load: out std_logic;
+        load: out std_logic; 
         store: out std_logic;
         jumpAddress: out std_logic_vector( 31 downto 0);
         memAddress: out std_logic_vector(31 downto 0);
@@ -112,14 +112,14 @@ begin
 					else
 						jumpCheck <= '0';
 					end if;
-					jA <= std_logic_vector(signed(offset_in) + signed(pc_in));
+					jA <= std_logic_vector(signed(signExtendImmediate) + signed(pc_in));
 				when "000101" => --branch on not equal (beq)
 					if(signed(a) = signed(b)) then
 						jumpCheck <= '0';
 					else
 						jumpCheck <= '1';
 					end if;
-					jA <= std_logic_vector(signed(offset_in) + signed(pc_in));
+					jA <= std_logic_vector(signed(signExtendImmediate) + signed(pc_in));
 				when "000010" => --jump
 					jumpCheck <= '1'; 
 					jA <= address_in;

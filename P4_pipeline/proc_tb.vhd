@@ -50,7 +50,7 @@ begin
 	wait for 1 * clk_period/2;
 
 
-	assert ( data_out = X"00000000") report "reset successfull" severity error;
+	--assert ( data_out = X"00000000") report "reset successfull" severity error;
 
 	wait for 1 * clk_period;
 	wait for 1 * clk_period;
