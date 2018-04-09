@@ -1,0 +1,172 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/camille/workspace/ECSE 325/ecse325/lab4
+Edata_memory
+Z0 w1522464427
+Z1 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Users/Ango/OneDrive/Documents/Ecse 425/Project/WORKSPACE/P4/ecse425/P4_pipeline/testing
+Z6 8data_memory.vhd
+Z7 Fdata_memory.vhd
+l0
+L8
+VQ5AgNkYj:4b8S:Nz:kX>?1
+!s100 :e2;g<n==P@T?FNODNUL<1
+Z8 OP;C;10.4a;61
+32
+Z9 !s110 1522464663
+!i10b 1
+Z10 !s108 1522464663.000000
+Z11 !s90 -reportprogress|300|data_memory.vhd|
+Z12 !s107 data_memory.vhd|
+!i113 1
+o-O0
+Z13 tExplicit 1
+Artl
+R1
+R2
+R3
+R4
+DEx4 work 11 data_memory 0 22 Q5AgNkYj:4b8S:Nz:kX>?1
+l31
+L26
+VzIho`R0JGCE;joWQS[<h?2
+!s100 kz?hPJ`7kT5c0JDfU45]<1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+o-O0
+R13
+Edata_memory_tb
+Z14 w1522464535
+R2
+R3
+R4
+R5
+Z15 8data_memory_tb.vhd
+Z16 Fdata_memory_tb.vhd
+l0
+L5
+V6]cZ[Y__PcIi;K[hVBYQ61
+!s100 g5QhKV2mm5GaKHX@e8jSz2
+R8
+32
+R9
+!i10b 1
+R10
+Z17 !s90 -reportprogress|300|data_memory_tb.vhd|
+Z18 !s107 data_memory_tb.vhd|
+!i113 1
+o-O0
+R13
+Aarch
+R2
+R3
+R4
+DEx4 work 14 data_memory_tb 0 22 6]cZ[Y__PcIi;K[hVBYQ61
+l42
+L8
+V6z[dK^7FD5VmWWa^F[Yn10
+Z19 !s100 <7elNFLdiiNC=5FCAf=>62
+R8
+32
+R9
+!i10b 1
+R10
+R17
+R18
+!i113 1
+o-O0
+R13
+Eex_alu
+Z20 w1522090373
+R2
+R3
+R4
+Z21 dC:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/testing
+Z22 8ex_ALU.vhd
+Z23 Fex_ALU.vhd
+l0
+L6
+V?NzQMf_YC6W6=j_Z^Kb@D1
+!s100 R_jRCF^1nRARe;DeY>AJ83
+Z24 OV;C;10.5c;63
+32
+Z25 !s110 1522090378
+!i10b 1
+Z26 !s108 1522090378.000000
+Z27 !s90 -reportprogress|300|ex_ALU.vhd|
+Z28 !s107 ex_ALU.vhd|
+!i113 1
+Z29 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+R4
+DEx4 work 6 ex_alu 0 22 ?NzQMf_YC6W6=j_Z^Kb@D1
+l29
+L20
+VdF8=3>89W[g;WOM57GQ2O0
+!s100 1m3EG=e_ZP`Y2zk5DYLWl2
+R24
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R29
+Eex_alu_tb
+Z30 w1522090125
+R2
+R3
+R4
+R21
+Z31 8ex_ALU_tb.vhd
+Z32 Fex_ALU_tb.vhd
+l0
+L5
+Vj=^QZc07CPEXUCY4a0i<?3
+!s100 h4nUG^H4K1WJSOEao89AQ2
+R24
+32
+Z33 !s110 1522090379
+!i10b 1
+R26
+Z34 !s90 -reportprogress|300|ex_ALU_tb.vhd|
+Z35 !s107 ex_ALU_tb.vhd|
+!i113 1
+R29
+Abehavior
+R2
+R3
+R4
+DEx4 work 9 ex_alu_tb 0 22 j=^QZc07CPEXUCY4a0i<?3
+l37
+L8
+VHM4Tg:];XQF=;o785JV7<3
+!s100 Hh6kn91EGFhH;j5V;7T9Q2
+R24
+32
+R33
+!i10b 1
+R26
+R34
+R35
+!i113 1
+R29

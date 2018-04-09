@@ -1,0 +1,110 @@
+./PC.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/PC.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PC
+-- Compiling architecture arch of PC
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/hazard_Detection.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/hazard_Detection.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity hazard_detection
+-- Compiling architecture arch of hazard_detection
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/Sign_Ext.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/Sign_Ext.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sign_ext
+-- Compiling architecture arch of sign_ext
+
+} {} {}} ./instr_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/instr_memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity instr_memory
+-- Compiling architecture rtl of instr_memory
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/proc.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/proc.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity proc
+-- Compiling architecture arch of proc
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/USign_Ext.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/USign_Ext.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity usign_ext
+-- Compiling architecture arch of usign_ext
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ex_ALU
+-- Compiling architecture arch of ex_ALU
+** Warning: C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd(125): (vcom-1272) Length of expected is 32; length of actual is 26.
+** Warning: C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/ex_ALU.vhd(128): (vcom-1272) Length of expected is 32; length of actual is 26.
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/mux_2to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/mux_2to1.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux_2to1
+-- Compiling architecture Behavioral of mux_2to1
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/proc_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/proc_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity proc_tb
+-- Compiling architecture behavior of proc_tb
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/data_memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/data_memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity data_memory
+-- Compiling architecture rtl of data_memory
+
+} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/id_reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/id_reg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity id_reg
+-- Compiling architecture arch of id_reg
+
+} {} {}} ./PC_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/PC_adder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PC_adder
+-- Compiling architecture arch of PC_adder
+
+} {} {}}
