@@ -462,8 +462,8 @@ main : process(clock, reset)
 				--store into the appropriate register the result from alu
 				write_en_reg_file <= '1';
 				addr_write_reg_file <= reg_write_out_id_reg;
-			end if;
 				writedata_reg_file <= ex_ALU_result_out_id_reg;
+			end if;
 
 			--hazard detection
 			--EN_hazard_dect <= '1';

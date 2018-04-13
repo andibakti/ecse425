@@ -10,14 +10,14 @@ entity id_reg is
 		ex_ALU_result_in: in std_logic_vector(31 downto 0);
 		ex_ALU_result_out: out std_logic_vector(31 downto 0);
 		opCode_out: 	out std_logic_vector(5 downto 0);
-		reg1_out:	out std_logic_vector(4 downto 0);
-		reg2_out:	out std_logic_vector(4 downto 0);
+		reg1_out:	out std_logic_vector(4 downto 0);	--RS
+		reg2_out:	out std_logic_vector(4 downto 0);	--RT
 		reg_write_in: in std_logic_vector(4 downto 0);
 		address_out:	out std_logic_vector(25 downto 0);
 		immediateValue_out:	out std_logic_vector(15 downto 0);
 		shamt_out:	out std_logic_vector(4 downto 0);
 		funct_out:	out std_logic_vector(5 downto 0);
-		reg_write_out: out std_logic_vector(4 downto 0);
+		reg_write_out: out std_logic_vector(4 downto 0); -- RD
 		pc_out: out std_logic_vector(31 downto 0)
 		);
 

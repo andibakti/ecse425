@@ -1871,3 +1871,5 @@ run
 #    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1 ns  Iteration: 3  Instance: /proc_tb/proc_instance/register_file_instance
+# End time: 19:50:50 on Apr 09,2018, Elapsed time: 2:18:47
+# Errors: 0, Warnings: 18
