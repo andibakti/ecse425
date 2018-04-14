@@ -1,12 +1,4 @@
-./PC.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/PC.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity PC
--- Compiling architecture arch of PC
-
-} {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/USign_Ext.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/USign_Ext.vhd}
+{C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/USign_Ext.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/USign_Ext.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -14,16 +6,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Loading package NUMERIC_STD
 -- Compiling entity usign_ext
 -- Compiling architecture arch of usign_ext
-
-} {} {}} ./instr_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/instr_memory.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Compiling entity instr_memory
--- Compiling architecture rtl of instr_memory
 
 } {} {}} {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/mux_2to1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/mux_2to1.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
@@ -49,14 +31,5 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Loading package NUMERIC_STD
 -- Compiling entity sign_ext
 -- Compiling architecture arch of sign_ext
-
-} {} {}} ./PC_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/camille/workspace/ECSE 425/New folder/ecse425/P4_pipeline/PC_adder.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity PC_adder
--- Compiling architecture arch of PC_adder
 
 } {} {}}

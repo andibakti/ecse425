@@ -88,6 +88,8 @@ port(
 	immediateValue_out:	out std_logic_vector(15 downto 0);
 	shamt_out:	out std_logic_vector(4 downto 0);
 	funct_out:	out std_logic_vector(5 downto 0);
+	reg_writedata_in: in std_logic_vector(31 DOWNTO 0);
+	reg_writedata_out: out std_logic_vector(31 DOWNTO 0);
 	reg_write_out: out std_logic_vector(4 downto 0);
 	pc_out: out std_logic_vector(31 downto 0)
 );
@@ -166,7 +168,7 @@ signal program_counter, override_pc: std_logic_vector(31 downto 0);
 signal output_pc_add: std_logic_vector(31 downto 0);
 
 signal input_pc: std_logic_vector(31 downto 0);
-signal output_pc: std_logic_vector(31 downto 0); 
+signal output_pc: std_logic_vector(31 downto 0);
 
 signal SEL_mux:  STD_LOGIC;
 signal A_mux :  STD_LOGIC_VECTOR (31 downto 0);
@@ -182,6 +184,8 @@ signal waitrequest_instr_mem:  std_logic;
 
 signal pc_in_id_reg:		 std_logic_vector(31 downto 0);
 signal instruction_in_id_reg:  std_logic_vector(31 downto 0);
+signal reg_writedata_out_id_reg: std_logic_vector(31 downto 0);
+signal reg_writedata_in_id_reg: std_logic_vector(31 downto 0);
 signal reg_write_out_id_reg:  std_logic_vector(4 downto 0);
 signal reg_write_in_id_reg:  std_logic_vector(4 downto 0);
 signal ex_ALU_result_in_id_reg: std_logic_vector(31 downto 0);
@@ -310,7 +314,7 @@ port map(
 	pc_in => pc_in_id_reg,
 	instruction_in => instruction_in_id_reg,
 	ex_ALU_result_in => ex_ALU_result_in_id_reg,
-	ex_ALU_result_out => ex_ALU_result_out_id_reg, 
+	ex_ALU_result_out => ex_ALU_result_out_id_reg,
 	opCode_out => opCode_out_id_reg,
 	reg1_out => reg1_out_id_reg,
 	reg2_out => reg2_out_id_reg,
@@ -319,6 +323,8 @@ port map(
 	immediateValue_out => immediateValue_out_id_reg,
 	shamt_out => shamt_out_id_reg,
 	funct_out => funct_out_id_reg,
+	reg_writedata_out => reg_writedata_out_id_reg,
+	reg_writedata_in => reg_writedata_in_id_reg,
 	reg_write_out => reg_write_out_id_reg,
 	pc_out => pc_out_id_reg
 	);
@@ -409,9 +415,9 @@ main : process(clock, reset)
 			pc_in_id_reg <= output_pc;
 			--because we simulate little to no delay this if statement is always true
 			--if(falling_edge(waitrequest_instr_mem)) then
-			--	IF_ID_reg <= 		
+			--	IF_ID_reg <=
 			--end if;
-			pc_in_id_reg <= output_pc; 
+			pc_in_id_reg <= output_pc;
 			instruction_in_id_reg <= readdata_instr_mem;
 			reg_write_in_id_reg <= reg_id_out_data_mem;
 
@@ -443,27 +449,29 @@ main : process(clock, reset)
 				if(load_ex_alu = '1') then
 
 					do_load_data_mem <= '1';
-					--R[rt] = M[R[rs]+SignExtImm] 
+					--R[rt] = M[R[rs]+SignExtImm]
 					addr_data_mem <= memAddress_ex_alu; --load
 
 					write_en_reg_file <= '1';
 					--store result in register (write back)
-					addr_write_reg_file <= regWrite_out_ex_alu; 
-					writedata_reg_file <= data_out_data_mem;
+					addr_write_reg_file <= reg_write_in_id_reg; -- FORWADING HERE?
+					reg_writedata_in_id_reg <= data_out_data_mem;
 
 				elsif(store_ex_alu = '1') then
-				    --M[R[rs]+SignExtImm] = R[rt] 
+				    --M[R[rs]+SignExtImm] = R[rt]
 				    do_write_data_mem <= '1';
 					data_in_data_mem <= b_ex_alu;
 					addr_data_mem <= memAddress_ex_alu;
-				end if;	
+				end if;
 			else
 				--write back
 				--store into the appropriate register the result from alu
 				write_en_reg_file <= '1';
-				addr_write_reg_file <= reg_write_out_id_reg;
-				writedata_reg_file <= ex_ALU_result_out_id_reg;
+				addr_write_reg_file <= reg_write_in_id_reg;
+				reg_writedata_in_id_reg <=  ex_ALU_result_out_id_reg;
 			end if;
+
+			writedata_reg_file <= reg_writedata_out_id_reg;
 
 			--hazard detection
 			--EN_hazard_dect <= '1';
