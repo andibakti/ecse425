@@ -64,9 +64,6 @@ ARCHITECTURE arch OF Register_File IS
 
 BEGIN
 
-	read_regA <= register_file(to_integer(unsigned(addr_regA)));
-	read_regB <= register_file(to_integer(unsigned(addr_regB)));
-
 	register_process: PROCESS (clk)
 	BEGIN
 
@@ -76,15 +73,34 @@ BEGIN
 				register_file(i) <= "00000000000000000000000000000000";
 			END LOOP;
 
+            read_regA <= "00000000000000000000000000000000";
+            read_regB <= "00000000000000000000000000000000";
+
         ELSIF (rising_edge(clk)) THEN
 
 			IF (write_en = '1') THEN
                 if(addr_write = "00000" OR addr_write = "UUUUU") then
-                    -- do nothing
+                    read_regA <= register_file(to_integer(unsigned(addr_regA)));
+                    read_regB <= register_file(to_integer(unsigned(addr_regB)));
                 else
 				    register_file(to_integer(unsigned(addr_write))) <= writedata;
+
+                    if(addr_regA = addr_write) then
+                        read_regA <= writedata;
+                    end if;
+
+                    if(addr_regB = addr_write) then
+                        read_regB <= writedata;
+                    end if;
+
                 end if;
+            else
+                read_regA <= register_file(to_integer(unsigned(addr_regA)));
+                read_regB <= register_file(to_integer(unsigned(addr_regB)));
 			END IF;
+
+
+
 
 		END IF;
 	END PROCESS;
