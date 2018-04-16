@@ -1,6 +1,7 @@
 
+# Fibonacci sequence generation
 
-addi $10, $0, 8           # Stores the number of generated number desired
+addi $10, $0, 5           # Stores the number of generated number desired
 addi $1, $0, 1            # F(0) = 1, reg 1 always store F(n-1)
 addi $2, $0, 1            # F(1) = 1, reg 2 always stores F(n)
 addi $11, $0, 3000        # store address in mem
@@ -16,5 +17,5 @@ loop : addi $3, $2, 0     # temp = old F(n)
 	addi $10, $10, -1     # decrease counter
 	bne $10, $0, loop     # loop condition
 	
-
+#end of program
 	
