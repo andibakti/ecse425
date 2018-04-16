@@ -9,22 +9,22 @@ ENTITY Register_File IS
 	PORT (
 	clk,rst : IN std_logic;
 	write_en : IN std_logic;
-    
+
 	writedata : IN std_logic_vector(31 DOWNTO 0);
-    
+
 	addr_write : IN std_logic_vector(4 DOWNTO 0);
 	addr_regA : IN std_logic_vector(4 DOWNTO 0);
 	addr_regB : IN std_logic_vector(4 DOWNTO 0);
-    
+
 	read_regA : OUT std_logic_vector(31 DOWNTO 0);
 	read_regB : OUT std_logic_vector(31 DOWNTO 0)
 	);
-    
+
 END Register_File;
 
 
-ARCHITECTURE arch OF Register_File IS 
-	
+ARCHITECTURE arch OF Register_File IS
+
 	TYPE registers IS ARRAY (0 to 31) OF STD_LOGIC_VECTOR(31 downto 0);
 	SIGNAL register_file: registers := (
         "00000000000000000000000000000000",
@@ -37,8 +37,6 @@ ARCHITECTURE arch OF Register_File IS
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000000", 
-        "00000000000000000000000000000000", 
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
@@ -46,42 +44,64 @@ ARCHITECTURE arch OF Register_File IS
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000000",  
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000000", 
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000000", 
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000"
     );
-	
-	
+
+
 BEGIN
-	
-	read_regA <= register_file(to_integer(unsigned(addr_regA)));
-	read_regB <= register_file(to_integer(unsigned(addr_regB)));
-	
+
 	register_process: PROCESS (clk)
 	BEGIN
-	
+
     	IF (rst = '1') THEN
-        	
+
         	FOR i IN 0 TO 31 LOOP
 				register_file(i) <= "00000000000000000000000000000000";
 			END LOOP;
-        	
+
+            read_regA <= "00000000000000000000000000000000";
+            read_regB <= "00000000000000000000000000000000";
+
         ELSIF (rising_edge(clk)) THEN
-	
+
 			IF (write_en = '1') THEN
-				register_file(to_integer(unsigned(addr_write))) <= writedata;
+                if(addr_write = "00000" OR addr_write = "UUUUU") then
+                    read_regA <= register_file(to_integer(unsigned(addr_regA)));
+                    read_regB <= register_file(to_integer(unsigned(addr_regB)));
+                else
+				    register_file(to_integer(unsigned(addr_write))) <= writedata;
+
+                    if(addr_regA = addr_write) then
+                        read_regA <= writedata;
+                    end if;
+
+                    if(addr_regB = addr_write) then
+                        read_regB <= writedata;
+                    end if;
+
+                end if;
+            else
+                read_regA <= register_file(to_integer(unsigned(addr_regA)));
+                read_regB <= register_file(to_integer(unsigned(addr_regB)));
 			END IF;
-			
+
+
+
+
 		END IF;
 	END PROCESS;
 
@@ -105,5 +125,5 @@ BEGIN
         end if;
 
     end process;
-    
+
 END arch;

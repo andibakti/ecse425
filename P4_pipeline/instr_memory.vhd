@@ -40,11 +40,13 @@ begin
 	begin
 		--this is a cheap trick to initialize the sram in simulation
 		if(now < 1 ps) then
-			for i in 0 to ram_size-1 loop
-				ram_block(i) <= std_logic_vector(to_unsigned(i,32));
+			for j in 0 to ram_size-1 loop
+				ram_block(j) <= std_logic_vector(to_unsigned(j,32));
 			end loop;
 
 			file_open(program_file, "program.txt", read_mode);
+
+			i := 0;
 
 			while not endfile(program_file) loop
 				readline(program_file, x_line);
@@ -79,7 +81,7 @@ begin
 	waitreq_r_proc: process (memread)
 	begin
 		if(memread'event and memread = '1')then
-			read_waitreq_reg <= '0' after mem_delay, '1' after mem_delay + clock_period; 
+			read_waitreq_reg <= '0' after mem_delay, '1' after mem_delay + clock_period;
 		end if;
 	end process;
 	waitrequest <= write_waitreq_reg and read_waitreq_reg;
