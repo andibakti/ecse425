@@ -7,7 +7,7 @@ use ieee.std_logic_textio.all;
 
 entity data_memory is
 	generic(
-		ram_size : integer := 32768
+		ram_size : integer := 8192
 	);
 	port (
 		clock: in std_logic;
@@ -25,7 +25,7 @@ end data_memory;
 
 architecture rtl of data_memory is
 
-type MEM is array(ram_size-1 downto 0) of std_logic_vector(7 downto 0);
+type MEM is array(ram_size-1 downto 0) of std_logic_vector(31 downto 0);
 signal ram_block: MEM;
 
 begin
@@ -35,11 +35,11 @@ begin
 		--this is a cheap trick to initialize the sram in simulation
 		if(now < 1 ps)then
 			for i in 0 to ram_size-1 loop
-				ram_block(i) <= std_logic_vector(to_signed(0,8));
+				ram_block(i) <= std_logic_vector(to_signed(0,32));
 			end loop;
 		end if;
 
-		
+
 		if rising_edge(clock) then
 			--sw
 			if(do_write = '1') then
@@ -51,27 +51,27 @@ begin
 			else
 				data_out <= data_in;
 			end if;
-			
+
 			reg_id_out <= reg_id_in;
 		end if;
 
 	end process;
-	
+
 	write_file: process(writeMem)
 		--file memory_file : text open write_mode is "memory.txt";
 		file memory_file : text;
 		variable line_num: line;
 		variable file_status : file_open_status;
 		variable reg_value : std_logic_vector(31 downto 0);
-		
+
 		variable ram_size : integer := 32768;
 		variable endLoop : integer;
-		
+
 		begin
-		
+
 		--size
 		endLoop := ram_size/4;
-		
+
 		if (writeMem = '1') then
 			file_open(memory_file, "memory.txt", write_mode);
 

@@ -18,13 +18,7 @@ end component;
 signal reset : std_logic := '0';
 signal clock : std_logic := '0';
 constant clk_period : time := 1 ns;
-signal a, b: std_logic_vector(31 downto 0);
-signal signExtendImmediate: std_logic_vector(15 downto 0);
-signal sel, funct: std_logic_vector(5 downto 0);
-signal zero: std_logic;
-signal output: std_logic_vector(31 downto 0);
 
---signal s_addr : std_logic_vector (31 downto 0);
 
 begin
 
@@ -53,13 +47,17 @@ begin
 	reset <= '1';
 	wait for 1 * clk_period;
 	reset <= '0';
-	wait for 1 * clk_period;
+	wait for 1 * clk_period/2;
+
+
+	--assert ( data_out = X"00000000") report "reset successfull" severity error;
+
 	wait for 1 * clk_period;
 	wait for 1 * clk_period;
 	wait for 1 * clk_period;
 
 
---assert ( output = X"00000000") report "reset successfull" severity error;
+--
 
 --rst <= '0';
 
